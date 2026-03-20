@@ -35,8 +35,8 @@ export default function DemoPreview() {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
             <iframe 
               src="https://media.base44.com/files/public/69bce5cb012b9c997937b65e/ffe206256_rift-atm-v7.html"
-              className="w-full bg-[#080b08]"
-              style={{ height: '700px' }}
+              className="w-full"
+              style={{ height: '700px', background: 'transparent' }}
               title="RIFT Terminal Demo"
               sandbox="allow-scripts allow-same-origin allow-forms"
             />
