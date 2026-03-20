@@ -46,6 +46,7 @@ export default function Demo() {
               className="w-full rounded-lg border border-border"
               style={{ height: '900px' }}
               title="RIFT ATM Interactive Demo"
+              sandbox="allow-scripts allow-same-origin allow-forms"
             />
           </motion.div>
 

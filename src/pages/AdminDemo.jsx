@@ -46,6 +46,7 @@ export default function AdminDemo() {
               className="w-full rounded-lg border border-border"
               style={{ height: '900px' }}
               title="RIFT Admin Console Demo"
+              sandbox="allow-scripts allow-same-origin allow-forms"
             />
           </motion.div>
 

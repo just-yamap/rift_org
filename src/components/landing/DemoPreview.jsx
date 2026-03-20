@@ -38,6 +38,7 @@ export default function DemoPreview() {
               className="w-full bg-[#080b08]"
               style={{ height: '700px' }}
               title="RIFT Terminal Demo"
+              sandbox="allow-scripts allow-same-origin allow-forms"
             />
           </div>
           

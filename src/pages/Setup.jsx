@@ -216,6 +216,7 @@ export default function Setup() {
                 className="w-full rounded-lg border border-border"
                 style={{ height: '600px' }}
                 title="RIFT Setup Demo"
+                sandbox="allow-scripts allow-same-origin allow-forms"
               />
               <p className="font-body text-xs text-muted-foreground mt-4 text-center">
                 Click through to experience the KYC flow, payment methods, and transaction processing
