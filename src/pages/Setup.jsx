@@ -197,6 +197,32 @@ export default function Setup() {
             </div>
           </motion.div>
 
+          {/* Visual Demo Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <h2 className="font-heading text-3xl font-bold text-foreground mb-8">See It In Action</h2>
+            <div className="bg-card border border-border rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-heading text-lg font-semibold text-foreground">Interactive RIFT Interface</h3>
+                <Link to="/demo" className="text-primary font-body text-sm hover:underline">Full Demo →</Link>
+              </div>
+              <iframe 
+                src="https://media.base44.com/files/public/69bce5cb012b9c997937b65e/ffe206256_rift-atm-v7.html"
+                className="w-full rounded-lg border border-border"
+                style={{ height: '600px' }}
+                title="RIFT Setup Demo"
+              />
+              <p className="font-body text-xs text-muted-foreground mt-4 text-center">
+                Click through to experience the KYC flow, payment methods, and transaction processing
+              </p>
+            </div>
+          </motion.div>
+
           {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

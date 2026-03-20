@@ -49,10 +49,10 @@ export default function HeroSection({ atmImageUrl }) {
                 JOIN EARLY BIRD →
               </a>
               <a
-                href="#how-it-works"
+                href="/demo"
                 className="border border-border text-foreground px-8 py-3.5 rounded font-heading text-sm font-semibold hover:bg-secondary transition-colors text-center"
               >
-                HOW IT WORKS
+                TRY LIVE DEMO
               </a>
             </div>
 
