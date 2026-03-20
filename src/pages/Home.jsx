@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       <HeroSection atmImageUrl={ATM_IMAGE} />
       <SignupSection />
-      <TechSpecs />
+      <TechSpecs atmImageUrl={ATM_IMAGE} />
       <HowItWorks />
       <Features />
       <FAQ />
