@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { base44 } from '@/api/base44Client';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Check, Loader2, Zap } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -10,6 +11,8 @@ const GOAL = 500;
 
 export default function SignupSection() {
   const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [quantity, setQuantity] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -21,11 +24,21 @@ export default function SignupSection() {
   });
 
   const signupMutation = useMutation({
-    mutationFn: (data) => base44.entities.EarlyBirdSignup.create(data),
+    mutationFn: async (data) => {
+      const signup = await base44.entities.EarlyBirdSignup.create(data);
+      await base44.integrations.Core.SendEmail({
+        to: data.email,
+        subject: "Welcome to RIFT Early Bird 🚀",
+        body: `Hi ${data.name},\n\nThank you for joining the RIFT Early Bird waitlist!\n\nYou're interested in ${data.quantity} machine${data.quantity > 1 ? 's' : ''} and you've secured the 25% discount ($9,749 per unit instead of $12,999).\n\nWe'll notify you as soon as pre-orders open. Get ready for the world's first Solana-native ATM.\n\n— The RIFT Team`
+      });
+      return signup;
+    },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['earlybird-count'] });
       setSubmitted(true);
       setEmail('');
+      setName('');
+      setQuantity(1);
     },
   });
 
@@ -38,7 +51,15 @@ export default function SignupSection() {
       toast({ title: 'Please enter a valid email', variant: 'destructive' });
       return;
     }
-    signupMutation.mutate({ email });
+    if (!name || name.trim().length < 2) {
+      toast({ title: 'Please enter your name', variant: 'destructive' });
+      return;
+    }
+    if (!quantity || quantity < 1) {
+      toast({ title: 'Please select at least 1 machine', variant: 'destructive' });
+      return;
+    }
+    signupMutation.mutate({ email, name, quantity });
   };
 
   return (
@@ -64,25 +85,48 @@ export default function SignupSection() {
           </p>
 
           {!submitted ? (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-10">
-              <Input
-                type="email"
-                placeholder="your@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="bg-secondary border-border font-body text-foreground placeholder:text-muted-foreground h-12"
-              />
-              <button
-                type="submit"
-                disabled={signupMutation.isPending}
-                className="bg-primary text-primary-foreground px-6 h-12 rounded font-heading text-sm font-semibold hover:opacity-90 transition-opacity whitespace-nowrap flex items-center justify-center gap-2 disabled:opacity-50"
-              >
-                {signupMutation.isPending ? (
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                ) : (
-                  'NOTIFY ME'
-                )}
-              </button>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-lg mx-auto mb-10">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Input
+                  type="text"
+                  placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="bg-secondary border-border font-body text-foreground placeholder:text-muted-foreground h-12"
+                />
+                <Input
+                  type="email"
+                  placeholder="your@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="bg-secondary border-border font-body text-foreground placeholder:text-muted-foreground h-12"
+                />
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Select value={quantity.toString()} onValueChange={(val) => setQuantity(parseInt(val))}>
+                  <SelectTrigger className="bg-secondary border-border h-12">
+                    <SelectValue placeholder="How many machines?" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="1">1 machine</SelectItem>
+                    <SelectItem value="2">2 machines</SelectItem>
+                    <SelectItem value="3">3 machines</SelectItem>
+                    <SelectItem value="5">5 machines</SelectItem>
+                    <SelectItem value="10">10+ machines</SelectItem>
+                  </SelectContent>
+                </Select>
+                <button
+                  type="submit"
+                  disabled={signupMutation.isPending}
+                  className="bg-primary text-primary-foreground px-6 h-12 rounded font-heading text-sm font-semibold hover:opacity-90 transition-opacity whitespace-nowrap flex items-center justify-center gap-2 disabled:opacity-50"
+                >
+                  {signupMutation.isPending ? (
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  ) : (
+                    'SECURE MY SPOT'
+                  )}
+                </button>
+              </div>
             </form>
           ) : (
             <motion.div

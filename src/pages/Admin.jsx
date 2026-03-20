@@ -34,10 +34,11 @@ export default function Admin() {
   }
 
   const exportCSV = () => {
-    const headers = ['Email', 'Name', 'Signed Up'];
+    const headers = ['Email', 'Name', 'Quantity', 'Signed Up'];
     const rows = signups.map(s => [
       s.email,
       s.name || '',
+      s.quantity || 1,
       format(new Date(s.created_date), 'yyyy-MM-dd HH:mm:ss')
     ]);
     
@@ -133,6 +134,7 @@ export default function Admin() {
                     <TableRow>
                       <TableHead className="font-heading">Email</TableHead>
                       <TableHead className="font-heading">Name</TableHead>
+                      <TableHead className="font-heading">Quantity</TableHead>
                       <TableHead className="font-heading">Signed Up</TableHead>
                     </TableRow>
                   </TableHeader>
@@ -141,6 +143,7 @@ export default function Admin() {
                       <TableRow key={signup.id}>
                         <TableCell className="font-body">{signup.email}</TableCell>
                         <TableCell className="font-body text-muted-foreground">{signup.name || '—'}</TableCell>
+                        <TableCell className="font-body text-muted-foreground">{signup.quantity || 1}</TableCell>
                         <TableCell className="font-body text-muted-foreground">
                           {format(new Date(signup.created_date), 'MMM d, yyyy HH:mm')}
                         </TableCell>
