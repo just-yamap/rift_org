@@ -7,7 +7,7 @@ import Features from '../components/landing/Features';
 import FAQ from '../components/landing/FAQ';
 import Footer from '../components/landing/Footer';
 
-const ATM_IMAGE = "/__generating__/img_a5f70527f4fa.png";
+const ATM_IMAGE = "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/89c804baa_generated_973640e9.png";
 
 export default function Home() {
   return (
