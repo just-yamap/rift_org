@@ -16,6 +16,7 @@ export default function Footer() {
         <div className="flex items-center gap-6">
           <a href="#how-it-works" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
           <a href="#features" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">Features</a>
+          <a href="/setup" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">Setup Guide</a>
           <a href="#faq" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
         </div>
 
