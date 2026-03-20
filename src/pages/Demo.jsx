@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
+import RiftDemo from '../components/demo/RiftDemo';
 
 export default function Demo() {
   return (
@@ -35,19 +36,13 @@ export default function Demo() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-card border border-border rounded-xl p-6 mb-8"
+            className="mb-8"
           >
             <div className="flex items-center justify-between mb-4">
               <h2 className="font-heading text-xl font-semibold text-foreground">Interactive Demo</h2>
               <span className="text-xs font-body text-muted-foreground">Click to interact • Full transaction flow</span>
             </div>
-            <iframe 
-              src="https://media.base44.com/files/public/69bce5cb012b9c997937b65e/ffe206256_rift-atm-v7.html"
-              className="w-full rounded-lg border border-border bg-background"
-              style={{ height: '900px' }}
-              title="RIFT ATM Interactive Demo"
-              sandbox="allow-scripts allow-same-origin allow-forms"
-            />
+            <RiftDemo />
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
