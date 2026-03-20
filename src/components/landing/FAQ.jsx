@@ -29,8 +29,12 @@ const faqs = [
     a: "Sign up now to be notified when pre-orders launch. Early bird subscribers receive a 25% discount on the RIFT terminal. Limited spots available."
   },
   {
-    q: "How does operator risk management work?",
-    a: "RIFT can be configured to automatically sell collected cryptocurrency on connected exchanges in real-time, minimizing the operator's exposure to market volatility."
+    q: "How does Jupiter integration work?",
+    a: "RIFT is connected to Jupiter aggregator, allowing automatic buying or selling of ANY SPL token at the best rates across all Solana DEXs. This means instant liquidity for every token, from SOL to the newest memecoins."
+  },
+  {
+    q: "Is KYC verification required?",
+    a: "Yes, RIFT has built-in KYC verification for both cash-in and cash-out transactions to ensure regulatory compliance. The verification process is quick and seamless."
   }
 ];
 

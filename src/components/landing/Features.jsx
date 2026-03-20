@@ -15,8 +15,8 @@ const features = [
   },
   {
     icon: Shield,
-    title: "Operator Risk Reduction",
-    description: "Auto-sell collected crypto on connected exchanges. Configurable hedging strategies built-in."
+    title: "Jupiter Integration",
+    description: "Auto-buy or sell ANY SPL token via Jupiter aggregator. Instant liquidity for every token on Solana."
   },
   {
     icon: Printer,
@@ -32,6 +32,11 @@ const features = [
     icon: Clock,
     title: "SMS Notifications",
     description: "Real-time SMS alerts when transactions are ready. Customers never miss a withdrawal."
+  },
+  {
+    icon: Shield,
+    title: "Built-in KYC Verification",
+    description: "Integrated identity verification for both cash-in and cash-out. Compliant with regulatory requirements."
   }
 ];
 
