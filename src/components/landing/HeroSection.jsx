@@ -44,7 +44,7 @@ export default function HeroSection({ atmImageUrl }) {
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="#signup"
-                className="bg-primary text-primary-foreground px-8 py-3.5 rounded font-heading text-sm font-semibold hover:opacity-90 transition-opacity text-center"
+                className="bg-foreground text-background px-8 py-3.5 rounded font-heading text-sm font-semibold hover:opacity-80 transition-opacity text-center"
               >
                 JOIN EARLY BIRD →
               </a>

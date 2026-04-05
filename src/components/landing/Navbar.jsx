@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import RiftLogo from './RiftLogo';
 
 export default function Navbar() {
   return (
@@ -11,10 +12,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-            <div className="w-3 h-3 bg-primary-foreground rounded-sm rotate-45" />
-          </div>
-          <span className="font-heading font-bold text-xl tracking-wider text-foreground">RIFT</span>
+          <RiftLogo size="md" showText={true} />
         </div>
         
         <div className="hidden md:flex items-center gap-8">
@@ -27,7 +25,7 @@ export default function Navbar() {
 
         <a 
           href="#signup"
-          className="bg-primary text-primary-foreground px-5 py-2 rounded font-heading text-sm font-semibold hover:opacity-90 transition-opacity"
+          className="bg-foreground text-background px-5 py-2 rounded font-heading text-sm font-semibold hover:opacity-80 transition-opacity"
         >
           GET EARLY ACCESS
         </a>
