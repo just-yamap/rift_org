@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function RiftLogo({ size = 'md', showText = true }) {
   const sizes = {
-    sm: { icon: 20, text: 'text-sm', gap: 'gap-1.5' },
-    md: { icon: 28, text: 'text-xl', gap: 'gap-2' },
-    lg: { icon: 40, text: 'text-3xl', gap: 'gap-3' },
+    sm: { icon: 20, text: 'text-lg', gap: 'gap-1.5' },
+    md: { icon: 28, text: 'text-2xl', gap: 'gap-2' },
+    lg: { icon: 40, text: 'text-4xl', gap: 'gap-3' },
   };
   const s = sizes[size];
 
@@ -19,7 +19,7 @@ export default function RiftLogo({ size = 'md', showText = true }) {
         <rect x="22.5" y="4" width="1.5" height="20" rx="0.75" fill="rgba(255,255,255,0.5)"/>
       </svg>
       {showText && (
-        <span className={`font-heading font-bold ${s.text} tracking-widest text-foreground`}>RIFT</span>
+        <span className={`font-logo ${s.text} tracking-[0.05em] text-foreground`}>RIFT</span>
       )}
     </div>
   );
