@@ -40,9 +40,6 @@ export default function MachineDetail() {
                 style={{ maxHeight: '520px' }}
               />
             </div>
-            <p className="font-body text-sm text-muted-foreground mt-4 leading-relaxed text-center">
-              {DESCRIPTION}
-            </p>
           </motion.div>
         </div>
       </div>

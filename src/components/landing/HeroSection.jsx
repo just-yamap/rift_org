@@ -38,7 +38,7 @@ export default function HeroSection({ atmImageUrl }) {
             </h1>
 
             <p className="font-body text-lg text-muted-foreground max-w-md mb-8 leading-relaxed">
-              The world's first Solana-native ATM. Convert cash to ANY SPL token via Jupiter — or crypto to cash — at the speed of light.
+              Rapid Integrated Fiat Terminal.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
