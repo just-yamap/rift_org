@@ -3,10 +3,12 @@ import Navbar from '../components/landing/Navbar';
 import HeroSection from '../components/landing/HeroSection';
 import SignupSection from '../components/landing/SignupSection';
 import DemoPreview from '../components/landing/DemoPreview';
-
-import ProductSpecs from '../components/landing/ProductSpecs';
+import Vision from '../components/landing/Vision';
 import HowItWorks from '../components/landing/HowItWorks';
+import ProductSpecs from '../components/landing/ProductSpecs';
 import Features from '../components/landing/Features';
+import BusinessModel from '../components/landing/BusinessModel';
+import Roadmap from '../components/landing/Roadmap';
 import FAQ from '../components/landing/FAQ';
 import Footer from '../components/landing/Footer';
 
@@ -19,9 +21,12 @@ export default function Home() {
       <HeroSection atmImageUrl={ATM_IMAGE} />
       <SignupSection />
       <DemoPreview />
-
+      <Vision />
+      <HowItWorks />
       <ProductSpecs />
       <Features />
+      <BusinessModel />
+      <Roadmap />
       <FAQ />
       <Footer />
     </div>

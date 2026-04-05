@@ -1,16 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Monitor, Camera, Printer, Banknote, Cpu, Wifi, Shield, Zap } from 'lucide-react';
 
-const specs = [
-  { icon: Monitor, label: "21.5\" Touchscreen Display", detail: "Full HD, 10-point multi-touch" },
-  { icon: Camera, label: "QR Code Scanner", detail: "High-speed 2D barcode reader" },
-  { icon: Printer, label: "Thermal Receipt Printer", detail: "80mm, 250mm/sec print speed" },
-  { icon: Banknote, label: "Cash Handler Module", detail: "Bi-directional, multi-currency support" },
-  { icon: Cpu, label: "Industrial Computer", detail: "Intel i5, 8GB RAM, 256GB SSD" },
-  { icon: Wifi, label: "Connectivity", detail: "Ethernet, WiFi, 4G LTE backup" },
-  { icon: Shield, label: "Security Features", detail: "Encrypted storage, tamper detection" },
-  { icon: Zap, label: "Power Supply", detail: "110-240V AC, UPS battery backup" }
+const hardware = [
+  { label: "Processor", value: "Raspberry Pi 5 — 4-Core ARM" },
+  { label: "Display", value: "10\" Capacitive Touchscreen" },
+  { label: "Bill Reader", value: "NV200 — Multi-currency" },
+  { label: "Connectivity", value: "4G LTE + Ethernet + WiFi" },
+  { label: "Printer", value: "Thermal receipt — 58mm" },
+  { label: "Housing", value: "Steel enclosure — IP54" },
+  { label: "Power", value: "220V — 85W consumption" },
+  { label: "Dimensions", value: "45 × 35 × 130 cm" }
+];
+
+const software = [
+  { label: "Blockchain", value: "Solana Mainnet", highlight: true },
+  { label: "DEX", value: "Jupiter Aggregator", highlight: true },
+  { label: "Tokens", value: "All SPL Tokens" },
+  { label: "TX Speed", value: "~400ms average", highlight: true },
+  { label: "Avg Fee", value: "$0.001 per swap", highlight: true },
+  { label: "Wallet", value: "QR scan / NFC tap" },
+  { label: "KYC", value: "Optional (per jurisdiction)" },
+  { label: "Uptime", value: "99.9% guaranteed", highlight: true }
+];
+
+const highlights = [
+  { value: "99.9%", label: "Uptime SLA" },
+  { value: "<2s", label: "Full Transaction" },
+  { value: "256-bit", label: "Encryption" },
+  { value: "24/7", label: "Remote Monitoring" }
 ];
 
 export default function ProductSpecs() {
@@ -23,61 +40,83 @@ export default function ProductSpecs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <span className="font-heading text-xs text-primary tracking-widest uppercase">Product Details</span>
-          <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-4">
-            Technical Specifications
+          <span className="font-heading text-xs text-muted-foreground tracking-widest uppercase">Technical Specs</span>
+          <h2 className="font-heading text-4xl md:text-6xl font-bold text-foreground mt-3 mb-4 leading-tight">
+            BUILT FOR<br />PERFORMANCE
           </h2>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-8">
+          <div className="flex flex-col md:flex-row items-start gap-8 mt-8">
             <div>
               <p className="font-body text-sm text-muted-foreground mb-2">Retail Price</p>
               <p className="font-heading text-4xl font-bold text-foreground">$12,999</p>
-              <p className="font-body text-xs text-muted-foreground mt-1">per unit</p>
             </div>
             <div className="hidden md:block w-px h-16 bg-border" />
             <div>
               <p className="font-body text-sm text-muted-foreground mb-2">Early Bird Price</p>
               <p className="font-heading text-4xl font-bold text-primary">$9,749</p>
-              <p className="font-body text-xs text-accent mt-1">Save $3,250 (25% off)</p>
+              <p className="font-body text-xs text-muted-foreground mt-1">Save $3,250 — 25% off</p>
             </div>
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {specs.map((spec, index) => (
-            <motion.div
-              key={spec.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="bg-card border border-border rounded-xl p-6 hover:border-primary/30 transition-all"
-            >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <spec.icon className="w-5 h-5 text-primary" />
-              </div>
-              <h3 className="font-heading text-sm font-semibold text-foreground mb-2">{spec.label}</h3>
-              <p className="font-body text-xs text-muted-foreground leading-relaxed">{spec.detail}</p>
-            </motion.div>
-          ))}
+        <div className="grid lg:grid-cols-2 gap-8 mb-10">
+          {/* Hardware */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-card border border-border rounded-xl overflow-hidden"
+          >
+            <div className="px-6 py-4 border-b border-border">
+              <p className="font-heading text-xs tracking-widest uppercase text-muted-foreground">Hardware</p>
+            </div>
+            <div className="divide-y divide-border">
+              {hardware.map((row) => (
+                <div key={row.label} className="flex items-center justify-between px-6 py-3">
+                  <span className="font-heading text-xs text-muted-foreground tracking-wider uppercase">{row.label}</span>
+                  <span className="font-body text-sm text-foreground">{row.value}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Software */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-card border border-border rounded-xl overflow-hidden"
+          >
+            <div className="px-6 py-4 border-b border-border">
+              <p className="font-heading text-xs tracking-widest uppercase text-muted-foreground">Software</p>
+            </div>
+            <div className="divide-y divide-border">
+              {software.map((row) => (
+                <div key={row.label} className="flex items-center justify-between px-6 py-3">
+                  <span className="font-heading text-xs text-muted-foreground tracking-wider uppercase">{row.label}</span>
+                  <span className={`font-body text-sm ${row.highlight ? 'text-primary font-semibold' : 'text-foreground'}`}>{row.value}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 bg-card/50 border border-border rounded-xl p-8 text-center"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          <p className="font-body text-sm text-muted-foreground mb-4">
-            <span className="font-heading text-foreground font-semibold">Dimensions:</span> 1850mm (H) × 650mm (W) × 450mm (D) | 
-            <span className="font-heading text-foreground font-semibold ml-4">Weight:</span> 185kg | 
-            <span className="font-heading text-foreground font-semibold ml-4">Warranty:</span> 2 years parts & labor
-          </p>
-          <p className="font-body text-xs text-muted-foreground">
-            Installation, training, and ongoing support included with purchase. Compliance certified for US, EU, and international markets.
-          </p>
+          {highlights.map((h, i) => (
+            <div key={h.label} className="bg-card border border-border rounded-xl p-6 text-center">
+              <p className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-1">{h.value}</p>
+              <p className="font-heading text-xs text-muted-foreground tracking-widest uppercase">{h.label}</p>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>
