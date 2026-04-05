@@ -84,7 +84,8 @@ export default function HeroSection({ atmImageUrl }) {
               <img 
                 src={atmImageUrl}
                 alt="RIFT Solana ATM - sleek futuristic cryptocurrency terminal"
-                className="relative w-full max-w-md rounded-xl"
+                className="relative w-full max-w-md"
+                style={{ mixBlendMode: 'screen' }}
               />
               {/* Floating badge */}
               <motion.div
