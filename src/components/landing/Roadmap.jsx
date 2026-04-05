@@ -3,33 +3,21 @@ import { motion } from 'framer-motion';
 
 const milestones = [
   {
-    quarter: "Q1 2025 — NOW",
-    title: "Launch & Early Bird",
-    description: "First terminals deployed. Early Bird program active — 25% discount for founding operators. Live demo available online.",
+    quarter: "Phase 01",
+    title: "Waitlist Sign Up",
+    description: "Join the RIFT waitlist. Secure your spot and get notified as soon as early access opens.",
     active: true
   },
   {
-    quarter: "Q2 2025",
-    title: "Network Expansion",
-    description: "50 terminals deployed across major European cities. Partnership program launched for location hosts.",
+    quarter: "Phase 02",
+    title: "Open Early Bird Access",
+    description: "Early Bird operators get 25% off at $4,999/terminal. Limited units available for founding operators.",
     active: false
   },
   {
-    quarter: "Q3 2025",
-    title: "Multi-Chain Support",
-    description: "Integration of Ethereum, Base, and Arbitrum chains. NFT purchases and staking directly from terminal.",
-    active: false
-  },
-  {
-    quarter: "Q4 2025",
-    title: "Crypto-to-Cash Mode",
-    description: "Reverse flow — convert SPL tokens to fiat cash. Full two-way ATM experience launched globally.",
-    active: false
-  },
-  {
-    quarter: "Q1–Q2 2026",
-    title: "Global Scale",
-    description: "500+ terminals worldwide. RIFT API open for third-party integrations. White label program fully launched.",
+    quarter: "Phase 03",
+    title: "Public Access",
+    description: "Full public launch. RIFT terminals available globally at standard pricing.",
     active: false
   }
 ];

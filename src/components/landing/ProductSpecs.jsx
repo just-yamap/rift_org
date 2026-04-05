@@ -54,8 +54,8 @@ export default function ProductSpecs() {
             <div className="hidden md:block w-px h-16 bg-border" />
             <div>
               <p className="font-body text-sm text-muted-foreground mb-2">Early Bird Price</p>
-              <p className="font-heading text-4xl font-bold text-primary">$9,749</p>
-              <p className="font-body text-xs text-muted-foreground mt-1">Save $3,250 — 25% off</p>
+              <p className="font-heading text-4xl font-bold text-primary">$4,999</p>
+              <p className="font-body text-xs text-muted-foreground mt-1">Early Bird — Limited units</p>
             </div>
           </div>
         </motion.div>

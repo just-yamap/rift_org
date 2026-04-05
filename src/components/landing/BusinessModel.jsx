@@ -26,9 +26,9 @@ const streams = [
 ];
 
 const stats = [
-  { value: "1-3%", label: "Operator Commission Per TX" },
+  { value: "1-15%", label: "Operator Commission Per TX" },
   { value: "$2K+", label: "Avg Monthly Revenue / Terminal" },
-  { value: "<6mo", label: "Estimated ROI Period" }
+  { value: "~3mo", label: "Estimated ROI Period" }
 ];
 
 export default function BusinessModel() {
