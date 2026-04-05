@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 const VIEWS = [
   {
     label: 'Front View',
-    img: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/8a2235161_image.png',
+    img: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/a744eb9ea_image.png',
     description: 'Compact desktop form factor with 7" touchscreen, thermal printer slot, card reader and cash dispenser.'
   },
   {
     label: '3D View',
-    img: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/8a2235161_image.png',
+    img: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/a744eb9ea_image.png',
     description: 'Brushed steel enclosure with ventilation grille, QR scanner, and embossed RIFT branding.'
   },
   {
@@ -84,7 +84,7 @@ export default function MachineDetail() {
                 transition={{ duration: 0.4 }}
                 src={VIEWS[active].img}
                 alt={VIEWS[active].label}
-                className="w-full object-contain bg-zinc-100"
+                className="w-full object-cover"
                 style={{ maxHeight: '480px' }}
               />
             </div>
