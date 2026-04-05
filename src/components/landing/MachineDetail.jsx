@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 const VIEWS = [
   {
     label: 'Front View',
-    img: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/00a39a506_image.png',
+    img: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/8a2235161_image.png',
     description: 'Compact desktop form factor with 7" touchscreen, thermal printer slot, card reader and cash dispenser.'
   },
   {
     label: '3D View',
-    img: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/b0bdce6e7_image.png',
+    img: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/8a2235161_image.png',
     description: 'Brushed steel enclosure with ventilation grille, QR scanner, and embossed RIFT branding.'
   },
   {
