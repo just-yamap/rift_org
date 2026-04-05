@@ -88,14 +88,10 @@ export default function HeroSection({ atmImageUrl }) {
                 style={{ mixBlendMode: 'screen' }}
               />
               {/* Floating badge */}
-              <motion.div
-                animate={{ y: [-5, 5, -5] }}
-                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 bg-accent text-accent-foreground rounded-lg px-4 py-2 shadow-lg"
-              >
+              <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground rounded-lg px-4 py-2 shadow-lg">
                 <span className="font-heading text-xs font-bold">25% OFF</span>
                 <p className="font-body text-[10px]">Early Bird</p>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>
