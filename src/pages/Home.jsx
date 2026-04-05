@@ -3,7 +3,7 @@ import Navbar from '../components/landing/Navbar';
 import HeroSection from '../components/landing/HeroSection';
 import SignupSection from '../components/landing/SignupSection';
 import DemoPreview from '../components/landing/DemoPreview';
-import MachineDetail from '../components/landing/MachineDetail';
+
 import ProductSpecs from '../components/landing/ProductSpecs';
 import HowItWorks from '../components/landing/HowItWorks';
 import Features from '../components/landing/Features';
@@ -19,7 +19,7 @@ export default function Home() {
       <HeroSection atmImageUrl={ATM_IMAGE} />
       <SignupSection />
       <DemoPreview />
-      <MachineDetail />
+
       <ProductSpecs />
       <Features />
       <FAQ />
