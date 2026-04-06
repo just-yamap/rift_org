@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/landing/Navbar';
 import HeroSection from '../components/landing/HeroSection';
 import SignupSection from '../components/landing/SignupSection';
-import DemoPreview from '../components/landing/DemoPreview';
+
 import Vision from '../components/landing/Vision';
 import HowItWorks from '../components/landing/HowItWorks';
 import ProductSpecs from '../components/landing/ProductSpecs';
@@ -20,7 +20,6 @@ export default function Home() {
       <Navbar />
       <HeroSection atmImageUrl={ATM_IMAGE} />
       <SignupSection />
-      <DemoPreview />
       <Vision />
       <HowItWorks />
       <ProductSpecs />
