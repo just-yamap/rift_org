@@ -70,7 +70,7 @@ export default function SignupSection() {
         </tr>
         <tr>
           <td style="padding:24px 40px;border-top:1px solid #292929;text-align:center;">
-            <p style="margin:0 0 4px;color:#808080;font-size:12px;">Questions? <a href="mailto:atmrift@gmail.com" style="color:#F5F5F5;">atmrift@gmail.com</a></p>
+            <p style="margin:0 0 4px;color:#808080;font-size:12px;">Questions? <a href="mailto:contact@riftatm.com" style="color:#F5F5F5;">contact@riftatm.com</a></p>
             <p style="margin:0;color:#3d3d3d;font-size:11px;">© ${new Date().getFullYear()} RIFT. All rights reserved.</p>
           </td>
         </tr>

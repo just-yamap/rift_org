@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download } from 'lucide-react';
 import RiftLogo from './RiftLogo';
+import ContactForm from './ContactForm';
 
 export default function Navbar() {
   const [demoOpen, setDemoOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
 
   return (
     <motion.nav
@@ -22,6 +24,7 @@ export default function Navbar() {
           <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors font-body text-sm">How It Works</a>
           <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors font-body text-sm">Features</a>
           <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors font-body text-sm">FAQ</a>
+          <button onClick={() => setContactOpen(true)} className="text-muted-foreground hover:text-foreground transition-colors font-body text-sm">Contact</button>
 
           <a
             href="https://rift-pass-link.base44.app"
@@ -78,6 +81,7 @@ export default function Navbar() {
           JOIN WAITLIST
         </a>
       </div>
+      <ContactForm isOpen={contactOpen} onClose={() => setContactOpen(false)} />
     </motion.nav>
   );
 }
