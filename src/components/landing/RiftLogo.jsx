@@ -10,7 +10,7 @@ export default function RiftLogo({ size = 'md', showText }) {
     <img
       src={LOGO_URL}
       alt="RIFT"
-      style={{ height: h, filter: 'invert(1)', display: 'block' }}
+      style={{ height: h, display: 'block', mixBlendMode: 'screen', filter: 'brightness(10)' }}
     />
   );
 }
