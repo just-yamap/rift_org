@@ -21,7 +21,7 @@ export default function ContactBubble() {
             <div className="flex items-center gap-3 mb-3">
               <div className="relative">
                 <img
-                  src="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/d6fd69fe3_image.png"
+                  src="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/ba9ebfcb1_image.png"
                   alt="Chief of Sales"
                   className="w-12 h-12 rounded-full object-cover border-2 border-border"
                   style={{ mixBlendMode: 'screen' }}
