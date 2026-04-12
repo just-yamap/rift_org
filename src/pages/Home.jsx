@@ -21,7 +21,6 @@ export default function Home() {
       <SignupSection />
       <Vision />
       <HowItWorks />
-      <ProductSpecs />
       <Features />
       <BusinessModel />
       <Roadmap />
