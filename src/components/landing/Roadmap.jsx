@@ -11,7 +11,7 @@ const milestones = [
   {
     quarter: "Phase 02",
     title: "Open Early Bird Access",
-    description: "Early Bird operators get 25% off at $4,999/terminal. Limited units available for founding operators.",
+    description: "Waitlist members get first access when pre-orders open. Pricing will be announced exclusively to early bird subscribers.",
     active: false
   },
   {
