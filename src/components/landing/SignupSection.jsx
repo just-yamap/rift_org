@@ -15,6 +15,7 @@ export default function SignupSection() {
   const [quantity, setQuantity] = useState(1);
   const [location, setLocation] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [emailError, setEmailError] = useState(false);
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
@@ -34,20 +35,17 @@ export default function SignupSection() {
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#0A0A0A;padding:40px 20px;">
     <tr><td align="center">
       <table width="560" cellpadding="0" cellspacing="0" style="background:#141414;border:1px solid #292929;border-radius:12px;overflow:hidden;">
-        <!-- Header -->
         <tr>
           <td style="background:#0A0A0A;padding:32px 40px;border-bottom:1px solid #292929;text-align:center;">
             <img src="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/d6fd69fe3_image.png" width="120" alt="RIFT" style="display:block;margin:0 auto;" />
             <p style="margin:8px 0 0;color:#808080;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;">Rapid Integrated Fiat Terminal</p>
           </td>
         </tr>
-        <!-- Body -->
         <tr>
           <td style="padding:40px;">
             <p style="margin:0 0 8px;color:#808080;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;">Early Bird Confirmed</p>
             <h1 style="margin:0 0 24px;color:#F5F5F5;font-size:28px;font-weight:700;">You're on the list, ${data.name}.</h1>
             <p style="margin:0 0 24px;color:#808080;font-size:15px;line-height:1.7;">Thank you for joining the RIFT Early Bird waitlist. You've locked in your <strong style="color:#F5F5F5;">25% discount</strong> — reserved exclusively for founding members.</p>
-            <!-- Box -->
             <table width="100%" cellpadding="0" cellspacing="0" style="background:#0A0A0A;border:1px solid #292929;border-radius:8px;margin-bottom:24px;">
               <tr><td style="padding:24px;">
                 <table width="100%" cellpadding="0" cellspacing="0">
@@ -70,7 +68,6 @@ export default function SignupSection() {
             <a href="https://x.com/riftatm" style="display:inline-block;background:#F5F5F5;color:#0A0A0A;font-size:13px;font-weight:700;text-decoration:none;padding:14px 32px;border-radius:6px;letter-spacing:0.05em;">FOLLOW US ON X →</a>
           </td>
         </tr>
-        <!-- Footer -->
         <tr>
           <td style="padding:24px 40px;border-top:1px solid #292929;text-align:center;">
             <p style="margin:0 0 4px;color:#808080;font-size:12px;">Questions? <a href="mailto:atmrift@gmail.com" style="color:#F5F5F5;">atmrift@gmail.com</a></p>
@@ -83,11 +80,16 @@ export default function SignupSection() {
 </body>
 </html>`;
 
-      await base44.integrations.Core.SendEmail({
-        to: data.email,
-        subject: "You're on the RIFT Early Bird list ✓",
-        body: emailBody
-      });
+      try {
+        await base44.integrations.Core.SendEmail({
+          to: data.email,
+          subject: "You're on the RIFT Early Bird list ✓",
+          body: emailBody
+        });
+      } catch (emailErr) {
+        console.error('Email send failed:', emailErr);
+        setEmailError(true);
+      }
       return signup;
     },
     onSuccess: () => {
@@ -203,7 +205,16 @@ export default function SignupSection() {
                 <Check className="w-5 h-5 text-primary" />
                 <span className="font-body text-foreground">You're on the list! We'll notify you when pre-orders open.</span>
               </div>
-              <p className="font-body text-xs text-muted-foreground">Confirmation email sent — check your <strong className="text-foreground">spam or promotions</strong> folder if you don't see it.</p>
+              {emailError ? (
+                <p className="font-body text-xs text-destructive">
+                  We couldn't send the confirmation email. Please contact{' '}
+                  <a href="mailto:atmrift@gmail.com" className="underline">atmrift@gmail.com</a> to confirm your spot.
+                </p>
+              ) : (
+                <p className="font-body text-xs text-muted-foreground">
+                  Confirmation email sent — check your <strong className="text-foreground">spam or promotions</strong> folder if you don't see it.
+                </p>
+              )}
             </motion.div>
           )}
 
