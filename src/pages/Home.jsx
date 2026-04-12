@@ -10,6 +10,7 @@ import Roadmap from '../components/landing/Roadmap';
 import FAQ from '../components/landing/FAQ';
 import Footer from '../components/landing/Footer';
 import ATMWidget from '../components/landing/ATMWidget';
+import InfoBar from '../components/landing/InfoBar';
 
 const ATM_IMAGE = "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/8a2235161_image.png";
 
@@ -18,6 +19,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection atmImageUrl={ATM_IMAGE} />
+      <InfoBar />
       <SignupSection />
       <Vision />
       <HowItWorks />
