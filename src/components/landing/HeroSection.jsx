@@ -87,11 +87,6 @@ export default function HeroSection({ atmImageUrl }) {
                 className="relative w-full max-w-md"
                 style={{ mixBlendMode: 'screen' }}
               />
-              {/* Floating badge */}
-              <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground rounded-lg px-4 py-2 shadow-lg">
-                <span className="font-heading text-xs font-bold">25% OFF</span>
-                <p className="font-body text-[10px]">Early Bird</p>
-              </div>
             </div>
           </motion.div>
         </div>
