@@ -34,7 +34,7 @@ export default function RiftConnectSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-heading text-sm font-semibold hover:opacity-90 transition-opacity"
             >
-              <img src="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/58e197d53_generated_image.png" alt="RIFT Connect" className="w-5 h-5" />
+              <img src="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/320d15ebb_image.png" alt="RIFT Connect" className="w-5 h-5" />
               DOWNLOAD RIFT CONNECT
             </a>
           </div>

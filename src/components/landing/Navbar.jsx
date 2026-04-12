@@ -29,7 +29,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 border border-border text-foreground px-4 py-2 rounded font-heading text-sm font-semibold hover:bg-secondary transition-colors"
           >
-            <Download className="w-3.5 h-3.5" />
+            <img src="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/320d15ebb_image.png" alt="RIFT Connect" className="w-4 h-4" />
             RIFT CONNECT
           </a>
 
