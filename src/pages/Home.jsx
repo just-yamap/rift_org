@@ -4,6 +4,7 @@ import HeroSection from '../components/landing/HeroSection';
 import SignupSection from '../components/landing/SignupSection';
 import Vision from '../components/landing/Vision';
 import HowItWorks from '../components/landing/HowItWorks';
+import MapSection from '../components/landing/MapSection';
 import Features from '../components/landing/Features';
 import BusinessModel from '../components/landing/BusinessModel';
 import Roadmap from '../components/landing/Roadmap';
@@ -25,6 +26,7 @@ export default function Home() {
       <SignupSection />
       <Vision />
       <RiftConnectSection />
+      <MapSection />
       <HowItWorks />
       <Features />
       <BusinessModel />
