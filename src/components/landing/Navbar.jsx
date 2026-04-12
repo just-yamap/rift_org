@@ -41,9 +41,6 @@ export default function Navbar() {
                   className="absolute top-full right-0 mt-2 w-52 bg-card border border-border rounded-xl overflow-hidden shadow-xl"
                 >
                   <a href="/demo" className="flex items-center gap-3 px-4 py-3 hover:bg-secondary transition-colors group">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                      <span className="text-sm">🖥️</span>
-                    </div>
                     <div>
                       <p className="font-heading text-xs font-semibold text-foreground">ATM Interface</p>
                       <p className="font-body text-xs text-muted-foreground">Customer-facing terminal</p>
@@ -51,9 +48,6 @@ export default function Navbar() {
                   </a>
                   <div className="h-px bg-border" />
                   <a href="/admin-demo" className="flex items-center gap-3 px-4 py-3 hover:bg-secondary transition-colors group">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                      <span className="text-sm">📊</span>
-                    </div>
                     <div>
                       <p className="font-heading text-xs font-semibold text-foreground">Operator Dashboard</p>
                       <p className="font-body text-xs text-muted-foreground">Analytics & management</p>
