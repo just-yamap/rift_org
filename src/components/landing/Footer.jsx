@@ -25,11 +25,11 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-6">
-          <a href="/demo" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">Demo</a>
+          <a href="/demo" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">🖥️ ATM User Demo</a>
+          <a href="/admin-demo" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">📊 Operator Dashboard Demo</a>
           <a href="#how-it-works" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
           <a href="#features" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">Features</a>
           <a href="/setup" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">Setup Guide</a>
-          <a href="/admin-demo" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">Admin</a>
         </div>
 
         <div className="flex items-center gap-6">

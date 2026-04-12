@@ -19,6 +19,15 @@ export default function Navbar() {
           <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors font-body text-sm">How It Works</a>
           <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors font-body text-sm">Features</a>
           <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors font-body text-sm">FAQ</a>
+          <div className="flex items-center gap-1 border border-border rounded-lg overflow-hidden">
+            <a href="/demo" className="text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors font-body text-xs px-3 py-1.5 flex items-center gap-1.5">
+              <span>🖥️</span> ATM Demo
+            </a>
+            <div className="w-px h-5 bg-border" />
+            <a href="/admin-demo" className="text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors font-body text-xs px-3 py-1.5 flex items-center gap-1.5">
+              <span>📊</span> Operator Demo
+            </a>
+          </div>
         </div>
 
         <a 
