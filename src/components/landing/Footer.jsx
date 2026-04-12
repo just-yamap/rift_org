@@ -1,5 +1,7 @@
 import React from 'react';
 import RiftLogo from './RiftLogo';
+import { base44 } from '@/api/base44Client';
+import { Download } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -31,6 +33,13 @@ export default function Footer() {
         <p className="font-body text-xs text-muted-foreground">
           © {new Date().getFullYear()} RIFT. All rights reserved.
         </p>
+        <a
+          href="/api/functions/styleGuide"
+          className="flex items-center gap-1.5 font-body text-xs text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <Download className="w-3 h-3" />
+          Download Style Guide
+        </a>
       </div>
     </footer>
   );
