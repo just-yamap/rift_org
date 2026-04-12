@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import RiftLogo from './RiftLogo';
 
 export default function HeroSection({ atmImageUrl }) {
   return (
@@ -29,16 +30,12 @@ export default function HeroSection({ atmImageUrl }) {
               <span className="font-heading text-xs text-primary tracking-wider">POWERED BY SOLANA</span>
             </div>
 
-            <h1 className="font-heading text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-6">
-              <span className="text-foreground">RAPID</span>
-              <br />
-              <span className="text-foreground">INTEGRATED</span>
-              <br />
-              <span className="text-primary">FIAT TERMINAL</span>
-            </h1>
+            <div className="mb-6">
+              <RiftLogo size="xl" showText={false} />
+            </div>
 
-            <p className="font-body text-lg text-muted-foreground max-w-md mb-8 leading-relaxed">
-              Rapid Integrated Fiat Terminal.
+            <p className="font-heading text-sm tracking-widest text-muted-foreground uppercase mb-8">
+              Rapid · Integrated · Fiat · Terminal
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
