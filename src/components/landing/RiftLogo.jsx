@@ -11,7 +11,7 @@ export default function RiftLogo({ size = 'md', showText }) {
       src={LOGO_URL}
       alt="RIFT"
       width={w}
-      style={{ mixBlendMode: 'screen', display: 'inline-block' }}
+      style={{ mixBlendMode: 'screen', filter: 'invert(1)', display: 'inline-block' }}
     />
   );
 }
