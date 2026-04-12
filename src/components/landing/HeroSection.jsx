@@ -35,7 +35,7 @@ export default function HeroSection({ atmImageUrl }) {
             </div>
 
             <p className="font-heading text-sm tracking-widest text-muted-foreground uppercase mb-8">
-              Rapid · Integrated · Fiat · Terminal
+              Rapid  Integrated  Fiat  Terminal
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
