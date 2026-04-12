@@ -82,7 +82,6 @@ export default function RiftDemo() {
                 </p>
                 <div className="flex gap-2">
                   <span className="text-xs font-body text-primary">Instant settlement</span>
-                  <span className="text-xs font-body text-muted-foreground">•</span>
                   <span className="text-xs font-body text-primary">15 assets</span>
                 </div>
               </div>
@@ -103,7 +102,6 @@ export default function RiftDemo() {
                 </p>
                 <div className="flex gap-2">
                   <span className="text-xs font-body text-primary">Print ticket</span>
-                  <span className="text-xs font-body text-muted-foreground">•</span>
                   <span className="text-xs font-body text-primary">Return to collect</span>
                 </div>
               </div>
@@ -121,7 +119,6 @@ export default function RiftDemo() {
                 </p>
                 <div className="flex gap-2">
                   <span className="text-xs font-body text-primary">Scan ticket</span>
-                  <span className="text-xs font-body text-muted-foreground">•</span>
                   <span className="text-xs font-body text-primary">Collect cash</span>
                 </div>
               </div>
@@ -189,7 +186,7 @@ export default function RiftDemo() {
         </div>
 
         <h2 className="font-heading text-3xl font-bold text-foreground mb-2">Sell Details</h2>
-        <p className="font-body text-sm text-muted-foreground mb-8">Step 03 · Sell</p>
+        <p className="font-body text-sm text-muted-foreground mb-8">Step 03  Sell</p>
 
         <div className="bg-card border border-border rounded-xl p-6 mb-6">
           <div className="grid grid-cols-2 gap-4 mb-6">
@@ -239,7 +236,7 @@ export default function RiftDemo() {
         </div>
 
         <h2 className="font-heading text-3xl font-bold text-foreground mb-2">How to Pay?</h2>
-        <p className="font-body text-sm text-muted-foreground mb-8">Step 03 · Buy</p>
+        <p className="font-body text-sm text-muted-foreground mb-8">Step 03  Buy</p>
 
         <div className="space-y-4">
           <button
