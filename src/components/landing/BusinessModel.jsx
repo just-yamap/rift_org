@@ -14,8 +14,8 @@ const streams = [
     description: "Split earnings with host locations — malls, hotels, convenience stores & more."
   },
   {
-    icon: Monitor,
-    title: "Digital Advertising",
+    icon: MapPin,
+    title: "Increased Foot Traffic",
     description: "A RIFT terminal draws a new category of crypto-native customers to your location — people actively looking to convert cash or withdraw funds on the spot."
   },
   {
