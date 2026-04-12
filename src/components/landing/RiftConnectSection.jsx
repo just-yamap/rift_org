@@ -28,15 +28,26 @@ export default function RiftConnectSection() {
               Download RIFT Connect to locate nearby ATMs, complete your KYC verification, and start transacting instantly. When you arrive at a RIFT terminal, you're already verified — fast, secure, and immediate.
             </p>
 
-            <a
-              href="https://rift-pass-link.base44.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-heading text-sm font-semibold hover:opacity-90 transition-opacity"
-            >
-              <Smartphone className="w-4 h-4" />
-              DOWNLOAD RIFT CONNECT
-            </a>
+            <div className="flex flex-col gap-3">
+              <a
+                href="https://rift-pass-link.base44.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-heading text-sm font-semibold hover:opacity-90 transition-opacity w-fit"
+              >
+                <img src="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/58e197d53_generated_image.png" alt="RIFT Connect" className="w-5 h-5" />
+                DOWNLOAD RIFT CONNECT
+              </a>
+              <a
+                href="https://solanamobile.com/seeker"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 border border-border text-foreground px-6 py-3 rounded-lg font-heading text-sm font-semibold hover:bg-secondary transition-colors w-fit"
+              >
+                <img src="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/58e197d53_generated_image.png" alt="Seeker" className="w-5 h-5" />
+                SEEKER (SOLANA PHONE)
+              </a>
+            </div>
           </div>
 
           {/* Right: Features Grid */}
@@ -102,6 +113,22 @@ export default function RiftConnectSection() {
               <h3 className="font-heading text-sm font-semibold text-foreground mb-2">iOS & Android</h3>
               <p className="font-body text-xs text-muted-foreground">
                 Available on all platforms. Add to home screen.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="bg-card border border-border rounded-xl p-6 hover:border-primary/30 transition-all"
+            >
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                <Smartphone className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="font-heading text-sm font-semibold text-foreground mb-2">Solana Phone</h3>
+              <p className="font-body text-xs text-muted-foreground">
+                Native support on Seeker — the Solana Mobile device.
               </p>
             </motion.div>
           </div>
