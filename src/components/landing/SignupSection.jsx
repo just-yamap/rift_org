@@ -37,7 +37,7 @@ export default function SignupSection() {
         <!-- Header -->
         <tr>
           <td style="background:#0A0A0A;padding:32px 40px;border-bottom:1px solid #292929;text-align:center;">
-            <img src="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/d6fd69fe3_image.png" width="100" alt="RIFT" style="display:block;margin:0 auto;" />
+            <img src="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/d6fd69fe3_image.png" width="120" alt="RIFT" style="display:block;margin:0 auto;" />
             <p style="margin:8px 0 0;color:#808080;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;">Rapid Integrated Fiat Terminal</p>
           </td>
         </tr>
