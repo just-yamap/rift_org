@@ -13,6 +13,7 @@ export default function SignupSection() {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [quantity, setQuantity] = useState(1);
+  const [location, setLocation] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -29,7 +30,7 @@ export default function SignupSection() {
       await base44.integrations.Core.SendEmail({
         to: data.email,
         subject: "Welcome to RIFT Early Bird 🚀",
-        body: `Hi ${data.name},\n\nThank you for joining the RIFT Early Bird waitlist!\n\nYou're interested in ${data.quantity} machine${data.quantity > 1 ? 's' : ''} and you've secured the 25% discount ($9,749 per unit instead of $12,999).\n\nWe'll notify you as soon as pre-orders open. Get ready for the world's first Solana-native ATM.\n\n— The RIFT Team`
+        body: `Hi ${data.name},\n\nThank you for joining the RIFT Early Bird waitlist!\n\nYou're interested in ${data.quantity} machine${data.quantity > 1 ? 's' : ''} and you've secured the 25% discount.\n\nWe'll notify you as soon as pre-orders open. Get ready for the world's first Solana-native ATM.\n\n— The RIFT Team`
       });
       return signup;
     },
@@ -39,6 +40,7 @@ export default function SignupSection() {
       setEmail('');
       setName('');
       setQuantity(1);
+      setLocation('');
     },
   });
 
@@ -59,7 +61,7 @@ export default function SignupSection() {
       toast({ title: 'Please select at least 1 machine', variant: 'destructive' });
       return;
     }
-    signupMutation.mutate({ email, name, quantity });
+    signupMutation.mutate({ email, name, quantity, location });
   };
 
   return (
@@ -102,6 +104,13 @@ export default function SignupSection() {
                   className="bg-secondary border-border font-body text-foreground placeholder:text-muted-foreground h-12"
                 />
               </div>
+              <Input
+                type="text"
+                placeholder="ATM location — city, country or venue (e.g. Paris, France)"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+                className="bg-secondary border-border font-body text-foreground placeholder:text-muted-foreground h-12"
+              />
               <div className="flex flex-col sm:flex-row gap-3">
                 <Select value={quantity.toString()} onValueChange={(val) => setQuantity(parseInt(val))}>
                   <SelectTrigger className="bg-secondary border-border h-12">

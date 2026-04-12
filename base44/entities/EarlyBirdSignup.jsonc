@@ -1,0 +1,28 @@
+{
+  "name": "EarlyBirdSignup",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "description": "Email address of the early bird subscriber"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the subscriber"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Number of RIFT machines interested in purchasing",
+      "default": 1
+    },
+    "location": {
+      "type": "string",
+      "description": "Planned ATM location (city, country or venue)"
+    }
+  },
+  "required": [
+    "email",
+    "name",
+    "quantity"
+  ]
+}
