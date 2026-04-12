@@ -6,7 +6,7 @@ const streams = [
   {
     icon: DollarSign,
     title: "Transaction Fees",
-    description: "Earn 1-3% on every cash-to-crypto conversion processed through your terminal."
+    description: "Earn a percentage on every transaction processed through your terminal — cash-in or cash-out."
   },
   {
     icon: MapPin,
@@ -16,7 +16,7 @@ const streams = [
   {
     icon: Monitor,
     title: "Digital Advertising",
-    description: "Monetize the screen during idle time with crypto project ads and promotions."
+    description: "A RIFT terminal draws a new category of crypto-native customers to your location — people actively looking to convert cash or withdraw funds on the spot."
   },
   {
     icon: Building2,
