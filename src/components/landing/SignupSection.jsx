@@ -197,10 +197,13 @@ export default function SignupSection() {
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="flex items-center justify-center gap-3 bg-primary/10 border border-primary/20 rounded-lg px-6 py-4 max-w-md mx-auto mb-10"
+              className="flex flex-col items-center gap-3 bg-primary/10 border border-primary/20 rounded-lg px-6 py-4 max-w-md mx-auto mb-10"
             >
-              <Check className="w-5 h-5 text-primary" />
-              <span className="font-body text-foreground">You're on the list! We'll notify you when pre-orders open.</span>
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 text-primary" />
+                <span className="font-body text-foreground">You're on the list! We'll notify you when pre-orders open.</span>
+              </div>
+              <p className="font-body text-xs text-muted-foreground">Confirmation email sent — check your <strong className="text-foreground">spam or promotions</strong> folder if you don't see it.</p>
             </motion.div>
           )}
 
