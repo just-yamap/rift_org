@@ -12,6 +12,7 @@ import Footer from '../components/landing/Footer';
 import ATMWidget from '../components/landing/ATMWidget';
 import InfoBar from '../components/landing/InfoBar';
 import ContactBubble from '../components/landing/ContactBubble';
+import RiftConnectSection from '../components/landing/RiftConnectSection';
 
 const ATM_IMAGE = "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/8a2235161_image.png";
 
@@ -23,6 +24,7 @@ export default function Home() {
       <InfoBar />
       <SignupSection />
       <Vision />
+      <RiftConnectSection />
       <HowItWorks />
       <Features />
       <BusinessModel />

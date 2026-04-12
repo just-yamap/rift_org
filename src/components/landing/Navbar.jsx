@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Download } from 'lucide-react';
 import RiftLogo from './RiftLogo';
 
 export default function Navbar() {
@@ -21,6 +22,17 @@ export default function Navbar() {
           <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors font-body text-sm">How It Works</a>
           <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors font-body text-sm">Features</a>
           <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors font-body text-sm">FAQ</a>
+
+          <a
+            href="https://rift-pass-link.base44.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 border border-border text-foreground px-4 py-2 rounded font-heading text-sm font-semibold hover:bg-secondary transition-colors"
+          >
+            <Download className="w-3.5 h-3.5" />
+            RIFT CONNECT
+          </a>
+
 
           {/* Try Demo dropdown */}
           <div className="relative" onMouseEnter={() => setDemoOpen(true)} onMouseLeave={() => setDemoOpen(false)}>
