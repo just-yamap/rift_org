@@ -3,6 +3,18 @@ import RiftLogo from './RiftLogo';
 import { base44 } from '@/api/base44Client';
 import { Download } from 'lucide-react';
 
+async function downloadStyleGuide() {
+  const response = await base44.functions.invoke('styleGuide', {});
+  const text = typeof response.data === 'string' ? response.data : JSON.stringify(response.data);
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'RIFT_ATM_StyleGuide.txt';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 export default function Footer() {
   return (
     <footer className="border-t border-border py-12 px-6">
@@ -33,13 +45,13 @@ export default function Footer() {
         <p className="font-body text-xs text-muted-foreground">
           © {new Date().getFullYear()} RIFT. All rights reserved.
         </p>
-        <a
-          href="/api/functions/styleGuide"
+        <button
+          onClick={downloadStyleGuide}
           className="flex items-center gap-1.5 font-body text-xs text-muted-foreground hover:text-foreground transition-colors"
         >
           <Download className="w-3 h-3" />
           Download Style Guide
-        </a>
+        </button>
       </div>
     </footer>
   );
