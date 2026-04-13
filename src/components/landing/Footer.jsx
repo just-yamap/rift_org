@@ -45,6 +45,11 @@ export default function Footer() {
         <p className="font-body text-xs text-muted-foreground">
           © {new Date().getFullYear()} RIFT. All rights reserved.
         </p>
+      </div>
+      <div className="max-w-7xl mx-auto mt-6 pt-6 border-t border-border/50 flex flex-col items-center gap-4">
+        <p className="font-body text-xs text-muted-foreground/60 leading-relaxed text-center max-w-3xl">
+          <span className="font-semibold text-muted-foreground/80">Disclaimer:</span> RIFT ATM is a hardware and software manufacturer only. We do not operate machines, provide liquidity, custody funds, or perform swaps. The operator is fully responsible for all licensing, compliance, AML/KYC, and legal obligations in their jurisdiction.
+        </p>
         <button
           onClick={downloadStyleGuide}
           className="flex items-center gap-1.5 font-body text-xs text-muted-foreground hover:text-foreground transition-colors"
