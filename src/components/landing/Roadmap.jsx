@@ -48,10 +48,10 @@ export default function Roadmap() {
             {milestones.map((m, i) => (
               <motion.div
                 key={m.quarter}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -28 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+                transition={{ duration: 0.55, ease: 'easeOut', delay: i * 0.15 }}
                 className="flex gap-8 pl-12 relative"
               >
                 <div className={`absolute left-0 top-1.5 w-8 h-8 rounded-full border-2 flex items-center justify-center ${m.active ? 'bg-primary border-primary' : 'bg-background border-border'}`}>
