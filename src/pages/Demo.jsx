@@ -4,8 +4,6 @@ import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/landing/Footer';
-import RiftDemo from '../components/demo/RiftDemo';
-
 export default function Demo() {
   return (
     <div className="min-h-screen bg-background">
@@ -42,7 +40,15 @@ export default function Demo() {
               <h2 className="font-heading text-xl font-semibold text-foreground">Interactive Demo</h2>
               <span className="text-xs font-body text-muted-foreground">Click to interact • Full transaction flow</span>
             </div>
-            <RiftDemo />
+            <div className="w-full rounded-xl overflow-hidden border border-border shadow-2xl" style={{ height: '700px' }}>
+              <iframe
+                src="https://just-yamap.github.io/rift/"
+                title="RIFT ATM Terminal Demo"
+                className="w-full h-full"
+                style={{ border: 'none' }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+              />
+            </div>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
