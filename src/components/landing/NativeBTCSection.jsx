@@ -35,10 +35,10 @@ export default function NativeBTCSection() {
         >
           <span className="font-heading text-xs text-muted-foreground tracking-widest uppercase">Cross-Chain</span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4 leading-tight">
-            Real Bitcoin. Real Ethereum.<br />Delivered from cash, in seconds.
+            Built on Solana.<br />Reach every chain.
           </h2>
           <p className="font-body text-muted-foreground max-w-2xl text-lg leading-relaxed">
-            Most crypto ATMs give you <em>wrapped</em> tokens locked to one chain. Rift is different. Insert cash at a Rift kiosk in São Paulo or Belgrade and walk away with <strong className="text-foreground">native BTC</strong> in your real Bitcoin wallet. No bridge UI, no wrapped tokens, no custody handoff.
+            Rift is a Solana-native ATM — sub-cent fees, 400ms settlement. Insert cash and walk away with <strong className="text-foreground">native BTC, ETH, or any supported asset</strong> delivered directly to your wallet. No bridge UI, no custody handoff.
           </p>
         </motion.div>
 
