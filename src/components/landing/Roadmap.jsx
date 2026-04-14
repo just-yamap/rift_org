@@ -43,25 +43,42 @@ export default function Roadmap() {
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-4 top-0 bottom-0 w-px bg-border" />
+          <div className="absolute left-4 top-0 bottom-0 w-px bg-border/30" />
+          <motion.div 
+            className="absolute left-4 top-0 w-px bg-primary"
+            initial={{ height: 0 }}
+            whileInView={{ height: "100%" }}
+            viewport={{ once: false, margin: "0px 0px -100px 0px" }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          />
           <div className="space-y-8">
             {milestones.map((m, i) => (
               <motion.div
                 key={m.quarter}
-                initial={{ opacity: 0, x: -28 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.55, ease: 'easeOut', delay: i * 0.15 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, margin: "0px 0px -60px 0px" }}
+                transition={{ duration: 0.5 }}
                 className="flex gap-8 pl-12 relative"
               >
-                <div className={`absolute left-0 top-1.5 w-8 h-8 rounded-full border-2 flex items-center justify-center ${m.active ? 'bg-primary border-primary' : 'bg-background border-border'}`}>
+                <motion.div 
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: false, margin: "0px 0px -60px 0px" }}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                  className={`absolute left-0 top-1.5 w-8 h-8 rounded-full border-2 flex items-center justify-center ${m.active ? 'bg-primary border-primary' : 'bg-background border-border'}`}>
                   {m.active && <div className="w-2 h-2 rounded-full bg-primary-foreground" />}
-                </div>
-                <div className={`flex-1 bg-card border rounded-xl p-6 ${m.active ? 'border-primary/40' : 'border-border'}`}>
+                </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: false, margin: "0px 0px -60px 0px" }}
+                  transition={{ duration: 0.5, delay: 0.15 }}
+                  className={`flex-1 bg-card border rounded-xl p-6 hover:border-primary/50 transition-colors ${m.active ? 'border-primary/40' : 'border-border'}`}>
                   <p className={`font-heading text-xs tracking-widest uppercase mb-1 ${m.active ? 'text-primary' : 'text-muted-foreground'}`}>{m.quarter}</p>
                   <h3 className="font-heading text-lg font-semibold text-foreground mb-2">{m.title}</h3>
                   <p className="font-body text-sm text-muted-foreground leading-relaxed">{m.description}</p>
-                </div>
+                </motion.div>
               </motion.div>
             ))}
           </div>
