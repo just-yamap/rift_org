@@ -21,6 +21,7 @@ import InfrastructureSection from '../components/landing/InfrastructureSection';
 import TransparencySection from '../components/landing/TransparencySection';
 import SupportedAssets from '../components/landing/SupportedAssets';
 import KioskMap from '../components/landing/KioskMap';
+import FeeCalculator from '../components/landing/FeeCalculator';
 
 const ATM_IMAGE = "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/8a2235161_image.png";
 
@@ -30,6 +31,7 @@ export default function Home() {
       <Navbar />
       <HeroSection atmImageUrl={ATM_IMAGE} />
       <InfoBar />
+      <FeeCalculator />
       <SignupSection />
       <Vision />
       <RiftConnectSection />
