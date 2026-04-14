@@ -48,6 +48,7 @@ const categories = [
       { name: "Covalent GoldRush", logo: null, icon: "🔍", desc: "Wallet risk & sanctions" },
       { name: "KYC / AML", logo: null, icon: "✅", desc: "On-chain audit fields" },
       { name: "Kill Switches", logo: null, icon: "🔒", desc: "Platform + operator level" },
+      { name: "GDPR Ready", logo: null, icon: "📋", desc: "Data minimisation by design" },
     ]
   },
   {
@@ -60,6 +61,7 @@ const categories = [
       { name: "Jupiter Price API", logo: "https://jup.ag/svg/jupiter-logo.svg", desc: "Live token pricing" },
       { name: "Pyth", logo: null, icon: "🐍", desc: "Oracle feeds (planned)" },
       { name: "Coinbase Feed", logo: null, icon: "💱", desc: "EUR/USD spot price" },
+      { name: "On-Chain Receipts", logo: null, icon: "🧾", desc: "Immutable transaction logs" },
     ]
   },
   {

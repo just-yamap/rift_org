@@ -50,13 +50,25 @@ export default function Footer() {
         <p className="font-body text-xs text-muted-foreground/60 leading-relaxed text-center max-w-3xl">
           <span className="font-semibold text-muted-foreground/80">Disclaimer:</span> RIFT ATM is a hardware and software manufacturer only. We do not operate machines, provide liquidity, custody funds, or perform swaps. The operator is fully responsible for all licensing, compliance, AML/KYC, and legal obligations in their jurisdiction.
         </p>
-        <button
-          onClick={downloadStyleGuide}
-          className="flex items-center gap-1.5 font-body text-xs text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <Download className="w-3 h-3" />
-          Download Style Guide
-        </button>
+        <div className="flex items-center gap-6">
+          <button
+            onClick={downloadStyleGuide}
+            className="flex items-center gap-1.5 font-body text-xs text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <Download className="w-3 h-3" />
+            Download Style Guide
+          </button>
+          <a
+            href="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/97beddd47_image.png"
+            download="RIFT_Logo.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 font-body text-xs text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <Download className="w-3 h-3" />
+            Download Logo
+          </a>
+        </div>
       </div>
     </footer>
   );
