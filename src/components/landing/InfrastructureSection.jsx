@@ -77,7 +77,7 @@ function Logo({ item }) {
       <img
         src={item.logo}
         alt={item.name}
-        className="w-6 h-6 object-contain"
+        className="w-8 h-8 object-contain"
         onError={() => setErr(true)}
         style={{ maxWidth: '100%', maxHeight: '100%' }}
       />
@@ -120,9 +120,7 @@ export default function InfrastructureSection() {
               className="group block rounded-xl p-5 border border-white/8 bg-white/3 backdrop-blur-sm hover:bg-white/6 hover:border-white/15 transition-all duration-200"
             >
               <div className="flex items-center gap-2.5 mb-3">
-                <div className="w-8 h-8 rounded-lg bg-white/6 border border-white/10 flex items-center justify-center flex-shrink-0">
-                  <Logo item={item} />
-                </div>
+                <Logo item={item} />
                 <span className="font-heading text-sm font-semibold text-foreground/90 group-hover:text-foreground transition-colors">{item.name}</span>
               </div>
               <p className="font-body text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
