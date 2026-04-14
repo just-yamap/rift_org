@@ -3,15 +3,14 @@ import { motion } from 'framer-motion';
 import { Search } from 'lucide-react';
 
 const preselected = [
-  { symbol: "SOL", name: "Solana's native token", emoji: "🟣" },
-  { symbol: "wBTC", name: "Wrapped Bitcoin on Solana", emoji: "🟠" },
-  { symbol: "wETH", name: "Wrapped Ethereum on Solana", emoji: "🔵" },
-  { symbol: "USDC", name: "USD Coin (Solana)", emoji: "🔵" },
-  { symbol: "BSD", name: "Brazilian Stable Dollar (Solana)", emoji: "🟢" },
-  { symbol: "JUP", name: "Jupiter", emoji: "🟢" },
-  { symbol: "BONK", name: "Bonk", emoji: "🟡" },
-  { symbol: "WIF", name: "dogwifhat", emoji: "🟤" },
-  { symbol: "RAY", name: "Raydium", emoji: "🔵" },
+  { symbol: "SOL", name: "Solana", logo: "https://cryptologos.cc/logos/solana-sol-logo.png" },
+  { symbol: "USDC", name: "USD Coin", logo: "https://cryptologos.cc/logos/usd-coin-usdc-logo.png" },
+  { symbol: "wBTC", name: "Wrapped Bitcoin", logo: "https://cryptologos.cc/logos/wrapped-bitcoin-wbtc-logo.png" },
+  { symbol: "wETH", name: "Wrapped Ethereum", logo: "https://cryptologos.cc/logos/ethereum-eth-logo.png" },
+  { symbol: "JUP", name: "Jupiter", logo: "https://jup.ag/svg/jupiter-logo.svg" },
+  { symbol: "BONK", name: "Bonk", logo: "https://cryptologos.cc/logos/bonk1-bonk-logo.png" },
+  { symbol: "WIF", name: "dogwifhat", logo: "https://cryptologos.cc/logos/dogwifhat-wif-logo.png" },
+  { symbol: "RAY", name: "Raydium", logo: "https://cryptologos.cc/logos/raydium-ray-logo.png" },
 ];
 
 const nativeChains = [
@@ -52,7 +51,9 @@ export default function AssetsSection() {
             <div className="space-y-2">
               {preselected.map((token) => (
                 <div key={token.symbol} className="flex items-center gap-3 bg-card border border-border rounded-lg px-4 py-3 hover:border-primary/30 transition-colors">
-                  <span className="text-lg">{token.emoji}</span>
+                  <div className="w-7 h-7 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 overflow-hidden">
+                    <img src={token.logo} alt={token.symbol} className="w-5 h-5 object-contain" onError={e => e.target.style.display='none'} />
+                  </div>
                   <div>
                     <span className="font-heading text-sm font-bold text-foreground">{token.symbol}</span>
                     <span className="font-body text-xs text-muted-foreground ml-2">{token.name}</span>
@@ -80,11 +81,20 @@ export default function AssetsSection() {
               <p className="font-body text-sm text-muted-foreground leading-relaxed">
                 Search any verified SPL token on Jupiter. We support every token with a <strong className="text-foreground">verified-and-strict</strong> tag and sufficient liquidity. If it trades on Solana with a real route, you can buy it at Rift.
               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {["PYTH", "ORCA", "MNGO", "SAMO", "STEP", "COPE"].map(t => (
-                  <span key={t} className="font-heading text-xs bg-secondary border border-border rounded-full px-3 py-1 text-muted-foreground">{t}</span>
-                ))}
-                <span className="font-heading text-xs bg-secondary border border-border rounded-full px-3 py-1 text-muted-foreground">+ thousands more</span>
+              <div className="mt-4 space-y-2">
+                <div className="flex items-center gap-3 bg-background/50 border border-green-500/20 rounded-lg px-3 py-2">
+                  <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-green-400 text-xs font-bold">$</span>
+                  </div>
+                  <span className="font-heading text-sm font-bold text-foreground">BSD</span>
+                  <span className="font-body text-xs text-muted-foreground">Brazilian Stable Dollar</span>
+                </div>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {["PYTH", "ORCA", "MNGO", "SAMO"].map(t => (
+                    <span key={t} className="font-heading text-xs bg-secondary border border-border rounded-full px-3 py-1 text-muted-foreground">{t}</span>
+                  ))}
+                  <span className="font-heading text-xs bg-secondary border border-border rounded-full px-3 py-1 text-muted-foreground">+ thousands more</span>
+                </div>
               </div>
             </div>
           </motion.div>
