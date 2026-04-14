@@ -79,14 +79,14 @@ const categories = [
 ];
 
 const hackathons = [
-  { name: "Colosseum Frontier", label: "Main Track", url: "https://arena.colosseum.org/", logo: "https://avatars.githubusercontent.com/u/106675373?s=200&v=4" },
+  { name: "Colosseum Frontier", label: "Main Track", url: "https://arena.colosseum.org/", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/5b67011fc_image.png" },
   { name: "Jupiter", label: "Developer Platform", url: "https://jup.ag/", logo: "https://jup.ag/svg/jupiter-logo.svg" },
-  { name: "Umbra", label: "Privacy Track", url: "https://app.umbra.cash/", logo: "https://avatars.githubusercontent.com/u/68905827?s=200&v=4" },
-  { name: "Covalent GoldRush", label: "Data Track", url: "https://goldrush.dev/", logo: "https://avatars.githubusercontent.com/u/33249832?s=200&v=4" },
-  { name: "Dune SIM", label: "Analytics Track", url: "https://dune.com/", logo: "https://avatars.githubusercontent.com/u/47568715?s=200&v=4" },
-  { name: "RPC Fast", label: "Infra Track", url: "https://rpcfast.com/", logo: "https://rpcfast.com/favicon.ico" },
-  { name: "Adevar Labs", label: "Security Audit", url: "https://www.adevarlabs.com/", logo: "https://avatars.githubusercontent.com/u/116872918?s=200&v=4" },
-  { name: "100xDevs", label: "Open Track", url: "https://100xdevs.com/", logo: "https://avatars.githubusercontent.com/u/119992547?s=200&v=4" },
+  { name: "Umbra", label: "Privacy Track", url: "https://app.umbra.cash/", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/e9eaa355f_image.png" },
+  { name: "Covalent GoldRush", label: "Data Track", url: "https://goldrush.dev/", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/783905a66_image.png" },
+  { name: "Dune SIM", label: "Analytics Track", url: "https://dune.com/", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/60237420b_image.png" },
+  { name: "RPC Fast", label: "Infra Track", url: "https://rpcfast.com/", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/038d8f03e_image.png" },
+  { name: "Adevar Labs", label: "Security Audit", url: "https://www.adevarlabs.com/", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/c442bd152_image.png" },
+  { name: "100xDevs", label: "Open Track", url: "https://100xdevs.com/", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/4ccbd670c_image.png" },
 ];
 
 function LogoOrIcon({ item, accent }) {
