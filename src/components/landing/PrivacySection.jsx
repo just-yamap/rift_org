@@ -33,58 +33,72 @@ const cards = [
 ];
 
 export default function PrivacySection() {
+  const cardColors = [
+    { accent: 'from-purple-500/10 to-purple-500/5', border: 'border-purple-500/20', label: 'purple' },
+    { accent: 'from-blue-500/10 to-blue-500/5', border: 'border-blue-500/20', label: 'blue' },
+    { accent: 'from-green-500/10 to-green-500/5', border: 'border-green-500/20', label: 'green' },
+    { accent: 'from-orange-500/10 to-orange-500/5', border: 'border-orange-500/20', label: 'orange' },
+  ];
+
   return (
-    <section className="py-24 px-6 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/3 to-transparent" />
+    <section className="py-24 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/2 to-transparent" />
       <div className="relative max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-16"
         >
           <span className="font-heading text-xs text-muted-foreground tracking-widest uppercase">Privacy</span>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4 leading-tight">
-            Privacy by design.<br />Compliance by default.
+          <h2 className="font-heading text-5xl md:text-6xl font-black text-foreground mt-4 mb-6 leading-tight">
+            Privacy by design,<br />compliance by default.
           </h2>
-          <p className="font-body text-muted-foreground max-w-xl text-lg">
+          <p className="font-body text-muted-foreground max-w-2xl text-base">
             How your money stays private.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {cards.map((card, i) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-xl p-6 border border-white/10 bg-white/4 backdrop-blur-sm hover:bg-white/7 hover:border-white/20 transition-all duration-200 relative overflow-hidden"
-            >
-              {/* Logo background watermark */}
-              <div className="absolute top-2 right-2 opacity-5 pointer-events-none">
-                <img
-                  src={card.logo}
-                  alt=""
-                  className="w-16 h-16 object-contain"
-                />
-              </div>
-              <h3 className="font-heading text-base font-bold text-foreground mb-3">{card.title}</h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                {card.body}
-              </p>
-              <a
-                href={card.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 mt-4 font-heading text-xs text-muted-foreground hover:text-foreground transition-colors hover:underline"
+          {cards.map((card, i) => {
+            const colors = cardColors[i];
+            return (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className={`rounded-xl p-6 border ${colors.border} bg-gradient-to-br ${colors.accent} backdrop-blur-sm hover:border-${colors.label}-500/40 transition-all duration-200 group`}
               >
-                Learn about {card.linkLabel} →
-              </a>
-            </motion.div>
-          ))}
+                {/* Icon at top */}
+                <div className="w-8 h-8 mb-5 flex items-center justify-center">
+                  <img
+                    src={card.logo}
+                    alt=""
+                    className="w-6 h-6 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+
+                <h3 className="font-heading text-base font-bold text-foreground mb-3 leading-snug">
+                  {card.title}
+                </h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
+                  {card.body}
+                </p>
+                <a
+                  href={card.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-heading text-xs text-muted-foreground hover:text-foreground transition-colors group/link"
+                >
+                  Learn about {card.linkLabel}
+                  <span className="opacity-0 group-hover/link:opacity-100 transition-opacity">→</span>
+                </a>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
