@@ -18,7 +18,7 @@ const items = [
   },
   {
     label: "Audit",
-    content: "Scheduled with Adevar Labs as part of the Colosseum Frontier Hackathon security track.",
+    content: "Planned with Adevar Labs — contingent on Colosseum Frontier Hackathon results.",
     href: null,
   },
   {
