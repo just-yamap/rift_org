@@ -19,7 +19,6 @@ import PrivacySection from '../components/landing/PrivacySection';
 import NativeBTCSection from '../components/landing/NativeBTCSection';
 import InfrastructureSection from '../components/landing/InfrastructureSection';
 import TransparencySection from '../components/landing/TransparencySection';
-import FeeCalculator from '../components/landing/FeeCalculator';
 import SupportedAssets from '../components/landing/SupportedAssets';
 import KioskMap from '../components/landing/KioskMap';
 
@@ -31,7 +30,6 @@ export default function Home() {
       <Navbar />
       <HeroSection atmImageUrl={ATM_IMAGE} />
       <InfoBar />
-      <FeeCalculator />
       <SignupSection />
       <Vision />
       <RiftConnectSection />
