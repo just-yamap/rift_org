@@ -14,6 +14,7 @@ const items = [
     content: "The Anchor program, kiosk UI, and backend connector are public on GitHub.",
     href: "https://github.com/just-yamap/rift",
     linkLabel: "View on GitHub",
+    linkIcon: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/1ce797349_image.png",
   },
   {
     label: "Audit",
@@ -66,9 +67,12 @@ export default function TransparencySection() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 mt-2 font-heading text-xs text-primary hover:underline"
+                    className="inline-flex items-center gap-1.5 mt-2 font-heading text-xs text-primary hover:underline"
                   >
-                    <ExternalLink className="w-3 h-3" />
+                    {item.linkIcon
+                      ? <img src={item.linkIcon} alt="" className="w-3.5 h-3.5 object-contain rounded-sm" style={{ filter: 'brightness(0) invert(1) opacity(0.8)' }} />
+                      : <ExternalLink className="w-3 h-3" />
+                    }
                     {item.linkLabel}
                   </a>
                 )}
