@@ -84,10 +84,10 @@ export default function NativeBTCSection() {
               className="relative bg-white/3 border border-white/8 backdrop-blur-sm rounded-xl p-6 hover:bg-white/5 hover:border-white/15 transition-all duration-200 overflow-hidden"
             >
               {/* Big background number */}
-              <span className="absolute -bottom-3 -right-1 font-heading text-8xl font-black text-white/4 select-none leading-none">
+              <span className="absolute bottom-2 right-3 font-heading text-7xl font-black text-white/[0.06] select-none leading-none pointer-events-none" style={{zIndex: 0}}>
                 {step.num}
               </span>
-              <div className="relative">
+              <div className="relative" style={{zIndex: 1}}>
                 <p className="font-heading text-xs tracking-widest text-muted-foreground mb-4">{step.num}</p>
                 <h3 className="font-heading text-lg font-bold text-foreground mb-3">{step.title}</h3>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed">
