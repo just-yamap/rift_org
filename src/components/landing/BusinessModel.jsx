@@ -1,28 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DollarSign, MapPin, Monitor, Building2 } from 'lucide-react';
+import { DollarSign, TrendingUp, Layers } from 'lucide-react';
 
 const streams = [
   {
     icon: DollarSign,
-    title: "Operator commission (1–15%)",
-    description: "You set the rate from your admin dashboard, with optional tiered pricing (e.g. 5% up to €200, 4% up to €1,000, 3% above). Different tiers for buys vs. sells. Changeable in real time."
+    title: "Commission (1–15%)",
+    description: "Operator-set per kiosk, tiered by transaction amount. Different tiers for buys vs sells. Adjustable in real time from the admin dashboard."
   },
   {
-    icon: Monitor,
+    icon: TrendingUp,
     title: "Delta profit from the safety buffer",
-    description: "Every transaction reserves a small safety margin (0–5%) against adverse price moves between the UI quote and the physical cash drop. Any unused buffer is recorded on-chain as your accrued_delta_usdc — pure profit on favorable price moves. You never lose on a bad tick."
+    description: "Every transaction reserves 0–5% against adverse price moves between the UI quote and the cash drop. Any unused buffer is recorded on-chain as accrued_delta_usdc — pure profit on favorable ticks. Operator never loses on slippage."
   },
   {
-    icon: Building2,
+    icon: Layers,
     title: "Capital efficiency",
-    description: "You hold only USDC + SOL. No multi-chain inventory management. Every cross-chain delivery (native BTC, ETH, etc.) is fulfilled in real time by LI.FI solvers, with the cost deducted from the user's transaction — not from your treasury."
+    description: "Hold only USDC + SOL. No multi-chain inventory. Every native-asset delivery (BTC, ETH, etc.) is sourced just-in-time by LI.FI solvers. Every native-asset receipt is liquidated back to USDC on-chain automatically."
   },
 ];
 
-const stats = [
-  { value: "1–15%", label: "Operator Commission Per TX" },
-  { value: "0–5%", label: "Safety Buffer (accrues to operator)" }
+const onChainCounters = [
+  "total_buy_volume_usdc",
+  "total_sell_volume_usdc",
+  "accrued_commission_usdc",
+  "accrued_delta_usdc",
 ];
 
 export default function BusinessModel() {
@@ -42,46 +44,46 @@ export default function BusinessModel() {
             THREE REVENUE<br />STREAMS
           </h2>
           <p className="font-body text-muted-foreground max-w-xl text-lg">
-            How operators make money on every transaction.
+            Three stacking revenue streams, on-chain transparent, operator-controlled.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-14">
-          {stats.map((s, i) => (
-            <motion.div
-              key={s.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-card border border-border rounded-xl p-8 text-center"
-            >
-              <p className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-2">{s.value}</p>
-              <p className="font-heading text-xs text-muted-foreground tracking-widest uppercase">{s.label}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
           {streams.map((s, i) => (
             <motion.div
               key={s.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
               className="bg-card border border-border rounded-xl p-6 hover:border-primary/30 transition-all flex gap-4"
             >
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <s.icon className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h3 className="font-heading text-sm font-semibold text-foreground mb-1">{s.title}</h3>
+                <h3 className="font-heading text-sm font-semibold text-foreground mb-2">{s.title}</h3>
                 <p className="font-body text-xs text-muted-foreground leading-relaxed">{s.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* On-chain counters callout */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="bg-card border border-border rounded-xl p-6"
+        >
+          <p className="font-body text-xs text-muted-foreground mb-3">On-chain counters visible on the admin dashboard:</p>
+          <div className="flex flex-wrap gap-2">
+            {onChainCounters.map(c => (
+              <code key={c} className="font-mono text-xs bg-secondary border border-border rounded px-2 py-1 text-muted-foreground">{c}</code>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

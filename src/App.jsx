@@ -10,6 +10,12 @@ import Admin from './pages/Admin';
 import Setup from './pages/Setup';
 import Demo from './pages/Demo';
 import AdminDemo from './pages/AdminDemo';
+import Operator from './pages/Operator';
+import Privacy from './pages/Privacy';
+import Assets from './pages/Assets';
+import Transparency from './pages/Transparency';
+import Waitlist from './pages/Waitlist';
+import CookieBanner from './components/CookieBanner';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -43,6 +49,11 @@ const AuthenticatedApp = () => {
       <Route path="/setup" element={<Setup />} />
       <Route path="/demo" element={<Demo />} />
       <Route path="/admin-demo" element={<AdminDemo />} />
+      <Route path="/operator" element={<Operator />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/assets" element={<Assets />} />
+      <Route path="/transparency" element={<Transparency />} />
+      <Route path="/waitlist" element={<Waitlist />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
@@ -56,6 +67,7 @@ function App() {
       <QueryClientProvider client={queryClientInstance}>
         <Router>
           <AuthenticatedApp />
+          <CookieBanner />
         </Router>
         <Toaster />
       </QueryClientProvider>

@@ -35,22 +35,23 @@ export default function HeroSection({ atmImageUrl }) {
             </div>
 
             <p className="font-heading text-base md:text-lg font-semibold text-foreground mb-2 leading-snug">
-              Bidirectional, multi-chain, privacy-preserving crypto ATM — built on Solana.
+              The first bidirectional, multi-chain, privacy-preserving crypto ATM — built on Solana.
             </p>
-            <p className="font-body text-sm text-muted-foreground mb-8">No account required. No compromises on privacy.</p>
+            <p className="font-body text-sm text-muted-foreground mb-1">Insert cash, walk away with native BTC, ETH, SOL, or any verified SPL token.</p>
+            <p className="font-body text-sm text-muted-foreground mb-8">Sell any supported asset back to cash, instantly. No account required. No wrapped tokens. No compromises.</p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="#signup"
                 className="bg-foreground text-background px-8 py-3.5 rounded font-heading text-sm font-semibold hover:opacity-80 transition-opacity text-center"
               >
-                EARLY BIRD PURCHASE →
+                FIND A KIOSK →
               </a>
               <a
-                href="/demo"
+                href="/operator"
                 className="border border-border text-foreground px-8 py-3.5 rounded font-heading text-sm font-semibold hover:bg-secondary transition-colors text-center"
               >
-                TRY LIVE DEMO
+                OPERATE A KIOSK
               </a>
             </div>
 
