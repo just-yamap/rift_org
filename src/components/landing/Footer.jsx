@@ -15,59 +15,97 @@ async function downloadStyleGuide() {
   URL.revokeObjectURL(url);
 }
 
+const columns = [
+  {
+    label: "PRODUCT",
+    links: [
+      { label: "How It Works", href: "#how-it-works" },
+      { label: "Assets", href: "/assets" },
+      { label: "Operators", href: "/operator" },
+      { label: "Try Demo", href: "/demo" },
+    ],
+  },
+  {
+    label: "RESOURCES",
+    links: [
+      { label: "GitHub", href: "https://github.com/just-yamap/rift", external: true },
+      { label: "Setup Guide", href: "/setup" },
+      { label: "Transparency", href: "/transparency" },
+    ],
+  },
+  {
+    label: "COMMUNITY",
+    links: [
+      { label: "X / Twitter", href: "https://x.com/riftatm", external: true },
+      { label: "Contact", href: "mailto:contact@riftatm.com" },
+    ],
+  },
+  {
+    label: "LEGAL",
+    links: [
+      { label: "Privacy", href: "/privacy" },
+      { label: "Download Style Guide", onClick: downloadStyleGuide },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
-    <footer className="border-t border-border py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2">
-          <RiftLogo size="sm" showText={true} />
-          <span className="font-body text-xs text-muted-foreground ml-2">Rapid Integrated Fiat Terminal</span>
-        </div>
+    <footer className="border-t border-border/50 px-6 pt-16 pb-8">
+      <div className="max-w-7xl mx-auto">
 
-        <div className="flex items-center gap-6">
-          <a href="/demo" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">ATM User Demo</a>
-          <a href="/admin-demo" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">Operator Dashboard Demo</a>
-          <a href="#how-it-works" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
-          <a href="#features" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">Features</a>
-          <a href="/setup" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors">Setup Guide</a>
-        </div>
-
-        <div className="flex items-center gap-6">
-          <a href="mailto:contact@riftatm.com" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            contact@riftatm.com
-          </a>
-          <a href="https://x.com/riftatm" target="_blank" rel="noopener noreferrer" className="font-body text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.73-8.835L1.254 2.25H8.08l4.259 5.632L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            @riftatm
-          </a>
-        </div>
-        <p className="font-body text-xs text-muted-foreground">
-          © {new Date().getFullYear()} RIFT. All rights reserved.
-        </p>
-      </div>
-      <div className="max-w-7xl mx-auto mt-6 pt-6 border-t border-border/50 flex flex-col items-center gap-4">
-        <p className="font-body text-xs text-muted-foreground/60 leading-relaxed text-center max-w-3xl">
-          <span className="font-semibold text-muted-foreground/80">Disclaimer:</span> RIFT ATM is a hardware and software manufacturer only. We do not operate machines, provide liquidity, custody funds, or perform swaps. The operator is fully responsible for all licensing, compliance, AML/KYC, and legal obligations in their jurisdiction.
-        </p>
-        <div className="flex items-center gap-6">
-          <button
-            onClick={downloadStyleGuide}
-            className="flex items-center gap-1.5 font-body text-xs text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <Download className="w-3 h-3" />
-            Download Style Guide
-          </button>
+        {/* Top bar */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-10 border-b border-border/40">
+          <div>
+            <RiftLogo size="sm" showText={true} />
+            <p className="font-body text-xs text-muted-foreground mt-1">Rapid Integrated Fiat Terminal</p>
+          </div>
           <a
-            href="https://media.base44.com/images/public/69bce5cb012b9c997937b65e/97beddd47_image.png"
-            download="RIFT_Logo.png"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 font-body text-xs text-muted-foreground hover:text-foreground transition-colors"
+            href="#signup"
+            className="self-start sm:self-auto font-body text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
           >
-            <Download className="w-3 h-3" />
-            Download Logo
+            Get early bird pricing →
           </a>
+        </div>
+
+        {/* Columns */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 py-10 border-b border-border/40">
+          {columns.map((col) => (
+            <div key={col.label}>
+              <p className="font-heading text-xs tracking-widest text-muted-foreground mb-4">{col.label}</p>
+              <ul className="space-y-3">
+                {col.links.map((link) => (
+                  <li key={link.label}>
+                    {link.onClick ? (
+                      <button
+                        onClick={link.onClick}
+                        className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
+                      >
+                        {link.label}
+                      </button>
+                    ) : (
+                      <a
+                        href={link.href}
+                        target={link.external ? '_blank' : undefined}
+                        rel={link.external ? 'noopener noreferrer' : undefined}
+                        className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom */}
+        <div className="pt-6 flex flex-col sm:flex-row sm:items-start gap-4">
+          <p className="font-body text-xs text-muted-foreground/50">© {new Date().getFullYear()} RIFT. All rights reserved.</p>
+          <p className="font-body text-xs text-muted-foreground/40 sm:ml-auto max-w-xl leading-relaxed">
+            RIFT ATM is a hardware and software manufacturer only. We do not operate machines, provide liquidity, custody funds, or perform swaps. The operator is fully responsible for all licensing, compliance, AML/KYC, and legal obligations in their jurisdiction.
+          </p>
         </div>
       </div>
     </footer>

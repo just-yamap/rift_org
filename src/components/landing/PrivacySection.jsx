@@ -73,12 +73,12 @@ export default function PrivacySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`bg-card border ${card.accent} rounded-xl p-6 bg-gradient-to-br ${card.gradient}`}
+              className="rounded-xl p-6 border border-white/8 bg-white/3 backdrop-blur-sm hover:bg-white/6 hover:border-white/15 transition-all duration-200"
             >
-              <div className="w-10 h-10 rounded-lg bg-background/50 flex items-center justify-center mb-4 text-xl">
+              <div className="w-10 h-10 rounded-lg bg-white/6 border border-white/10 flex items-center justify-center mb-4 text-xl">
                 {card.icon}
               </div>
-              <h3 className={`font-heading text-base font-bold ${card.accentText} mb-1`}>{card.title}</h3>
+              <h3 className="font-heading text-base font-bold text-foreground mb-1">{card.title}</h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed mt-3">
                 {card.body}
               </p>
@@ -86,7 +86,7 @@ export default function PrivacySection() {
                 href={card.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex items-center gap-1 mt-4 font-heading text-xs ${card.accentText} hover:underline`}
+                className="inline-flex items-center gap-1 mt-4 font-heading text-xs text-muted-foreground hover:text-foreground transition-colors hover:underline"
               >
                 Learn about {card.linkLabel} →
               </a>

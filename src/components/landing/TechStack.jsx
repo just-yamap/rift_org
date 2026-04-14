@@ -9,7 +9,7 @@ const categories = [
     border: "border-orange-500/20",
     items: [
       { name: "Solana (mainnet-beta)", logo: "https://cryptologos.cc/logos/solana-sol-logo.png", desc: "L1 blockchain" },
-      { name: "Anchor 0.31.1", logo: null, icon: "⚓", desc: "Rust smart contract framework" },
+      { name: "Anchor 0.31.1", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/5e13c286e_image.png", desc: "Rust smart contract framework" },
       { name: "SPL Token Standard", logo: null, icon: "🔷", desc: "Token standard" },
       { name: "Associated Token Program", logo: null, icon: "🔗", desc: "ATA management" },
       { name: "Jupiter v6 / Swap V2", logo: "https://jup.ag/svg/jupiter-logo.svg", desc: "Developer Platform swap" },
@@ -46,7 +46,7 @@ const categories = [
     border: "border-green-500/20",
     items: [
       { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", desc: "Runtime" },
-      { name: "@coral-xyz/anchor", logo: null, icon: "⚓", desc: "Anchor client SDK" },
+      { name: "@coral-xyz/anchor", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/5e13c286e_image.png", desc: "Anchor client SDK" },
       { name: "@solana/web3.js + spl-token", logo: null, icon: "🔷", desc: "Solana JS stack" },
       { name: "Privy server SDK", logo: null, icon: "🔑", desc: "Operator wallet signing" },
       { name: "WebSocket bridges", logo: null, icon: "⚙", desc: "NV200 cash unit + ESC/POS thermal printer" },
@@ -150,15 +150,15 @@ export default function TechStack() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: ci * 0.07 }}
-              className={`bg-card border ${cat.border} rounded-xl p-6 bg-gradient-to-br ${cat.color}`}
+              className="rounded-xl p-6 border border-white/8 bg-white/3 backdrop-blur-sm"
             >
-              <p className={`font-heading text-xs tracking-widest uppercase mb-1 ${cat.accent}`}>{cat.label}</p>
+              <p className="font-heading text-xs tracking-widest uppercase mb-1 text-muted-foreground">{cat.label}</p>
               {cat.note && <p className="font-body text-xs text-muted-foreground/60 italic mb-4">{cat.note}</p>}
               {!cat.note && <div className="mb-4" />}
               <div className="space-y-3">
                 {cat.items.map(item => (
                   <div key={item.name} className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-background/50 flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 rounded-lg bg-white/6 border border-white/10 flex items-center justify-center flex-shrink-0">
                       <LogoOrIcon item={item} accent={cat.accent} />
                     </div>
                     <div>
@@ -192,7 +192,7 @@ export default function TechStack() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 hover:border-primary/40 hover:bg-secondary transition-colors"
+                className="flex items-center gap-2 border border-white/10 bg-white/4 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-white/8 hover:border-white/20 transition-colors"
               >
                 {h.logo ? (
                   <img src={h.logo} alt={h.name} className="w-4 h-4 rounded-full object-cover flex-shrink-0" onError={e => e.target.style.display='none'} />
