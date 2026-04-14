@@ -13,14 +13,14 @@ const cards = [
     title: "Squads multi-sig custody",
     href: "https://squads.so",
     linkLabel: "Squads",
-    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/d425f6ab3_image.png",
+    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/4ead2372c_generated_image.png",
     body: "Every operator's Solana vault is secured by a Squads 2-of-3 multi-signature wallet. No single key can drain the kiosk. Any meaningful action needs approval from two independent parties.",
   },
   {
     title: "Ika MPC for cross-chain receives",
     href: "https://ika.xyz",
     linkLabel: "Ika",
-    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/c442bd152_image.png",
+    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/20a44efd1_generated_image.png",
     body: "When you sell native BTC or ETH, your deposit goes to an address controlled by Ika's 2PC-MPC protocol. Even if the kiosk's software is compromised, attackers only ever hold a single share. The received asset stays safe.",
   },
   {

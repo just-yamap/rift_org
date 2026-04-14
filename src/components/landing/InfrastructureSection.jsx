@@ -11,8 +11,7 @@ const infra = [
   {
     name: "Anchor",
     href: "https://www.anchor-lang.com",
-    // Anchor wordmark logo
-    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/5e13c286e_image.png",
+    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/863ec5eab_generated_image.png",
     desc: "The Rust framework securing Rift's on-chain program. 18 instructions deployed on devnet.",
   },
   {
@@ -30,7 +29,7 @@ const infra = [
   {
     name: "MagicBlock",
     href: "https://magicblock.gg",
-    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/ec75713f1_image.png",
+    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/7c4d76708_generated_image.png",
     desc: "Ephemeral Rollups give the kiosk flow sub-200ms finality, then commit back to mainnet.",
   },
   {
@@ -42,7 +41,7 @@ const infra = [
   {
     name: "Privy",
     href: "https://privy.io",
-    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/c43ddd9fe_image.png",
+    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/61e96c881_generated_image.png",
     desc: "Operator wallet authentication. Email/social/passkey login — no seed phrase on a Post-it.",
   },
   {
@@ -54,14 +53,13 @@ const infra = [
   {
     name: "Squads",
     href: "https://squads.so",
-    // Squads logo provided
-    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/d425f6ab3_image.png",
+    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/4ead2372c_generated_image.png",
     desc: "Solana-native 2-of-3 multi-sig for operator + platform custody. No single key can drain a kiosk.",
   },
   {
     name: "Ika",
     href: "https://ika.xyz",
-    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/c442bd152_image.png",
+    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/20a44efd1_generated_image.png",
     desc: "2PC-MPC dWallets for secure native BTC/ETH/other-chain custody.",
   },
   {

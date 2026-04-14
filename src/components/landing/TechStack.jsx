@@ -7,7 +7,7 @@ const categories = [
     accent: "text-orange-400",
     items: [
       { name: "Solana (mainnet-beta)", logo: "https://cryptologos.cc/logos/solana-sol-logo.png", desc: "L1 blockchain" },
-      { name: "Anchor 0.31.1", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/5e13c286e_image.png", desc: "Rust smart contract framework" },
+      { name: "Anchor 0.31.1", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/863ec5eab_generated_image.png", desc: "Rust smart contract framework" },
       { name: "SPL Token Standard", logo: null, icon: "🔷", desc: "Token standard" },
       { name: "Associated Token Program", logo: null, icon: "🔗", desc: "ATA management" },
       { name: "Jupiter v6 / Swap V2", logo: "https://jup.ag/svg/jupiter-logo.svg", desc: "Developer Platform swap" },
@@ -21,7 +21,7 @@ const categories = [
     items: [
       { name: "Umbra SDK", logo: null, icon: "🛡", desc: "Confidential SPL transfers, viewing-key regulatory decryption" },
       { name: "Encrypt (REFHE)", logo: null, icon: "🔒", desc: "Fully-homomorphic-encrypted vault balances" },
-      { name: "Ika 2PC-MPC", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/c442bd152_image.png", desc: "dWallet multi-party custody + cross-chain signing" },
+      { name: "Ika 2PC-MPC", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/20a44efd1_generated_image.png", desc: "dWallet multi-party custody + cross-chain signing" },
       { name: "Covalent GoldRush", logo: null, icon: "🔍", desc: "Real-time wallet risk scoring, sanctions screening" },
     ]
   },
@@ -40,7 +40,7 @@ const categories = [
       { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", desc: "Runtime" },
       { name: "@coral-xyz/anchor", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/5e13c286e_image.png", desc: "Anchor client SDK" },
       { name: "@solana/web3.js + spl-token", logo: null, icon: "🔷", desc: "Solana JS stack" },
-      { name: "Privy server SDK", logo: null, icon: "🔑", desc: "Operator wallet signing" },
+      { name: "Privy server SDK", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/61e96c881_generated_image.png", icon: null, desc: "Operator wallet signing" },
       { name: "WebSocket bridges", logo: null, icon: "⚙", desc: "NV200 cash unit + ESC/POS thermal printer" },
     ]
   },
