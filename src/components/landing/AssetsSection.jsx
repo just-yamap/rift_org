@@ -14,9 +14,9 @@ const preselected = [
 ];
 
 const nativeChains = [
-  { symbol: "BTC", name: "Native Bitcoin — real BTC, not wrapped — delivered to your Bitcoin wallet via LI.FI cross-chain routing", emoji: "🟠" },
-  { symbol: "ETH", name: "Native Ethereum (real ETH on Ethereum mainnet)", emoji: "🔵" },
-  { symbol: "More", name: "Any chain LI.FI supports (Polygon, Base, Arbitrum, Optimism, etc.)", emoji: "⛓" },
+  { symbol: "BTC", name: "Native Bitcoin — real BTC, not wrapped — delivered to your Bitcoin wallet via LI.FI cross-chain routing", logo: "https://cryptologos.cc/logos/bitcoin-btc-logo.png" },
+  { symbol: "ETH", name: "Native Ethereum (real ETH on Ethereum mainnet)", logo: "https://cryptologos.cc/logos/ethereum-eth-logo.png" },
+  { symbol: "More", name: "Any chain LI.FI supports (Polygon, Base, Arbitrum, Optimism, etc.)", logo: "https://li.fi/logo192.png" },
 ];
 
 export default function AssetsSection() {
@@ -115,7 +115,9 @@ export default function AssetsSection() {
             <div className="space-y-2">
               {nativeChains.map((token) => (
                 <div key={token.symbol} className="flex items-start gap-3 bg-card border border-orange-500/20 rounded-lg px-4 py-3 bg-gradient-to-br from-orange-500/5 to-transparent">
-                  <span className="text-lg mt-0.5">{token.emoji}</span>
+                  <div className="w-7 h-7 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 overflow-hidden mt-0.5">
+                    <img src={token.logo} alt={token.symbol} className="w-5 h-5 object-contain" onError={e => e.target.style.display='none'} />
+                  </div>
                   <div>
                     <span className="font-heading text-sm font-bold text-foreground">{token.symbol}</span>
                     <p className="font-body text-xs text-muted-foreground mt-0.5 leading-relaxed">{token.name}</p>
