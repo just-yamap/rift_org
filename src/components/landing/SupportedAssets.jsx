@@ -7,10 +7,7 @@ const ASSETS = [
   { symbol: 'USDC', name: 'USD Coin', logo: 'https://cryptologos.cc/logos/usd-coin-usdc-logo.png', network: 'Solana', category: 'SPL' },
   { symbol: 'JUP', name: 'Jupiter', logo: 'https://jup.ag/svg/jupiter-logo.svg', network: 'Solana', category: 'SPL' },
   { symbol: 'BONK', name: 'Bonk', logo: 'https://cryptologos.cc/logos/bonk1-bonk-logo.png', network: 'Solana', category: 'SPL' },
-  { symbol: 'WIF', name: 'dogwifhat', logo: 'https://cryptologos.cc/logos/dogwifhat-wif-logo.png', network: 'Solana', category: 'SPL' },
-  { symbol: 'RAY', name: 'Raydium', logo: 'https://cryptologos.cc/logos/raydium-ray-logo.png', network: 'Solana', category: 'SPL' },
-  { symbol: 'PYTH', name: 'Pyth Network', logo: 'https://cryptologos.cc/logos/pyth-network-pyth-logo.png', network: 'Solana', category: 'SPL' },
-  { symbol: 'ORCA', name: 'Orca', logo: 'https://cryptologos.cc/logos/orca-orca-logo.png', network: 'Solana', category: 'SPL' },
+  { symbol: 'BSD', name: 'Brazilian Stable Dollar', logo: 'https://cryptologos.cc/logos/usd-coin-usdc-logo.png', network: 'Solana', category: 'SPL' },
   
   // Wrapped Assets
   { symbol: 'wBTC', name: 'Wrapped Bitcoin', logo: 'https://cryptologos.cc/logos/wrapped-bitcoin-wbtc-logo.png', network: 'Solana', category: 'Wrapped' },
