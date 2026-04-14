@@ -77,14 +77,14 @@ const categories = [
 ];
 
 const hackathons = [
-  { name: "Colosseum Frontier", label: "Main Track", url: "https://arena.colosseum.org/", logo: "https://pbs.twimg.com/profile_images/1892342193313964032/JxUjfJHs_400x400.jpg" },
+  { name: "Colosseum Frontier", label: "Main Track", url: "https://arena.colosseum.org/", logo: "https://avatars.githubusercontent.com/u/106675373?s=200&v=4" },
   { name: "Jupiter", label: "Developer Platform", url: "https://jup.ag/", logo: "https://jup.ag/svg/jupiter-logo.svg" },
-  { name: "Umbra", label: "Privacy Track", url: "https://app.umbra.cash/", logo: "https://pbs.twimg.com/profile_images/1455321039758behov/oJMRRZyT_400x400.jpg" },
-  { name: "Covalent GoldRush", label: "Data Track", url: "https://goldrush.dev/", logo: "https://pbs.twimg.com/profile_images/1807484329730207744/KtSKlNVo_400x400.jpg" },
-  { name: "Dune SIM", label: "Analytics Track", url: "https://dune.com/", logo: "https://pbs.twimg.com/profile_images/1745565191489183744/OoGqROMl_400x400.jpg" },
-  { name: "RPC Fast", label: "Infra Track", url: "https://rpcfast.com/", logo: "https://pbs.twimg.com/profile_images/1659251694846717952/x4lFPGbQ_400x400.jpg" },
-  { name: "Adevar Labs", label: "Security Audit", url: "https://www.adevarlabs.com/", logo: null },
-  { name: "100xDevs", label: "Open Track", url: "https://100xdevs.com/", logo: "https://pbs.twimg.com/profile_images/1667489665857552384/OqkdDi4f_400x400.jpg" },
+  { name: "Umbra", label: "Privacy Track", url: "https://app.umbra.cash/", logo: "https://avatars.githubusercontent.com/u/68905827?s=200&v=4" },
+  { name: "Covalent GoldRush", label: "Data Track", url: "https://goldrush.dev/", logo: "https://avatars.githubusercontent.com/u/33249832?s=200&v=4" },
+  { name: "Dune SIM", label: "Analytics Track", url: "https://dune.com/", logo: "https://avatars.githubusercontent.com/u/47568715?s=200&v=4" },
+  { name: "RPC Fast", label: "Infra Track", url: "https://rpcfast.com/", logo: "https://rpcfast.com/favicon.ico" },
+  { name: "Adevar Labs", label: "Security Audit", url: "https://www.adevarlabs.com/", logo: "https://avatars.githubusercontent.com/u/116872918?s=200&v=4" },
+  { name: "100xDevs", label: "Open Track", url: "https://100xdevs.com/", logo: "https://avatars.githubusercontent.com/u/119992547?s=200&v=4" },
 ];
 
 function LogoOrIcon({ item, accent }) {
