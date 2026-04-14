@@ -25,7 +25,7 @@ const categories = [
     items: [
       { name: "Umbra SDK", logo: null, icon: "🛡", desc: "Confidential SPL transfers, viewing-key regulatory decryption" },
       { name: "Encrypt (REFHE)", logo: null, icon: "🔒", desc: "Fully-homomorphic-encrypted vault balances" },
-      { name: "Ika 2PC-MPC", logo: null, icon: "🔐", desc: "dWallet multi-party custody + cross-chain signing" },
+      { name: "Ika 2PC-MPC", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/c442bd152_image.png", desc: "dWallet multi-party custody + cross-chain signing" },
       { name: "Covalent GoldRush", logo: null, icon: "🔍", desc: "Real-time wallet risk scoring, sanctions screening" },
     ]
   },
