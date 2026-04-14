@@ -166,7 +166,7 @@ export default function TechStack() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-heading text-xs text-muted-foreground tracking-widest uppercase mb-6 text-center">Ecosystem Tracks & Affiliations</p>
+          <p className="font-heading text-xs text-muted-foreground tracking-widest uppercase mb-6 text-center">Colosseum Frontier Hackathon — Main Track & Side Tracks</p>
           <div className="flex flex-wrap justify-center gap-3">
             {hackathons.map((h, i) => (
               <motion.a
