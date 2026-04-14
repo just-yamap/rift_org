@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Shield, Coins, Globe, Printer, Clock } from 'lucide-react';
+import { Zap, Shield, Coins, Globe, Printer } from 'lucide-react';
 
 const features = [
   {
@@ -27,11 +27,6 @@ const features = [
     icon: Globe,
     title: "Bidirectional",
     description: "Cash → Crypto or Crypto → Cash. Configure RIFT as unidirectional or bidirectional per your needs."
-  },
-  {
-    icon: Clock,
-    title: "SMS Notifications",
-    description: "Real-time SMS alerts when transactions are ready. Customers never miss a withdrawal."
   },
   {
     icon: Shield,
