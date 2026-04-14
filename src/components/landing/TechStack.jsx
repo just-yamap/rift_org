@@ -4,9 +4,7 @@ import { motion } from 'framer-motion';
 const categories = [
   {
     label: "On-Chain / Settlement",
-    color: "from-orange-500/20 to-orange-500/5",
     accent: "text-orange-400",
-    border: "border-orange-500/20",
     items: [
       { name: "Solana (mainnet-beta)", logo: "https://cryptologos.cc/logos/solana-sol-logo.png", desc: "L1 blockchain" },
       { name: "Anchor 0.31.1", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/5e13c286e_image.png", desc: "Rust smart contract framework" },
@@ -19,9 +17,7 @@ const categories = [
   },
   {
     label: "Privacy + Compliance",
-    color: "from-purple-500/20 to-purple-500/5",
     accent: "text-purple-400",
-    border: "border-purple-500/20",
     items: [
       { name: "Umbra SDK", logo: null, icon: "🛡", desc: "Confidential SPL transfers, viewing-key regulatory decryption" },
       { name: "Encrypt (REFHE)", logo: null, icon: "🔒", desc: "Fully-homomorphic-encrypted vault balances" },
@@ -31,9 +27,7 @@ const categories = [
   },
   {
     label: "Performance",
-    color: "from-yellow-500/20 to-yellow-500/5",
     accent: "text-yellow-400",
-    border: "border-yellow-500/20",
     items: [
       { name: "MagicBlock Ephemeral Rollups", logo: null, icon: "⚡", desc: "Sub-200ms session finality" },
       { name: "RPC Fast", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/038d8f03e_image.png", desc: "Dedicated low-latency Solana RPC (Frankfurt region)" },
@@ -41,9 +35,7 @@ const categories = [
   },
   {
     label: "Backend Services",
-    color: "from-green-500/20 to-green-500/5",
     accent: "text-green-400",
-    border: "border-green-500/20",
     items: [
       { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", desc: "Runtime" },
       { name: "@coral-xyz/anchor", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/5e13c286e_image.png", desc: "Anchor client SDK" },
@@ -54,9 +46,7 @@ const categories = [
   },
   {
     label: "Frontend",
-    color: "from-blue-500/20 to-blue-500/5",
     accent: "text-blue-400",
-    border: "border-blue-500/20",
     items: [
       { name: "React 19", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", desc: "UI framework" },
       { name: "9-language i18n", logo: null, icon: "🌍", desc: "EN FR DE ES IT PT RU UA ZH" },
@@ -66,9 +56,7 @@ const categories = [
   },
   {
     label: "Hardware (Prototype)",
-    color: "from-red-500/20 to-red-500/5",
     accent: "text-red-400",
-    border: "border-red-500/20",
     note: "Prototype build — final hardware subject to change",
     items: [
       { name: "JCM NV200", logo: null, icon: "💵", desc: "Cash acceptor/dispenser (SSP over RS-232)" },
@@ -78,9 +66,7 @@ const categories = [
   },
   {
     label: "Security",
-    color: "from-gray-500/20 to-gray-500/5",
     accent: "text-gray-400",
-    border: "border-gray-500/20",
     items: [
       { name: "Adevar Labs", logo: null, icon: "🔬", desc: "Scheduled protocol audit (Colosseum Frontier security track)" },
       { name: "5-min claim TTL", logo: null, icon: "⏱", desc: "Auto-refund on timeout" },
@@ -102,7 +88,7 @@ const hackathons = [
   { name: "100xDevs", label: "Open Track", url: "https://100xdevs.com/", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/4ccbd670c_image.png" },
 ];
 
-function LogoOrIcon({ item, accent }) {
+function LogoOrIcon({ item }) {
   const [imgError, setImgError] = React.useState(false);
 
   if (item.logo && !imgError) {
@@ -110,19 +96,18 @@ function LogoOrIcon({ item, accent }) {
       <img
         src={item.logo}
         alt={item.name}
-        className="w-6 h-6 object-contain"
+        className="w-5 h-5 object-contain"
         onError={() => setImgError(true)}
-        style={{ filter: 'brightness(0) invert(1) opacity(0.7)' }}
+        style={{ filter: 'brightness(0) invert(1) opacity(0.75)' }}
       />
     );
   }
-  return <span className={`text-xl leading-none ${accent}`}>{item.icon}</span>;
+  return <span className="text-base leading-none">{item.icon}</span>;
 }
 
 export default function TechStack() {
   return (
     <section className="py-24 px-6 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/2 to-transparent" />
       <div className="relative max-w-7xl mx-auto">
 
         <motion.div
@@ -142,7 +127,7 @@ export default function TechStack() {
         </motion.div>
 
         {/* Categories grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
           {categories.map((cat, ci) => (
             <motion.div
               key={cat.label}
@@ -150,19 +135,22 @@ export default function TechStack() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: ci * 0.07 }}
-              className="rounded-xl p-6 border border-white/8 bg-white/3 backdrop-blur-sm"
+              className="rounded-xl border border-white/8 bg-white/3 backdrop-blur-sm overflow-hidden"
             >
-              <p className="font-heading text-xs tracking-widest uppercase mb-1 text-muted-foreground">{cat.label}</p>
-              {cat.note && <p className="font-body text-xs text-muted-foreground/60 italic mb-4">{cat.note}</p>}
-              {!cat.note && <div className="mb-4" />}
-              <div className="space-y-3">
+              {/* Card header */}
+              <div className="px-5 pt-5 pb-3 border-b border-white/6">
+                <p className={`font-heading text-xs tracking-widest uppercase font-semibold ${cat.accent}`}>{cat.label}</p>
+                {cat.note && <p className="font-body text-xs text-muted-foreground/50 italic mt-1">{cat.note}</p>}
+              </div>
+              {/* Items */}
+              <div className="divide-y divide-white/5">
                 {cat.items.map(item => (
-                  <div key={item.name} className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-white/6 border border-white/10 flex items-center justify-center flex-shrink-0">
-                      <LogoOrIcon item={item} accent={cat.accent} />
+                  <div key={item.name} className="flex items-center gap-3 px-5 py-3">
+                    <div className="w-7 h-7 rounded-md bg-white/6 flex items-center justify-center flex-shrink-0">
+                      <LogoOrIcon item={item} />
                     </div>
-                    <div>
-                      <p className="font-heading text-sm font-semibold text-foreground leading-tight">{item.name}</p>
+                    <div className="min-w-0">
+                      <p className="font-heading text-sm font-semibold text-foreground leading-tight truncate">{item.name}</p>
                       <p className="font-body text-xs text-muted-foreground leading-tight">{item.desc}</p>
                     </div>
                   </div>
