@@ -12,6 +12,8 @@ const categories = [
       { name: "Anchor 0.31.1", logo: null, icon: "⚓", desc: "Rust smart contract framework" },
       { name: "SPL Token", logo: null, icon: "🔷", desc: "Token standard" },
       { name: "Jupiter v6", logo: "https://jup.ag/svg/jupiter-logo.svg", desc: "DEX aggregator" },
+      { name: "Token-2022", logo: null, icon: "🪙", desc: "Next-gen token extensions" },
+      { name: "Memo Program", logo: null, icon: "📝", desc: "On-chain transaction notes" },
     ]
   },
   {
@@ -24,6 +26,9 @@ const categories = [
       { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", desc: "HTTP server" },
       { name: "WebSocket", logo: null, icon: "⚡", desc: "NV200 + printer bridges" },
       { name: "Privy", logo: null, icon: "🔑", desc: "Operator wallet signing" },
+      { name: "PostgreSQL", logo: null, icon: "🐘", desc: "Transaction & audit database" },
+      { name: "SMS Gateway", logo: null, icon: "📱", desc: "Transaction alerts" },
+      { name: "RPC Fast", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/038d8f03e_image.png", desc: "High-speed Solana RPC" },
     ]
   },
   {
@@ -36,6 +41,8 @@ const categories = [
       { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", desc: "Styling" },
       { name: "9 Languages", logo: null, icon: "🌍", desc: "EN FR DE ES IT PT RU UA ZH" },
       { name: "Lucide Icons", logo: null, icon: "✦", desc: "Icon system" },
+      { name: "Framer Motion", logo: null, icon: "🎞", desc: "Animations & transitions" },
+      { name: "QR Code Gen", logo: null, icon: "⬛", desc: "Wallet address display" },
     ]
   },
   {
