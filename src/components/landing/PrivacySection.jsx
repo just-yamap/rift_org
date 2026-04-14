@@ -6,40 +6,28 @@ const cards = [
     title: "Umbra confidential transfers",
     href: "https://umbra.cash",
     linkLabel: "Umbra",
-    accent: "border-purple-500/30",
-    gradient: "from-purple-500/10 to-purple-500/5",
-    accentText: "text-purple-400",
-    icon: "🛡",
+    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/e9eaa355f_image.png",
     body: "Every buy can be delivered via Umbra's confidential SPL transfer protocol. Transaction amount and the link between the kiosk and your wallet stay encrypted on-chain. Regulators with a legitimate request can decrypt via a published viewing key — nobody else can.",
   },
   {
     title: "Squads multi-sig custody",
     href: "https://squads.so",
     linkLabel: "Squads",
-    accent: "border-green-500/30",
-    gradient: "from-green-500/10 to-green-500/5",
-    accentText: "text-green-400",
-    icon: "🔐",
+    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/d425f6ab3_image.png",
     body: "Every operator's Solana vault is secured by a Squads 2-of-3 multi-signature wallet. No single key can drain the kiosk. Any meaningful action needs approval from two independent parties.",
   },
   {
     title: "Ika MPC for cross-chain receives",
     href: "https://ika.xyz",
     linkLabel: "Ika",
-    accent: "border-blue-500/30",
-    gradient: "from-blue-500/10 to-blue-500/5",
-    accentText: "text-blue-400",
-    icon: "⛓",
+    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/c442bd152_image.png",
     body: "When you sell native BTC or ETH, your deposit goes to an address controlled by Ika's 2PC-MPC protocol. Even if the kiosk's software is compromised, attackers only ever hold a single share. The received asset stays safe.",
   },
   {
     title: "Compliance built in",
     href: "https://goldrush.dev/",
     linkLabel: "Covalent GoldRush",
-    accent: "border-yellow-500/30",
-    gradient: "from-yellow-500/10 to-yellow-500/5",
-    accentText: "text-yellow-400",
-    icon: "✅",
+    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/783905a66_image.png",
     body: "Every transaction gets a real-time wallet risk score via Covalent GoldRush. Sanctioned addresses, drainer-linked wallets, known mixer interactions — all refused automatically. Each kiosk operator can also designate a compliance officer who can veto suspicious claims before settlement. Privacy-by-default; transparency-on-subpoena.",
   },
 ];
@@ -73,13 +61,18 @@ export default function PrivacySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-xl p-6 border border-white/8 bg-white/3 backdrop-blur-sm hover:bg-white/6 hover:border-white/15 transition-all duration-200"
+              className="rounded-xl p-6 border border-white/10 bg-white/4 backdrop-blur-sm hover:bg-white/7 hover:border-white/20 transition-all duration-200"
             >
-              <div className="w-10 h-10 rounded-lg bg-white/6 border border-white/10 flex items-center justify-center mb-4 text-xl">
-                {card.icon}
+              <div className="w-11 h-11 rounded-lg bg-foreground flex items-center justify-center mb-5 flex-shrink-0">
+                <img
+                  src={card.logo}
+                  alt={card.linkLabel}
+                  className="w-6 h-6 object-contain"
+                  style={{ filter: 'brightness(0)' }}
+                />
               </div>
-              <h3 className="font-heading text-base font-bold text-foreground mb-1">{card.title}</h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed mt-3">
+              <h3 className="font-heading text-base font-bold text-foreground mb-3">{card.title}</h3>
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">
                 {card.body}
               </p>
               <a
