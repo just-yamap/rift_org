@@ -8,6 +8,7 @@ import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'rec
 const TOKENS = [
   { symbol: 'SOL', name: 'Solana', price: 142.50, change24h: 5.2, trend: 'up' },
   { symbol: 'USDC', name: 'USD Coin', price: 1.00, change24h: 0.0, trend: 'neutral' },
+  { symbol: 'BSD', name: 'Brazilian Stable Dollar', price: 0.98, change24h: 0.1, trend: 'neutral' },
   { symbol: 'wBTC', name: 'Wrapped Bitcoin', price: 67850.00, change24h: 3.1, trend: 'up' },
   { symbol: 'wETH', name: 'Wrapped Ethereum', price: 2845.00, change24h: -1.8, trend: 'down' },
   { symbol: 'JUP', name: 'Jupiter', price: 0.85, change24h: 8.5, trend: 'up' },
@@ -31,6 +32,15 @@ const PRICE_TRENDS = {
     { time: '16h', price: 1.00 },
     { time: '20h', price: 1.00 },
     { time: '24h', price: 1.00 },
+  ],
+  BSD: [
+    { time: '0h', price: 0.977 },
+    { time: '4h', price: 0.978 },
+    { time: '8h', price: 0.979 },
+    { time: '12h', price: 0.980 },
+    { time: '16h', price: 0.980 },
+    { time: '20h', price: 0.980 },
+    { time: '24h', price: 0.98 },
   ],
   wBTC: [
     { time: '0h', price: 65800.00 },
