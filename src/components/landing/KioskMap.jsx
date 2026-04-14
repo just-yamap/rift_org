@@ -26,27 +26,6 @@ export default function KioskMap() {
   return (
     <section className="py-24 px-6 relative">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
-          <div className="flex items-center gap-3 mb-4">
-            <span className="font-heading text-xs text-muted-foreground tracking-widest uppercase">Locations</span>
-            <span className="font-heading text-xs bg-orange-500/20 text-orange-400 border border-orange-500/30 rounded-full px-2.5 py-1">
-              BETA
-            </span>
-          </div>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4">
-            Find a RIFT Kiosk
-          </h2>
-          <p className="font-body text-muted-foreground max-w-2xl text-lg">
-            Planned kiosk locations across Europe. Full live map and real-time availability coming to the Seeker Connect app after 500 units shipped.
-          </p>
-        </motion.div>
-
         <div className="grid lg:grid-cols-3 gap-8 items-start">
           {/* Left: Search & List */}
           <motion.div
