@@ -31,7 +31,7 @@ const features = [
   {
     icon: Shield,
     title: "Built-in KYC Verification",
-    description: "Integrated identity verification for both cash-in and cash-out. Compliant with regulatory requirements."
+    description: "Full identity verification at the kiosk — or remotely via the RIFT Connect app before you arrive. Compliant with regulatory requirements."
   }
 ];
 
