@@ -73,11 +73,11 @@ export default function PrivacySection() {
                 className={`rounded-xl p-6 border ${colors.border} bg-gradient-to-br ${colors.accent} backdrop-blur-sm hover:border-${colors.label}-500/40 transition-all duration-200 group`}
               >
                 {/* Icon at top */}
-                <div className="w-8 h-8 mb-5 flex items-center justify-center">
+                <div className="w-14 h-14 mb-5 flex items-center justify-center">
                   <img
                     src={card.logo}
                     alt=""
-                    className="w-6 h-6 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                    className="w-10 h-10 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                   />
                 </div>
 
