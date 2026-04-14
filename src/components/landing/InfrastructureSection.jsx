@@ -81,7 +81,7 @@ function Logo({ item }) {
         alt={item.name}
         className="w-6 h-6 object-contain"
         onError={() => setErr(true)}
-        style={{ filter: 'brightness(0) invert(1) opacity(0.85)' }}
+        style={{ maxWidth: '100%', maxHeight: '100%' }}
       />
     );
   }
