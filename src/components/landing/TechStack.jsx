@@ -63,13 +63,15 @@ const categories = [
     ]
   },
   {
-    label: "Hardware",
+    label: "Hardware (Prototype)",
     color: "from-red-500/20 to-red-500/5",
     accent: "text-red-400",
     border: "border-red-500/20",
+    note: "Prototype build — final hardware subject to change",
     items: [
       { name: "JCM NV200", logo: null, icon: "💵", desc: "Cash acceptor/dispenser" },
       { name: "Thermal Printer", logo: null, icon: "🖨", desc: "ESC/POS 80mm" },
+      { name: "Tera 3100 QR Scanner", logo: null, icon: "📷", desc: "2D/QR fixed scan module" },
       { name: "Raspberry Pi 5", logo: null, icon: "🍓", desc: "Or x86 mini-PC host" },
       { name: "Chromium Kiosk", logo: null, icon: "🖥", desc: "1080p touchscreen" },
     ]
@@ -137,7 +139,9 @@ export default function TechStack() {
               transition={{ duration: 0.5, delay: ci * 0.07 }}
               className={`bg-card border ${cat.border} rounded-xl p-6 bg-gradient-to-br ${cat.color}`}
             >
-              <p className={`font-heading text-xs tracking-widest uppercase mb-4 ${cat.accent}`}>{cat.label}</p>
+              <p className={`font-heading text-xs tracking-widest uppercase mb-1 ${cat.accent}`}>{cat.label}</p>
+              {cat.note && <p className="font-body text-xs text-muted-foreground/60 italic mb-4">{cat.note}</p>}
+              {!cat.note && <div className="mb-4" />}
               <div className="space-y-3">
                 {cat.items.map(item => (
                   <div key={item.name} className="flex items-center gap-3">
