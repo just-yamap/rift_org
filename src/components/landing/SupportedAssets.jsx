@@ -80,11 +80,11 @@ export default function SupportedAssets() {
                 transition={{ duration: 0.2 }}
               >
                 {/* Logo */}
-                <div className="w-12 h-12 mb-2 flex items-center justify-center">
+                <div className="w-16 h-16 mb-3 flex items-center justify-center">
                   <img
                     src={asset.logo}
                     alt={asset.symbol}
-                    className="w-10 h-10 object-contain"
+                    className="w-12 h-12 object-contain"
                     onError={(e) => {
                       e.target.style.display = 'none';
                     }}
