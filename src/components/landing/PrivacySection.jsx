@@ -72,16 +72,16 @@ export default function PrivacySection() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className={`rounded-xl p-6 border ${colors.border} bg-gradient-to-br ${colors.accent} backdrop-blur-sm hover:border-${colors.label}-500/40 transition-all duration-200 group`}
               >
-                {/* Icon at top */}
-                <img
-                  src={card.logo}
-                  alt=""
-                  className="w-12 h-12 mb-5 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
-                />
-
-                <h3 className="font-heading text-base font-bold text-foreground mb-3 leading-snug">
-                  {card.title}
-                </h3>
+                <div className="flex items-start gap-3 mb-3">
+                  <img
+                    src={card.logo}
+                    alt=""
+                    className="w-6 h-6 object-contain opacity-80 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-0.5"
+                  />
+                  <h3 className="font-heading text-base font-bold text-foreground leading-snug">
+                    {card.title}
+                  </h3>
+                </div>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
                   {card.body}
                 </p>
