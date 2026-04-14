@@ -45,7 +45,7 @@ export default function SignupSection() {
           <td style="padding:40px;">
             <p style="margin:0 0 8px;color:#808080;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;">Early Bird Confirmed</p>
             <h1 style="margin:0 0 24px;color:#F5F5F5;font-size:28px;font-weight:700;">You're on the list, ${data.name}.</h1>
-            <p style="margin:0 0 24px;color:#808080;font-size:15px;line-height:1.7;">Thank you for joining the RIFT Early Bird waitlist. You've locked in your <strong style="color:#F5F5F5;">25% discount</strong> — reserved exclusively for founding members.</p>
+            <p style="margin:0 0 24px;color:#808080;font-size:15px;line-height:1.7;">Thank you for joining the RIFT Early Bird waitlist. You've locked in your <strong style="color:#F5F5F5;">early bird pricing</strong> — reserved exclusively for founding members.</p>
             <table width="100%" cellpadding="0" cellspacing="0" style="background:#0A0A0A;border:1px solid #292929;border-radius:8px;margin-bottom:24px;">
               <tr><td style="padding:24px;">
                 <table width="100%" cellpadding="0" cellspacing="0">
@@ -58,8 +58,8 @@ export default function SignupSection() {
                     <td align="right" style="color:#F5F5F5;font-size:13px;font-weight:600;padding-bottom:10px;">${data.location || '—'}</td>
                   </tr>
                   <tr>
-                    <td style="color:#808080;font-size:13px;">Early bird discount</td>
-                    <td align="right" style="color:#F5F5F5;font-size:13px;font-weight:600;">25% OFF</td>
+                    <td style="color:#808080;font-size:13px;">Early bird pricing</td>
+                    <td align="right" style="color:#F5F5F5;font-size:13px;font-weight:600;">✓ Locked in</td>
                   </tr>
                 </table>
               </td></tr>
@@ -134,14 +134,14 @@ export default function SignupSection() {
         >
           <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-6">
             <Zap className="w-3 h-3 text-accent" />
-            <span className="font-heading text-xs text-accent tracking-wider">EARLY BIRD — 25% OFF</span>
+            <span className="font-heading text-xs text-accent tracking-wider">EARLY BIRD PRICING</span>
           </div>
 
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-4">
             Be First In Line
           </h2>
           <p className="font-body text-muted-foreground text-lg mb-10 max-w-lg mx-auto">
-            Sign up now to get notified when pre-orders go live. Early birds get a 25% discount on the RIFT terminal.
+            Sign up now to get notified when pre-orders go live. Early birds get exclusive pricing on the RIFT terminal.
           </p>
 
           {!submitted ? (
