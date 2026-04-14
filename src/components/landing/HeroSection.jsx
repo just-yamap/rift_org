@@ -35,17 +35,16 @@ export default function HeroSection({ atmImageUrl }) {
             </div>
 
             <p className="font-heading text-base md:text-lg font-semibold text-foreground mb-2 leading-snug">
-              The world's first bidirectional, multi-chain, privacy-preserving crypto ATM — built on Solana.
+              Bidirectional, multi-chain, privacy-preserving crypto ATM — built on Solana.
             </p>
-            <p className="font-body text-sm text-muted-foreground mb-2">Insert cash. Walk away with SOL, BTC, ETH, or any verified SPL token.</p>
-            <p className="font-body text-sm text-muted-foreground mb-8">No account required. No wrapped tokens. No compromises on privacy.</p>
+            <p className="font-body text-sm text-muted-foreground mb-8">No account required. No compromises on privacy.</p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="#signup"
                 className="bg-foreground text-background px-8 py-3.5 rounded font-heading text-sm font-semibold hover:opacity-80 transition-opacity text-center"
               >
-                JOIN EARLY BIRD →
+                SIGN UP FOR EARLY BIRD PRICING →
               </a>
               <a
                 href="/demo"
@@ -62,7 +61,7 @@ export default function HeroSection({ atmImageUrl }) {
               </div>
               <div>
                 <p className="font-heading text-2xl font-bold text-foreground">All SPL</p>
-                <p className="font-body text-xs text-muted-foreground">Tokens Supported</p>
+                <p className="font-body text-xs text-muted-foreground">+ BTC, ETH & more <span className="text-primary/70">(beta)</span></p>
               </div>
               <div>
                 <p className="font-heading text-2xl font-bold text-foreground">$0.001</p>

@@ -19,7 +19,7 @@ const items = [
     icon: Coins,
     value: "All SPL Tokens",
     label: "Token Support",
-    detail: "SOL, USDC, BONK & every Solana token"
+    detail: "SOL, USDC, BONK, BTC, ETH & more"
   },
   {
     icon: ShieldCheck,

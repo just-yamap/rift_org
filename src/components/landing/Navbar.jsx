@@ -78,7 +78,7 @@ export default function Navbar() {
           href="#signup"
           className="bg-foreground text-background px-5 py-2 rounded font-heading text-sm font-semibold hover:opacity-80 transition-opacity"
         >
-          JOIN WAITLIST
+          EARLY BIRD PRICING
         </a>
       </div>
       <ContactForm isOpen={contactOpen} onClose={() => setContactOpen(false)} />
