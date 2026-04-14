@@ -44,7 +44,7 @@ export default function HeroSection({ atmImageUrl }) {
                 href="#signup"
                 className="bg-foreground text-background px-8 py-3.5 rounded font-heading text-sm font-semibold hover:opacity-80 transition-opacity text-center"
               >
-                SIGN UP FOR EARLY BIRD PRICING →
+                EARLY BIRD PURCHASE →
               </a>
               <a
                 href="/demo"
