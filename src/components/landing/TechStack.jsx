@@ -13,7 +13,7 @@ const categories = [
       { name: "Jupiter v6 / Swap V2", logo: "https://jup.ag/svg/jupiter-logo.svg", desc: "Developer Platform swap" },
       { name: "LI.FI cross-chain router", logo: null, icon: "🔀", desc: "Native BTC / ETH / other-chain delivery" },
     ],
-    note: "Program ID (devnet): EC2FRmq3gQSXB27V2XjwDGke8AcE3nURfXbFTW3cU9vm"
+    note: null
   },
   {
     label: "Privacy + Compliance",
@@ -135,12 +135,11 @@ export default function TechStack() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: ci * 0.07 }}
-              className="rounded-xl border border-white/8 bg-white/3 backdrop-blur-sm overflow-hidden"
+              className="rounded-xl border border-border bg-card overflow-hidden"
             >
               {/* Card header */}
               <div className="px-5 pt-5 pb-3 border-b border-white/6">
                 <p className={`font-heading text-xs tracking-widest uppercase font-semibold ${cat.accent}`}>{cat.label}</p>
-                {cat.note && <p className="font-body text-xs text-muted-foreground/50 italic mt-1">{cat.note}</p>}
               </div>
               {/* Items */}
               <div className="divide-y divide-white/5">
