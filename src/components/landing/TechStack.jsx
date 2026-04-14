@@ -77,14 +77,14 @@ const categories = [
 ];
 
 const hackathons = [
-  { name: "Colosseum Frontier", label: "Main Track" },
-  { name: "Jupiter", label: "Developer Platform" },
-  { name: "Umbra", label: "Privacy Track" },
-  { name: "Covalent GoldRush", label: "Data Track" },
-  { name: "Dune SIM", label: "Analytics Track" },
-  { name: "RPC Fast", label: "Infra Track" },
-  { name: "Adevar Labs", label: "Security Audit" },
-  { name: "100xDevs", label: "Open Track" },
+  { name: "Colosseum Frontier", label: "Main Track", url: "https://arena.colosseum.org/", logo: "https://pbs.twimg.com/profile_images/1892342193313964032/JxUjfJHs_400x400.jpg" },
+  { name: "Jupiter", label: "Developer Platform", url: "https://jup.ag/", logo: "https://jup.ag/svg/jupiter-logo.svg" },
+  { name: "Umbra", label: "Privacy Track", url: "https://app.umbra.cash/", logo: "https://pbs.twimg.com/profile_images/1455321039758behov/oJMRRZyT_400x400.jpg" },
+  { name: "Covalent GoldRush", label: "Data Track", url: "https://goldrush.dev/", logo: "https://pbs.twimg.com/profile_images/1807484329730207744/KtSKlNVo_400x400.jpg" },
+  { name: "Dune SIM", label: "Analytics Track", url: "https://dune.com/", logo: "https://pbs.twimg.com/profile_images/1745565191489183744/OoGqROMl_400x400.jpg" },
+  { name: "RPC Fast", label: "Infra Track", url: "https://rpcfast.com/", logo: "https://pbs.twimg.com/profile_images/1659251694846717952/x4lFPGbQ_400x400.jpg" },
+  { name: "Adevar Labs", label: "Security Audit", url: "https://www.adevarlabs.com/", logo: null },
+  { name: "100xDevs", label: "Open Track", url: "https://100xdevs.com/", logo: "https://pbs.twimg.com/profile_images/1667489665857552384/OqkdDi4f_400x400.jpg" },
 ];
 
 function LogoOrIcon({ item, accent }) {
@@ -165,18 +165,25 @@ export default function TechStack() {
           <p className="font-heading text-xs text-muted-foreground tracking-widest uppercase mb-6 text-center">Ecosystem Tracks & Affiliations</p>
           <div className="flex flex-wrap justify-center gap-3">
             {hackathons.map((h, i) => (
-              <motion.div
+              <motion.a
                 key={h.name}
+                href={h.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 hover:border-primary/40 transition-colors"
+                className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 hover:border-primary/40 hover:bg-secondary transition-colors"
               >
-                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                {h.logo ? (
+                  <img src={h.logo} alt={h.name} className="w-4 h-4 rounded-full object-cover flex-shrink-0" onError={e => e.target.style.display='none'} />
+                ) : (
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                )}
                 <span className="font-heading text-xs font-semibold text-foreground">{h.name}</span>
                 <span className="font-body text-xs text-muted-foreground">· {h.label}</span>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </motion.div>
