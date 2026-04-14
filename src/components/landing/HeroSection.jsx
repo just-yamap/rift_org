@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import RiftLogo from './RiftLogo';
 
 export default function HeroSection({ atmImageUrl }) {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left - rect.width / 2) / 30;
+    const y = (e.clientY - rect.top - rect.height / 2) / 30;
+    setMousePosition({ x, y });
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section 
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
+    >
       {/* Grid background */}
       <div className="absolute inset-0 opacity-5">
         <div className="w-full h-full" style={{
@@ -14,8 +27,12 @@ export default function HeroSection({ atmImageUrl }) {
         }} />
       </div>
 
-      {/* Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]" />
+      {/* Glow with parallax */}
+      <motion.div 
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]"
+        animate={{ x: mousePosition.x * 2, y: mousePosition.y * 2 }}
+        transition={{ type: "spring", stiffness: 100, damping: 30 }}
+      />
 
       <div className="relative max-w-7xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -71,22 +88,30 @@ export default function HeroSection({ atmImageUrl }) {
             </div>
           </motion.div>
 
-          {/* Right ATM image */}
+          {/* Right ATM image with mouse tracking */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative flex justify-center"
           >
-            <div className="relative">
-              <div className="absolute -inset-4 bg-primary/5 rounded-2xl blur-xl" />
+            <motion.div 
+              className="relative"
+              animate={{ x: mousePosition.x * 0.5, y: mousePosition.y * 0.5 }}
+              transition={{ type: "spring", stiffness: 100, damping: 30 }}
+            >
+              <motion.div 
+                className="absolute -inset-4 bg-primary/5 rounded-2xl blur-xl"
+                animate={{ opacity: [0.5, 0.8, 0.5] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              />
               <img 
                 src={atmImageUrl}
                 alt="RIFT Solana ATM - sleek futuristic cryptocurrency terminal"
                 className="relative w-full max-w-md"
                 style={{ mixBlendMode: 'screen' }}
               />
-            </div>
+            </motion.div>
           </motion.div>
         </div>
 
