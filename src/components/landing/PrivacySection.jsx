@@ -63,12 +63,11 @@ export default function PrivacySection() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="rounded-xl p-6 border border-white/10 bg-white/4 backdrop-blur-sm hover:bg-white/7 hover:border-white/20 transition-all duration-200"
             >
-              <div className="w-11 h-11 rounded-lg bg-foreground flex items-center justify-center mb-5 flex-shrink-0">
+              <div className="w-11 h-11 rounded-lg bg-white/8 border border-white/10 flex items-center justify-center mb-5 flex-shrink-0">
                 <img
                   src={card.logo}
                   alt={card.linkLabel}
-                  className="w-6 h-6 object-contain"
-                  style={{ filter: 'brightness(0)' }}
+                  className="w-7 h-7 object-contain"
                 />
               </div>
               <h3 className="font-heading text-base font-bold text-foreground mb-3">{card.title}</h3>
