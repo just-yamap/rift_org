@@ -3,32 +3,53 @@ import { motion } from 'framer-motion';
 
 const categories = [
   {
-    label: "On-Chain / Rust",
+    label: "On-Chain / Settlement",
     color: "from-orange-500/20 to-orange-500/5",
     accent: "text-orange-400",
     border: "border-orange-500/20",
     items: [
-      { name: "Solana", logo: "https://cryptologos.cc/logos/solana-sol-logo.png", desc: "L1 blockchain" },
+      { name: "Solana (mainnet-beta)", logo: "https://cryptologos.cc/logos/solana-sol-logo.png", desc: "L1 blockchain" },
       { name: "Anchor 0.31.1", logo: null, icon: "⚓", desc: "Rust smart contract framework" },
-      { name: "SPL Token", logo: null, icon: "🔷", desc: "Token standard" },
-      { name: "Jupiter v6", logo: "https://jup.ag/svg/jupiter-logo.svg", desc: "DEX aggregator" },
-      { name: "Token-2022", logo: null, icon: "🪙", desc: "Next-gen token extensions" },
-      { name: "Memo Program", logo: null, icon: "📝", desc: "On-chain transaction notes" },
+      { name: "SPL Token Standard", logo: null, icon: "🔷", desc: "Token standard" },
+      { name: "Associated Token Program", logo: null, icon: "🔗", desc: "ATA management" },
+      { name: "Jupiter v6 / Swap V2", logo: "https://jup.ag/svg/jupiter-logo.svg", desc: "Developer Platform swap" },
+      { name: "LI.FI cross-chain router", logo: null, icon: "🔀", desc: "Native BTC / ETH / other-chain delivery" },
+    ],
+    note: "Program ID (devnet): EC2FRmq3gQSXB27V2XjwDGke8AcE3nURfXbFTW3cU9vm"
+  },
+  {
+    label: "Privacy + Compliance",
+    color: "from-purple-500/20 to-purple-500/5",
+    accent: "text-purple-400",
+    border: "border-purple-500/20",
+    items: [
+      { name: "Umbra SDK", logo: null, icon: "🛡", desc: "Confidential SPL transfers, viewing-key regulatory decryption" },
+      { name: "Encrypt (REFHE)", logo: null, icon: "🔒", desc: "Fully-homomorphic-encrypted vault balances" },
+      { name: "Ika 2PC-MPC", logo: null, icon: "🔐", desc: "dWallet multi-party custody + cross-chain signing" },
+      { name: "Covalent GoldRush", logo: null, icon: "🔍", desc: "Real-time wallet risk scoring, sanctions screening" },
     ]
   },
   {
-    label: "Backend",
+    label: "Performance",
+    color: "from-yellow-500/20 to-yellow-500/5",
+    accent: "text-yellow-400",
+    border: "border-yellow-500/20",
+    items: [
+      { name: "MagicBlock Ephemeral Rollups", logo: null, icon: "⚡", desc: "Sub-200ms session finality" },
+      { name: "RPC Fast", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/038d8f03e_image.png", desc: "Dedicated low-latency Solana RPC (Frankfurt region)" },
+    ]
+  },
+  {
+    label: "Backend Services",
     color: "from-green-500/20 to-green-500/5",
     accent: "text-green-400",
     border: "border-green-500/20",
     items: [
       { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", desc: "Runtime" },
-      { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", desc: "HTTP server" },
-      { name: "WebSocket", logo: null, icon: "⚡", desc: "NV200 + printer bridges" },
-      { name: "Privy", logo: null, icon: "🔑", desc: "Operator wallet signing" },
-      { name: "PostgreSQL", logo: null, icon: "🐘", desc: "Transaction & audit database" },
-      { name: "SMS Gateway", logo: null, icon: "📱", desc: "Transaction alerts" },
-      { name: "RPC Fast", logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/038d8f03e_image.png", desc: "High-speed Solana RPC" },
+      { name: "@coral-xyz/anchor", logo: null, icon: "⚓", desc: "Anchor client SDK" },
+      { name: "@solana/web3.js + spl-token", logo: null, icon: "🔷", desc: "Solana JS stack" },
+      { name: "Privy server SDK", logo: null, icon: "🔑", desc: "Operator wallet signing" },
+      { name: "WebSocket bridges", logo: null, icon: "⚙", desc: "NV200 cash unit + ESC/POS thermal printer" },
     ]
   },
   {
@@ -38,37 +59,9 @@ const categories = [
     border: "border-blue-500/20",
     items: [
       { name: "React 19", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", desc: "UI framework" },
-      { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", desc: "Styling" },
-      { name: "9 Languages", logo: null, icon: "🌍", desc: "EN FR DE ES IT PT RU UA ZH" },
-      { name: "Lucide Icons", logo: null, icon: "✦", desc: "Icon system" },
+      { name: "9-language i18n", logo: null, icon: "🌍", desc: "EN FR DE ES IT PT RU UA ZH" },
+      { name: "Chromium kiosk mode", logo: null, icon: "🖥", desc: "Production terminal display" },
       { name: "Framer Motion", logo: null, icon: "🎞", desc: "Animations & transitions" },
-      { name: "QR Code Gen", logo: null, icon: "⬛", desc: "Wallet address display" },
-    ]
-  },
-  {
-    label: "Privacy & Compliance",
-    color: "from-purple-500/20 to-purple-500/5",
-    accent: "text-purple-400",
-    border: "border-purple-500/20",
-    items: [
-      { name: "Umbra SDK", logo: null, icon: "🛡", desc: "Confidential transfers" },
-      { name: "Covalent GoldRush", logo: null, icon: "🔍", desc: "Wallet risk & sanctions" },
-      { name: "KYC / AML", logo: null, icon: "✅", desc: "On-chain audit fields" },
-      { name: "Kill Switches", logo: null, icon: "🔒", desc: "Platform + operator level" },
-      { name: "GDPR Ready", logo: null, icon: "📋", desc: "Data minimisation by design" },
-    ]
-  },
-  {
-    label: "Data & Pricing",
-    color: "from-yellow-500/20 to-yellow-500/5",
-    accent: "text-yellow-400",
-    border: "border-yellow-500/20",
-    items: [
-      { name: "Dune SIM", logo: null, icon: "📊", desc: "Live blockchain data" },
-      { name: "Jupiter Price API", logo: "https://jup.ag/svg/jupiter-logo.svg", desc: "Live token pricing" },
-      { name: "Pyth", logo: null, icon: "🐍", desc: "Oracle feeds (planned)" },
-      { name: "Coinbase Feed", logo: null, icon: "💱", desc: "EUR/USD spot price" },
-      { name: "On-Chain Receipts", logo: null, icon: "🧾", desc: "Immutable transaction logs" },
     ]
   },
   {
@@ -78,11 +71,22 @@ const categories = [
     border: "border-red-500/20",
     note: "Prototype build — final hardware subject to change",
     items: [
-      { name: "JCM NV200", logo: null, icon: "💵", desc: "Cash acceptor/dispenser" },
-      { name: "Thermal Printer", logo: null, icon: "🖨", desc: "ESC/POS 80mm" },
-      { name: "Tera 3100 QR Scanner", logo: null, icon: "📷", desc: "2D/QR fixed scan module" },
+      { name: "JCM NV200", logo: null, icon: "💵", desc: "Cash acceptor/dispenser (SSP over RS-232)" },
+      { name: "ESC/POS 80mm Printer", logo: null, icon: "🖨", desc: "Thermal receipt printer" },
       { name: "Raspberry Pi 5", logo: null, icon: "🍓", desc: "Or x86 mini-PC host" },
-      { name: "Chromium Kiosk", logo: null, icon: "🖥", desc: "1080p touchscreen" },
+    ]
+  },
+  {
+    label: "Security",
+    color: "from-gray-500/20 to-gray-500/5",
+    accent: "text-gray-400",
+    border: "border-gray-500/20",
+    items: [
+      { name: "Adevar Labs", logo: null, icon: "🔬", desc: "Scheduled protocol audit (Colosseum Frontier security track)" },
+      { name: "5-min claim TTL", logo: null, icon: "⏱", desc: "Auto-refund on timeout" },
+      { name: "Hard-capped commissions", logo: null, icon: "🔒", desc: "1–15%, operator-configurable" },
+      { name: "Hard-capped safety buffer", logo: null, icon: "🛡", desc: "≤ 5% max" },
+      { name: "Kill Switches", logo: null, icon: "⛔", desc: "Platform-side + operator-side" },
     ]
   },
 ];

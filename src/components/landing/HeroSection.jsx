@@ -34,9 +34,11 @@ export default function HeroSection({ atmImageUrl }) {
               <RiftLogo size="xl" showText={false} />
             </div>
 
-            <p className="font-heading text-sm tracking-widest text-muted-foreground uppercase mb-8">
-              Rapid  Integrated  Fiat  Terminal
+            <p className="font-heading text-base md:text-lg font-semibold text-foreground mb-2 leading-snug">
+              The world's first bidirectional, multi-chain, privacy-preserving crypto ATM — built on Solana.
             </p>
+            <p className="font-body text-sm text-muted-foreground mb-2">Insert cash. Walk away with SOL, BTC, ETH, or any verified SPL token.</p>
+            <p className="font-body text-sm text-muted-foreground mb-8">No account required. No wrapped tokens. No compromises on privacy.</p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
