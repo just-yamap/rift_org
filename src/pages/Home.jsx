@@ -5,6 +5,7 @@ import SignupSection from '../components/landing/SignupSection';
 import Vision from '../components/landing/Vision';
 import HowItWorks from '../components/landing/HowItWorks';
 import Features from '../components/landing/Features';
+import TechStack from '../components/landing/TechStack';
 import BusinessModel from '../components/landing/BusinessModel';
 import Roadmap from '../components/landing/Roadmap';
 import FAQ from '../components/landing/FAQ';
@@ -27,6 +28,7 @@ export default function Home() {
       <RiftConnectSection />
       <HowItWorks />
       <Features />
+      <TechStack />
       <BusinessModel />
       <Roadmap />
       <FAQ />
