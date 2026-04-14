@@ -20,6 +20,7 @@ import NativeBTCSection from '../components/landing/NativeBTCSection';
 import InfrastructureSection from '../components/landing/InfrastructureSection';
 import TransparencySection from '../components/landing/TransparencySection';
 import FeeCalculator from '../components/landing/FeeCalculator';
+import SupportedAssets from '../components/landing/SupportedAssets';
 
 const ATM_IMAGE = "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/8a2235161_image.png";
 
@@ -35,7 +36,7 @@ export default function Home() {
       <RiftConnectSection />
       <HowItWorks />
       <Features />
-      <AssetsSection />
+      <SupportedAssets />
       <NativeBTCSection />
       <PrivacySection />
       <InfrastructureSection />
