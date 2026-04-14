@@ -88,22 +88,6 @@ export default function FeeCalculator() {
     <section className="py-24 px-6 relative">
       <div className="max-w-2xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
-          <span className="font-heading text-xs text-muted-foreground tracking-widest uppercase">Calculator</span>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4">
-            See Your Price
-          </h2>
-          <p className="font-body text-muted-foreground max-w-xl text-lg">
-            Transparent breakdown of exactly what you'll pay before you visit.
-          </p>
-        </motion.div>
-
-        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
