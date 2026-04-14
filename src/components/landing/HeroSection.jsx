@@ -35,7 +35,7 @@ export default function HeroSection({ atmImageUrl }) {
             </div>
 
             <p className="font-heading text-base md:text-lg font-semibold text-foreground mb-2 leading-snug">
-              Bidirectional, multi-chain, privacy-preserving crypto ATM — built on Solana.
+              The world's first bidirectional, multi-chain, privacy-preserving crypto ATM — built on Solana.
             </p>
             <p className="font-body text-sm text-muted-foreground mb-8">No account required. No compromises on privacy.</p>
 
