@@ -15,6 +15,18 @@ async function downloadStyleGuide() {
   URL.revokeObjectURL(url);
 }
 
+async function downloadSiteContent() {
+  const response = await base44.functions.invoke('siteContent', {});
+  const text = typeof response.data === 'string' ? response.data : JSON.stringify(response.data);
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'RIFT_Website_Content_Brief.txt';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 const columns = [
   {
     label: "PRODUCT",
@@ -45,6 +57,7 @@ const columns = [
     links: [
       { label: "Privacy", href: "/privacy" },
       { label: "Download Style Guide", onClick: downloadStyleGuide },
+      { label: "Download Site Content Brief", onClick: downloadSiteContent },
     ],
   },
 ];
