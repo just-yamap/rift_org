@@ -28,16 +28,7 @@ const items = [
     content: "End-to-end sweep passing on every commit (11 on-chain instructions). 13-case negative-path unit suite covering quote replay, tier boundary, double-settle, authority bypass, bad royalty recipient, and more.",
     href: null,
   },
-  {
-    label: "Audit",
-    content: "Planned with Adevar Labs, contingent on Colosseum Frontier Hackathon results ($50,000 credits).",
-    href: null,
-  },
-  {
-    label: "Mainnet",
-    content: "Contingent on completing the Adevar Labs audit. Currently in end-to-end devnet testing.",
-    href: null,
-  },
+
 ];
 
 export default function TransparencySection() {
