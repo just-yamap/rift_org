@@ -3,19 +3,19 @@ import { motion } from 'framer-motion';
 
 const ASSETS = [
   // Solana SPL Tokens
-  { symbol: 'SOL', name: 'Solana', logo: 'https://cryptologos.cc/logos/solana-sol-logo.png', network: 'Solana', category: 'SPL' },
-  { symbol: 'USDC', name: 'USD Coin', logo: 'https://cryptologos.cc/logos/usd-coin-usdc-logo.png', network: 'Solana', category: 'SPL' },
+  { symbol: 'SOL', name: 'Solana', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png', network: 'Solana', category: 'SPL' },
+  { symbol: 'USDC', name: 'USD Coin', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png', network: 'Solana', category: 'SPL' },
   { symbol: 'JUP', name: 'Jupiter', logo: 'https://jup.ag/svg/jupiter-logo.svg', network: 'Solana', category: 'SPL' },
-  { symbol: 'BONK', name: 'Bonk', logo: 'https://cryptologos.cc/logos/bonk1-bonk-logo.png', network: 'Solana', category: 'SPL' },
-  { symbol: 'BSD', name: 'Brazilian Stable Dollar', logo: 'https://cryptologos.cc/logos/usd-coin-usdc-logo.png', network: 'Solana', category: 'SPL' },
+  { symbol: 'BONK', name: 'Bonk', logo: 'https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I', network: 'Solana', category: 'SPL' },
+  { symbol: 'BSD', name: 'Brazilian Stable Dollar', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png', network: 'Solana', category: 'SPL' },
   
   // Wrapped Assets
-  { symbol: 'wBTC', name: 'Wrapped Bitcoin', logo: 'https://cryptologos.cc/logos/wrapped-bitcoin-wbtc-logo.png', network: 'Solana', category: 'Wrapped' },
-  { symbol: 'wETH', name: 'Wrapped Ethereum', logo: 'https://cryptologos.cc/logos/ethereum-eth-logo.png', network: 'Solana', category: 'Wrapped' },
+  { symbol: 'wBTC', name: 'Wrapped Bitcoin', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E/logo.png', network: 'Solana', category: 'Wrapped' },
+  { symbol: 'wETH', name: 'Wrapped Ethereum', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs/logo.png', network: 'Solana', category: 'Wrapped' },
   
   // Native Assets (Coming Soon)
-  { symbol: 'BTC', name: 'Bitcoin', logo: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png', network: 'Bitcoin', category: 'Native', soon: true },
-  { symbol: 'ETH', name: 'Ethereum', logo: 'https://cryptologos.cc/logos/ethereum-eth-logo.png', network: 'Ethereum', category: 'Native', soon: true },
+  { symbol: 'BTC', name: 'Bitcoin', logo: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitcoin/info/logo.png', network: 'Bitcoin', category: 'Native', soon: true },
+  { symbol: 'ETH', name: 'Ethereum', logo: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png', network: 'Ethereum', category: 'Native', soon: true },
 ];
 
 export default function SupportedAssets() {
