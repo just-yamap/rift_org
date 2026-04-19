@@ -10,7 +10,7 @@ const pillars = [
   },
   {
     icon: Lock,
-    title: "Non-Custodial",
+    title: "Non Custodial",
     description: "Your keys, your crypto. RIFT never holds your funds — everything goes directly to your wallet."
   },
   {
