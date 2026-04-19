@@ -48,7 +48,7 @@ export default function SupportedAssets() {
       .filter(t =>
         t.symbol?.toLowerCase().includes(q) ||
         t.name?.toLowerCase().includes(q) ||
-        t.address?.toLowerCase() === q
+        t.address?.toLowerCase().includes(q)
       )
       .slice(0, 8);
     setSearchResults(results);
