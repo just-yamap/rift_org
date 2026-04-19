@@ -72,14 +72,14 @@ export default function HeroSection({ atmImageUrl }) {
               </a>
             </div>
 
-            <div className="flex items-center gap-8 mt-10">
+            <div className="grid grid-cols-4 gap-6 mt-10 pt-10 border-t border-border">
               <div>
                 <p className="font-heading text-2xl font-bold text-foreground">400ms</p>
                 <p className="font-body text-xs text-muted-foreground">Transaction Speed</p>
               </div>
               <div>
                 <p className="font-heading text-2xl font-bold text-foreground">All SPL</p>
-                <p className="font-body text-xs text-muted-foreground">+ BTC, ETH & more <span className="text-primary/70">(beta)</span></p>
+                <p className="font-body text-xs text-muted-foreground">+ BTC, ETH & more (beta)</p>
               </div>
               <div>
                 <p className="font-heading text-2xl font-bold text-foreground">$0.001</p>
@@ -87,7 +87,7 @@ export default function HeroSection({ atmImageUrl }) {
               </div>
               <div>
                 <p className="font-heading text-2xl font-bold text-foreground">~45s</p>
-                <p className="font-body text-xs text-muted-foreground">Cash-in / Cash-out <span className="text-primary/70">(KYC via RIFT Connect)</span></p>
+                <p className="font-body text-xs text-muted-foreground">Cash-in / Cash-out via RIFT Connect</p>
               </div>
             </div>
           </motion.div>
