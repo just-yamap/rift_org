@@ -57,7 +57,7 @@ export default function HeroSection({ atmImageUrl }) {
             <p className="font-body text-sm text-muted-foreground mb-1">Insert cash, walk away with native BTC, ETH, SOL, or any verified SPL token.</p>
             <p className="font-body text-sm text-muted-foreground mb-8">Sell any supported asset back to cash, instantly. No account required. No wrapped tokens. No compromises.</p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               <a 
                 href="#signup"
                 className="bg-foreground text-background px-8 py-3.5 rounded font-heading text-sm font-semibold hover:opacity-80 transition-opacity text-center"
@@ -70,15 +70,15 @@ export default function HeroSection({ atmImageUrl }) {
               >
                 OPERATE A KIOSK
               </a>
-            </div>
 
-            <div className="grid grid-cols-2 gap-6 mt-10 pt-10 border-t border-border">
+              <div className="h-8 w-px bg-border mx-2 hidden sm:block" />
+
               <div>
-                <p className="font-heading text-2xl font-bold text-foreground">$0.001</p>
+                <p className="font-heading text-lg font-bold text-foreground">$0.001</p>
                 <p className="font-body text-xs text-muted-foreground">Avg. Fee</p>
               </div>
               <div>
-                <p className="font-heading text-2xl font-bold text-foreground">~45s</p>
+                <p className="font-heading text-lg font-bold text-foreground">~45s</p>
                 <p className="font-body text-xs text-muted-foreground">Cash-in / Cash-out via RIFT Connect</p>
               </div>
             </div>
