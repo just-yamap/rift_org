@@ -72,15 +72,7 @@ export default function HeroSection({ atmImageUrl }) {
               </a>
             </div>
 
-            <div className="grid grid-cols-4 gap-6 mt-10 pt-10 border-t border-border">
-              <div>
-                <p className="font-heading text-2xl font-bold text-foreground">400ms</p>
-                <p className="font-body text-xs text-muted-foreground">Transaction Speed</p>
-              </div>
-              <div>
-                <p className="font-heading text-2xl font-bold text-foreground">All SPL</p>
-                <p className="font-body text-xs text-muted-foreground">+ BTC, ETH & more (beta)</p>
-              </div>
+            <div className="grid grid-cols-2 gap-6 mt-10 pt-10 border-t border-border">
               <div>
                 <p className="font-heading text-2xl font-bold text-foreground">$0.001</p>
                 <p className="font-body text-xs text-muted-foreground">Avg. Fee</p>
