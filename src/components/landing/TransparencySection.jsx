@@ -93,22 +93,7 @@ export default function TransparencySection() {
           ))}
         </div>
 
-        {/* Hackathon banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mt-8 bg-card border border-border rounded-xl p-5 text-center"
-        >
-          <p className="font-body text-sm text-muted-foreground">
-            Rift is a proud participant in the{' '}
-            <a href="https://www.colosseum.com/frontier" target="_blank" rel="noopener noreferrer" className="text-foreground hover:underline font-semibold">
-              Solana Frontier Hackathon
-            </a>{' '}
-            by Colosseum.
-          </p>
-        </motion.div>
+
       </div>
     </section>
   );
