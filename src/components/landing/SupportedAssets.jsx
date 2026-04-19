@@ -1,31 +1,19 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Search } from 'lucide-react';
 
 const ASSETS = [
-  // Solana SPL Tokens
   { symbol: 'SOL', name: 'Solana', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png', network: 'Solana', category: 'SPL' },
   { symbol: 'USDC', name: 'USD Coin', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png', network: 'Solana', category: 'SPL' },
-  { symbol: 'JUP', name: 'Jupiter', logo: 'https://jup.ag/svg/jupiter-logo.svg', network: 'Solana', category: 'SPL' },
-  { symbol: 'BONK', name: 'Bonk', logo: 'https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I', network: 'Solana', category: 'SPL' },
-  { symbol: 'BSD', name: 'Brazilian Stable Dollar', logo: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/d757f712d_image.png', network: 'Solana', category: 'SPL' },
-  
-  // Wrapped Assets
   { symbol: 'wBTC', name: 'Wrapped Bitcoin', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E/logo.png', network: 'Solana', category: 'Wrapped' },
   { symbol: 'wETH', name: 'Wrapped Ethereum', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs/logo.png', network: 'Solana', category: 'Wrapped' },
-  
-  // Native Assets (Coming Soon)
   { symbol: 'BTC', name: 'Bitcoin', logo: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitcoin/info/logo.png', network: 'Bitcoin', category: 'Native', soon: true },
   { symbol: 'ETH', name: 'Ethereum', logo: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png', network: 'Ethereum', category: 'Native', soon: true },
 ];
 
 export default function SupportedAssets() {
   const [hoveredAsset, setHoveredAsset] = useState(null);
-
-  const categories = [
-    { label: 'SPL Tokens', value: 'SPL', color: 'text-primary' },
-    { label: 'Wrapped Assets', value: 'Wrapped', color: 'text-accent' },
-    { label: 'Native Assets', value: 'Native', color: 'text-orange-400' },
-  ];
+  const [splSearch, setSplSearch] = useState('');
 
   return (
     <section className="py-24 px-6 relative">
@@ -42,23 +30,12 @@ export default function SupportedAssets() {
             Trade Everything
           </h2>
           <p className="font-body text-muted-foreground max-w-2xl text-lg">
-            Buy and sell from a growing list of verified Solana tokens, wrapped assets, and native chains.
+            Buy and sell SOL, wrapped assets, and native chains — or search any verified SPL token.
           </p>
         </motion.div>
 
-        {/* Category Tabs */}
-        <div className="flex flex-wrap gap-3 mb-12">
-          {categories.map((cat) => (
-            <div key={cat.value}>
-              <p className={`font-heading text-xs tracking-widest uppercase font-semibold ${cat.color} mb-3`}>
-                {cat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-
         {/* Assets Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
           {ASSETS.map((asset, i) => (
             <motion.div
               key={asset.symbol}
@@ -135,17 +112,33 @@ export default function SupportedAssets() {
           ))}
         </div>
 
-        {/* Info callout */}
+        {/* Custom SPL search */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-card border border-border rounded-xl p-6 max-w-3xl"
+          className="bg-card border border-border rounded-xl p-6 max-w-2xl"
         >
-          <p className="font-body text-sm text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Want to trade something else?</strong> Search any verified SPL token on Jupiter at the kiosk. If it has sufficient liquidity, you can buy it instantly. Native BTC and ETH delivery coming soon via LI.FI cross-chain routing.
+          <p className="font-heading text-xs text-muted-foreground tracking-widest uppercase mb-3">Any SPL Token</p>
+          <p className="font-body text-sm text-muted-foreground mb-4">
+            Don't see your token? Search any verified SPL token by name or mint address. If it has sufficient liquidity on Jupiter, you can buy it at the kiosk instantly.
           </p>
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+            <input
+              type="text"
+              placeholder="Search token name or mint address..."
+              value={splSearch}
+              onChange={(e) => setSplSearch(e.target.value)}
+              className="w-full bg-secondary border border-border rounded-lg pl-10 pr-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/40 transition-colors"
+            />
+          </div>
+          {splSearch && (
+            <p className="font-body text-xs text-muted-foreground mt-3">
+              Token search is available at the kiosk terminal — powered by Jupiter aggregator.
+            </p>
+          )}
         </motion.div>
       </div>
     </section>
