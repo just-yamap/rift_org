@@ -7,7 +7,7 @@ const ASSETS = [
   { symbol: 'USDC', name: 'USD Coin', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png', network: 'Solana', category: 'SPL' },
   { symbol: 'JUP', name: 'Jupiter', logo: 'https://jup.ag/svg/jupiter-logo.svg', network: 'Solana', category: 'SPL' },
   { symbol: 'BONK', name: 'Bonk', logo: 'https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I', network: 'Solana', category: 'SPL' },
-  { symbol: 'BSD', name: 'Brazilian Stable Dollar', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png', network: 'Solana', category: 'SPL' },
+  { symbol: 'BSD', name: 'Brazilian Stable Dollar', logo: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/d757f712d_image.png', network: 'Solana', category: 'SPL' },
   
   // Wrapped Assets
   { symbol: 'wBTC', name: 'Wrapped Bitcoin', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E/logo.png', network: 'Solana', category: 'Wrapped' },
