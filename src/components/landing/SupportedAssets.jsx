@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Search } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, X, ExternalLink } from 'lucide-react';
 
 const ASSETS = [
   { symbol: 'SOL', name: 'Solana', logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png', network: 'Solana', category: 'SPL' },
@@ -11,9 +11,48 @@ const ASSETS = [
   { symbol: 'ETH', name: 'Ethereum', logo: 'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png', network: 'Ethereum', category: 'Native', soon: true },
 ];
 
+const TOKEN_LIST_URL = 'https://cdn.jsdelivr.net/gh/solana-labs/token-list@main/src/tokens/solana.tokenlist.json';
+
 export default function SupportedAssets() {
   const [hoveredAsset, setHoveredAsset] = useState(null);
   const [splSearch, setSplSearch] = useState('');
+  const [tokenList, setTokenList] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
+  const [loadingList, setLoadingList] = useState(false);
+  const [listLoaded, setListLoaded] = useState(false);
+  const searchRef = useRef(null);
+
+  // Lazy-load token list when user focuses the search box
+  const loadTokenList = async () => {
+    if (listLoaded || loadingList) return;
+    setLoadingList(true);
+    try {
+      const res = await fetch(TOKEN_LIST_URL);
+      const data = await res.json();
+      setTokenList(data.tokens || []);
+      setListLoaded(true);
+    } catch (e) {
+      console.error('Token list load failed', e);
+    } finally {
+      setLoadingList(false);
+    }
+  };
+
+  useEffect(() => {
+    if (!splSearch.trim()) {
+      setSearchResults([]);
+      return;
+    }
+    const q = splSearch.trim().toLowerCase();
+    const results = tokenList
+      .filter(t =>
+        t.symbol?.toLowerCase().includes(q) ||
+        t.name?.toLowerCase().includes(q) ||
+        t.address?.toLowerCase() === q
+      )
+      .slice(0, 8);
+    setSearchResults(results);
+  }, [splSearch, tokenList]);
 
   return (
     <section className="py-24 px-6 relative">
@@ -124,21 +163,82 @@ export default function SupportedAssets() {
           <p className="font-body text-sm text-muted-foreground mb-4">
             Don't see your token? Search any verified SPL token by name or mint address. If it has sufficient liquidity on Jupiter, you can buy it at the kiosk instantly.
           </p>
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+          <div className="relative" ref={searchRef}>
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground z-10" />
             <input
               type="text"
               placeholder="Search token name or mint address..."
               value={splSearch}
+              onFocus={loadTokenList}
               onChange={(e) => setSplSearch(e.target.value)}
-              className="w-full bg-secondary border border-border rounded-lg pl-10 pr-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/40 transition-colors"
+              className="w-full bg-secondary border border-border rounded-lg pl-10 pr-10 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/40 transition-colors"
             />
+            {splSearch && (
+              <button
+                onClick={() => { setSplSearch(''); setSearchResults([]); }}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+
+            {/* Dropdown results */}
+            <AnimatePresence>
+              {splSearch && (
+                <motion.div
+                  initial={{ opacity: 0, y: 4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 4 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute top-full left-0 right-0 mt-1 bg-card border border-border rounded-xl overflow-hidden shadow-2xl z-50"
+                >
+                  {loadingList ? (
+                    <div className="px-4 py-6 text-center font-body text-xs text-muted-foreground">
+                      Loading token list…
+                    </div>
+                  ) : searchResults.length > 0 ? (
+                    <ul>
+                      {searchResults.map((token) => (
+                        <li key={token.address}>
+                          <a
+                            href={`https://jup.ag/swap/USDC-${token.address}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 px-4 py-3 hover:bg-secondary transition-colors group"
+                          >
+                            {token.logoURI ? (
+                              <img
+                                src={token.logoURI}
+                                alt={token.symbol}
+                                className="w-7 h-7 rounded-full object-contain flex-shrink-0 bg-secondary"
+                                onError={(e) => { e.target.style.display = 'none'; }}
+                              />
+                            ) : (
+                              <div className="w-7 h-7 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                                <span className="font-heading text-xs text-muted-foreground">{token.symbol?.[0]}</span>
+                              </div>
+                            )}
+                            <div className="flex-1 min-w-0">
+                              <p className="font-heading text-sm font-semibold text-foreground">{token.symbol}</p>
+                              <p className="font-body text-xs text-muted-foreground truncate">{token.name}</p>
+                            </div>
+                            <ExternalLink className="w-3.5 h-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : listLoaded ? (
+                    <div className="px-4 py-6 text-center font-body text-xs text-muted-foreground">
+                      No verified tokens found for "{splSearch}"
+                    </div>
+                  ) : null}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-          {splSearch && (
-            <p className="font-body text-xs text-muted-foreground mt-3">
-              Token search is available at the kiosk terminal — powered by Jupiter aggregator.
-            </p>
-          )}
+          <p className="font-body text-xs text-muted-foreground mt-3">
+            Powered by Solana token registry · 13,000+ verified tokens
+          </p>
         </motion.div>
       </div>
     </section>
