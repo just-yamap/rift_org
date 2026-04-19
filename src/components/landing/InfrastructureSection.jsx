@@ -42,7 +42,7 @@ const infra = [
     name: "Privy",
     href: "https://privy.io",
     logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/61e96c881_generated_image.png",
-    desc: "Operator wallet authentication. Email/social/passkey login — no seed phrase on a Post-it.",
+    desc: "Operator wallet authentication. Email/social/passkey login. No seed phrase on a Post-it.",
   },
   {
     name: "Umbra",

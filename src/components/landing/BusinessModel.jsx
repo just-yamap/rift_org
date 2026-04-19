@@ -11,7 +11,7 @@ const streams = [
   {
     icon: TrendingUp,
     title: "Delta profit from the safety buffer",
-    description: "Every transaction reserves 0–5% against adverse price moves between the UI quote and the cash drop. Any unused buffer is recorded on-chain as accrued_delta_usdc — pure profit on favorable ticks. Operator never loses on slippage."
+    description: "Every transaction reserves 0-5% against adverse price moves between the UI quote and the cash drop. Any unused buffer is recorded on-chain as accrued_delta_usdc, pure profit on favorable ticks. Operator never loses on slippage."
   },
   {
     icon: Layers,

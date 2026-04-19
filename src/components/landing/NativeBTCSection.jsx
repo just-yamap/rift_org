@@ -5,7 +5,7 @@ const steps = [
   {
     num: "01",
     title: "Insert cash.",
-    body: "The kiosk accepts euros, dollars, reais — any supported fiat. No account, no app, no seed phrase.",
+    body: "The kiosk accepts euros, dollars, reais, any supported fiat. No account, no app, no seed phrase.",
   },
   {
     num: "02",
@@ -16,7 +16,7 @@ const steps = [
   {
     num: "03",
     title: "Reach any chain.",
-    body: "Want native BTC or ETH delivered cross-chain? Powered by LI.FI, Rift routes your asset just-in-time — no wrapped tokens, no bridge UI.",
+    body: "Want native BTC or ETH delivered cross-chain? Powered by LI.FI, Rift routes your asset just-in-time, no wrapped tokens, no bridge UI.",
     link: "https://li.fi",
     linkLabel: "LI.FI",
   },
@@ -68,7 +68,7 @@ export default function NativeBTCSection() {
             Solana at the core.<br />Every asset in reach.
           </h2>
           <p className="font-body text-muted-foreground max-w-2xl text-lg leading-relaxed">
-            Every Rift transaction settles on Solana — the fastest, cheapest settlement layer in crypto. Need to reach another chain? Rift handles the routing invisibly.
+            Every Rift transaction settles on Solana, the fastest, cheapest settlement layer in crypto. Need to reach another chain? Rift handles the routing invisibly.
           </p>
         </motion.div>
 

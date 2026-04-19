@@ -57,7 +57,7 @@ const categories = [
   {
     label: "Hardware (Prototype)",
     accent: "text-red-400",
-    note: "Prototype build — final hardware subject to change",
+    note: "Prototype build. Final hardware subject to change.",
     items: [
       { name: "JCM NV200", logo: null, icon: "💵", desc: "Cash acceptor/dispenser (SSP over RS-232)" },
       { name: "ESC/POS 80mm Printer", logo: null, icon: "🖨", desc: "Thermal receipt printer" },
@@ -70,7 +70,7 @@ const categories = [
     items: [
       { name: "Adevar Labs", logo: null, icon: "🔬", desc: "Scheduled protocol audit (Colosseum Frontier security track)" },
       { name: "5-min claim TTL", logo: null, icon: "⏱", desc: "Auto-refund on timeout" },
-      { name: "Hard-capped commissions", logo: null, icon: "🔒", desc: "1–15%, operator-configurable" },
+      { name: "Hard-capped commissions", logo: null, icon: "🔒", desc: "1-15%, operator-configurable" },
       { name: "Hard-capped safety buffer", logo: null, icon: "🛡", desc: "≤ 5% max" },
       { name: "Kill Switches", logo: null, icon: "⛔", desc: "Platform-side + operator-side" },
     ]
@@ -122,7 +122,7 @@ export default function TechStack() {
             ENTERPRISE-GRADE<br />TECH STACK
           </h2>
           <p className="font-body text-muted-foreground max-w-xl text-lg">
-            Every layer of RIFT is built with production-grade tools — from Rust smart contracts on Solana to physical cash hardware integration.
+            Every layer of RIFT is built with production-grade tools, from Rust smart contracts on Solana to physical cash hardware integration.
           </p>
         </motion.div>
 

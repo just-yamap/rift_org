@@ -7,7 +7,7 @@ const cards = [
     href: "https://umbra.cash",
     linkLabel: "Umbra",
     logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/e9eaa355f_image.png",
-    body: "Every buy can be delivered via Umbra's confidential SPL transfer protocol. Transaction amount and the link between the kiosk and your wallet stay encrypted on-chain. Regulators with a legitimate request can decrypt via a published viewing key — nobody else can.",
+    body: "Every buy can be delivered via Umbra's confidential SPL transfer protocol. Transaction amount and the link between the kiosk and your wallet stay encrypted on-chain. Regulators with a legitimate request can decrypt via a published viewing key. Nobody else can.",
   },
   {
     title: "Squads multi-sig custody",
@@ -28,7 +28,7 @@ const cards = [
     href: "https://goldrush.dev/",
     linkLabel: "Covalent GoldRush",
     logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/783905a66_image.png",
-    body: "Every transaction gets a real-time wallet risk score via Covalent GoldRush. Sanctioned addresses, drainer-linked wallets, known mixer interactions — all refused automatically. Each kiosk operator can also designate a compliance officer who can veto suspicious claims before settlement. Privacy-by-default; transparency-on-subpoena.",
+    body: "Every transaction gets a real-time wallet risk score via Covalent GoldRush. Sanctioned addresses, drainer-linked wallets, known mixer interactions are all refused automatically. Each kiosk operator can also designate a compliance officer who can veto suspicious claims before settlement. Privacy by default, transparency on subpoena.",
   },
 ];
 

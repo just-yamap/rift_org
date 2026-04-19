@@ -13,7 +13,7 @@ const steps = [
 
 const revenueStreams = [
   { icon: DollarSign, title: "Commission (1–15%)", desc: "Set per kiosk, tiered by transaction amount. Different rates for buys vs sells." },
-  { icon: TrendingUp, title: "Safety buffer delta", desc: "Unused buffer from favorable price moves accrues as on-chain profit — automatically." },
+  { icon: TrendingUp, title: "Safety buffer delta", desc: "Unused buffer from favorable price moves accrues as on-chain profit, automatically." },
   { icon: Layers, title: "Capital efficiency", desc: "Hold only USDC + SOL. LI.FI handles all cross-chain delivery JIT. No multi-chain inventory." },
 ];
 
