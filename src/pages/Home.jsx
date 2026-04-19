@@ -22,7 +22,7 @@ import TransparencySection from '../components/landing/TransparencySection';
 import SupportedAssets from '../components/landing/SupportedAssets';
 
 
-const ATM_IMAGE = "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/8ce04ab8a_image.png";
+const ATM_IMAGE = "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/852607bcc_image.png";
 
 export default function Home() {
   return (
