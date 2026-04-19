@@ -87,15 +87,16 @@ export default function HeroSection({ atmImageUrl }) {
 
         </div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <ArrowDown className="w-5 h-5 text-muted-foreground" />
-        </motion.div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        animate={{ y: [0, 8, 0] }}
+        transition={{ repeat: Infinity, duration: 2 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <ArrowDown className="w-5 h-5 text-muted-foreground" />
+      </motion.div>
     </section>
   );
 }
