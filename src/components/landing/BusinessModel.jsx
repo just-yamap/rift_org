@@ -1,17 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DollarSign, TrendingUp, Layers } from 'lucide-react';
+import { DollarSign, Layers } from 'lucide-react';
 
 const streams = [
   {
     icon: DollarSign,
     title: "Commission (1–15%)",
     description: "Operator-set per kiosk, tiered by transaction amount. Different tiers for buys vs sells. Adjustable in real time from the admin dashboard."
-  },
-  {
-    icon: TrendingUp,
-    title: "Delta profit from the safety buffer",
-    description: "Every transaction reserves 0-5% against adverse price moves between the UI quote and the cash drop. Any unused buffer is recorded on-chain as accrued_delta_usdc, pure profit on favorable ticks. Operator never loses on slippage."
   },
   {
     icon: Layers,
@@ -24,7 +19,6 @@ const onChainCounters = [
   "total_buy_volume_usdc",
   "total_sell_volume_usdc",
   "accrued_commission_usdc",
-  "accrued_delta_usdc",
 ];
 
 export default function BusinessModel() {
@@ -41,14 +35,14 @@ export default function BusinessModel() {
         >
           <span className="font-heading text-xs text-muted-foreground tracking-widest uppercase">Business Model</span>
           <h2 className="font-heading text-4xl md:text-6xl font-bold text-foreground mt-3 mb-4 leading-tight">
-            THREE REVENUE<br />STREAMS
+            REVENUE<br />MODEL
           </h2>
           <p className="font-body text-muted-foreground max-w-xl text-lg">
-            Three stacking revenue streams, on-chain transparent, operator-controlled.
+            On-chain transparent, operator-controlled.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
+        <div className="grid md:grid-cols-2 gap-6 mb-10">
           {streams.map((s, i) => (
             <motion.div
               key={s.title}
