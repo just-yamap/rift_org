@@ -20,7 +20,9 @@ export default function SupportedAssets() {
   const [searchResults, setSearchResults] = useState([]);
   const [loadingList, setLoadingList] = useState(false);
   const [listLoaded, setListLoaded] = useState(false);
+  const [jupiterSearching, setJupiterSearching] = useState(false);
   const searchRef = useRef(null);
+  const jupiterDebounceRef = useRef(null);
 
   // Lazy-load token list when user focuses the search box
   const loadTokenList = async () => {
@@ -38,21 +40,62 @@ export default function SupportedAssets() {
     }
   };
 
+  // Fallback: fetch from Jupiter token search API
+  const searchJupiter = async (q) => {
+    setJupiterSearching(true);
+    try {
+      // Try by mint address first (exact)
+      const mintRes = await fetch(`https://tokens.jup.ag/token/${q}`);
+      if (mintRes.ok) {
+        const t = await mintRes.json();
+        setSearchResults([{ address: t.address, symbol: t.symbol, name: t.name, logoURI: t.logoURI }]);
+        setJupiterSearching(false);
+        return;
+      }
+      // Fallback: search by name/symbol
+      const searchRes = await fetch(`https://tokens.jup.ag/tokens/search?query=${encodeURIComponent(q)}&limit=8`);
+      if (searchRes.ok) {
+        const tokens = await searchRes.json();
+        setSearchResults((tokens || []).slice(0, 8).map(t => ({
+          address: t.address, symbol: t.symbol, name: t.name, logoURI: t.logoURI
+        })));
+      } else {
+        setSearchResults([]);
+      }
+    } catch (e) {
+      setSearchResults([]);
+    } finally {
+      setJupiterSearching(false);
+    }
+  };
+
   useEffect(() => {
     if (!splSearch.trim()) {
       setSearchResults([]);
       return;
     }
     const q = splSearch.trim().toLowerCase();
-    const results = tokenList
+
+    // Search local list first
+    const localResults = tokenList
       .filter(t =>
         t.symbol?.toLowerCase().includes(q) ||
         t.name?.toLowerCase().includes(q) ||
         t.address?.toLowerCase().includes(q)
       )
       .slice(0, 8);
-    setSearchResults(results);
-  }, [splSearch, tokenList]);
+
+    if (localResults.length > 0) {
+      setSearchResults(localResults);
+      return;
+    }
+
+    // If local list has no results, fall back to Jupiter API (debounced)
+    if (listLoaded) {
+      clearTimeout(jupiterDebounceRef.current);
+      jupiterDebounceRef.current = setTimeout(() => searchJupiter(splSearch.trim()), 400);
+    }
+  }, [splSearch, tokenList, listLoaded]);
 
   return (
     <section className="py-24 px-6 relative">
@@ -192,9 +235,9 @@ export default function SupportedAssets() {
                   transition={{ duration: 0.15 }}
                   className="absolute top-full left-0 right-0 mt-1 bg-card border border-border rounded-xl overflow-hidden shadow-2xl z-50"
                 >
-                  {loadingList ? (
+                  {loadingList || jupiterSearching ? (
                     <div className="px-4 py-6 text-center font-body text-xs text-muted-foreground">
-                      Loading token list…
+                      {loadingList ? 'Loading token list…' : 'Searching Jupiter…'}
                     </div>
                   ) : searchResults.length > 0 ? (
                     <ul>
