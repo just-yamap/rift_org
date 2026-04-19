@@ -10,7 +10,6 @@ import BusinessModel from '../components/landing/BusinessModel';
 import Roadmap from '../components/landing/Roadmap';
 import FAQ from '../components/landing/FAQ';
 import Footer from '../components/landing/Footer';
-import ATMWidget from '../components/landing/ATMWidget';
 import InfoBar from '../components/landing/InfoBar';
 import ContactBubble from '../components/landing/ContactBubble';
 import RiftConnectSection from '../components/landing/RiftConnectSection';
@@ -45,7 +44,6 @@ export default function Home() {
       <TransparencySection />
       <FAQ />
       <Footer />
-      <ATMWidget />
       <ContactBubble />
     </div>
   );
