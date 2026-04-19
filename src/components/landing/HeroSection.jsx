@@ -87,7 +87,7 @@ export default function HeroSection({ atmImageUrl }) {
               </div>
               <div>
                 <p className="font-heading text-2xl font-bold text-foreground">~45s</p>
-                <p className="font-body text-xs text-muted-foreground">Cash-in / Cash-out <span className="text-primary/70">(KYC via Seeker)</span></p>
+                <p className="font-body text-xs text-muted-foreground">Cash-in / Cash-out <span className="text-primary/70">(KYC via RIFT Connect)</span></p>
               </div>
             </div>
           </motion.div>
