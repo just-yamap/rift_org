@@ -11,7 +11,7 @@ const cashInSteps = [
   { icon: Eye,         label: "Live Amount Display",   desc: "Real-time fiat value shown on screen" },
   { icon: Coins,       label: "Select Crypto",         desc: "Pick any SPL token — SOL, USDC, BONK & more" },
   { icon: RefreshCw,   label: "Rate & Quote",          desc: "Best swap route via Jupiter aggregator" },
-  { icon: Wallet,      label: "Connect Wallet",        desc: "Scan QR, enter address — or RIFT prints a paper wallet for you" },
+  { icon: Wallet,      label: "Connect Wallet",        desc: "Scan QR, enter address. RIFT prints a paper wallet if you need one" },
   { icon: ShieldCheck, label: "KYC Verification",      desc: "App-based or on-device identity check" },
   { icon: CheckCircle, label: "Confirm & Send",        desc: "Crypto lands in your wallet in ~400ms" },
   { icon: Receipt,     label: "Receipt Printed",       desc: "Full transaction record printed on the spot" },
@@ -46,7 +46,7 @@ export default function HowItWorks() {
             BOTH<br />DIRECTIONS
           </h2>
           <p className="font-body text-muted-foreground text-lg max-w-xl">
-            RIFT handles the full cycle — deposit cash to get crypto, or convert crypto back to cash. On the spot.
+            RIFT handles the full cycle. Deposit cash to get crypto, or convert crypto back to cash. On the spot.
           </p>
         </motion.div>
 

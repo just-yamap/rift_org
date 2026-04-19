@@ -30,7 +30,7 @@ const items = [
   },
   {
     label: "Audit",
-    content: "Planned with Adevar Labs — contingent on Colosseum Frontier Hackathon results ($50,000 credits).",
+    content: "Planned with Adevar Labs, contingent on Colosseum Frontier Hackathon results ($50,000 credits).",
     href: null,
   },
   {

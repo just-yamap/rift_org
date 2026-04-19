@@ -10,7 +10,7 @@ import {
 const faqs = [
   {
     q: "What cryptocurrencies does RIFT support?",
-    a: "RIFT supports all Solana SPL tokens — including SOL, USDC, USDT, wrapped BTC (on Solana), memecoins, and any other token on the Solana network."
+    a: "RIFT supports all Solana SPL tokens, including SOL, USDC, USDT, wrapped BTC (on Solana), memecoins, and any other token on the Solana network."
   },
   {
     q: "How fast are transactions?",

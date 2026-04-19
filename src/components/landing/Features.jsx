@@ -6,7 +6,7 @@ const features = [
   {
     icon: Coins,
     title: "All SPL Tokens",
-    description: "Supports every Solana SPL token — SOL, USDC, wrapped BTC, memecoins, and everything in between."
+    description: "Supports every Solana SPL token: SOL, USDC, wrapped BTC, memecoins, and everything in between."
   },
   {
     icon: Zap,
@@ -31,7 +31,7 @@ const features = [
   {
     icon: Shield,
     title: "Built-in KYC Verification",
-    description: "Full identity verification at the kiosk — or remotely via the RIFT Connect app before you arrive. Compliant with regulatory requirements."
+    description: "Full identity verification at the kiosk, or remotely via the RIFT Connect app before you arrive. Compliant with regulatory requirements."
   }
 ];
 

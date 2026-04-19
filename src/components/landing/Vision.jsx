@@ -41,7 +41,7 @@ export default function Vision() {
             BRIDGING THE PHYSICAL<br />& DIGITAL
           </h2>
           <p className="font-body text-muted-foreground max-w-2xl text-lg leading-relaxed">
-            Crypto has transformed finance — but the barrier between physical cash and digital assets remains massive. RIFT was built to eliminate that gap, permanently.
+            Crypto has transformed finance, but the barrier between physical cash and digital assets remains massive. RIFT was built to eliminate that gap, permanently.
           </p>
         </motion.div>
 
@@ -74,7 +74,7 @@ export default function Vision() {
         >
           <p className="font-heading text-xs text-muted-foreground tracking-widest uppercase mb-2">Mission Statement</p>
           <p className="font-heading text-lg md:text-xl text-foreground italic">
-            "Make crypto accessible to everyone, everywhere — one terminal at a time."
+            "Make crypto accessible to everyone, everywhere. One terminal at a time."
           </p>
         </motion.div>
       </div>

@@ -25,7 +25,7 @@ export default function RiftConnectSection() {
               Setup in<br />Seconds
             </h2>
             <p className="font-body text-muted-foreground text-lg mb-8 leading-relaxed">
-              Download RIFT Connect to locate nearby ATMs, complete your KYC verification, and start transacting instantly. When you arrive at a RIFT terminal, you're already verified — fast, secure, and immediate.
+              Download RIFT Connect to locate nearby ATMs, complete your KYC verification, and start transacting instantly. When you arrive at a RIFT terminal, you're already verified. Fast, secure, and immediate.
             </p>
 
             <a
