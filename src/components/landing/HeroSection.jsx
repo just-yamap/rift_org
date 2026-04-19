@@ -35,7 +35,7 @@ export default function HeroSection({ atmImageUrl }) {
       />
 
       <div className="relative max-w-7xl mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-1 gap-12 items-center max-w-3xl">
           {/* Left text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -92,31 +92,7 @@ export default function HeroSection({ atmImageUrl }) {
             </div>
           </motion.div>
 
-          {/* Right ATM image with mouse tracking */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative flex justify-center"
-          >
-            <motion.div 
-              className="relative"
-              animate={{ x: mousePosition.x * 0.5, y: mousePosition.y * 0.5 }}
-              transition={{ type: "spring", stiffness: 100, damping: 30 }}
-            >
-              <motion.div 
-                className="absolute -inset-4 bg-primary/5 rounded-2xl blur-xl"
-                animate={{ opacity: [0.5, 0.8, 0.5] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              />
-              <img 
-                src={atmImageUrl}
-                alt="RIFT Solana ATM - sleek futuristic cryptocurrency terminal"
-                className="relative w-full max-w-md"
-                style={{ mixBlendMode: 'screen' }}
-              />
-            </motion.div>
-          </motion.div>
+
         </div>
 
         {/* Scroll indicator */}
