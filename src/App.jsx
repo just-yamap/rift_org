@@ -15,6 +15,7 @@ import Privacy from './pages/Privacy';
 import Assets from './pages/Assets';
 import Transparency from './pages/Transparency';
 import Waitlist from './pages/Waitlist';
+import UserDemo from './pages/UserDemo';
 import CookieBanner from './components/CookieBanner';
 // Add page imports here
 
@@ -54,6 +55,7 @@ const AuthenticatedApp = () => {
       <Route path="/assets" element={<Assets />} />
       <Route path="/transparency" element={<Transparency />} />
       <Route path="/waitlist" element={<Waitlist />} />
+      <Route path="/user-demo" element={<UserDemo />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
