@@ -42,7 +42,7 @@ export default function Demo() {
             </div>
             <div className="w-full rounded-xl overflow-hidden border border-border shadow-2xl" style={{ height: '700px' }}>
               <iframe
-                src="https://just-yamap.github.io/rift/"
+                src="https://raw.githubusercontent.com/just-yamap/rift/admin-dashboard-rework-2026-04-18/rift-atm-v10.html"
                 title="RIFT ATM Terminal Demo"
                 className="w-full h-full"
                 style={{ border: 'none' }}

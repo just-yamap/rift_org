@@ -42,10 +42,10 @@ export default function AdminDemo() {
               <span className="text-xs font-body text-muted-foreground">Interactive simulation</span>
             </div>
             <iframe 
-              src="https://just-yamap.github.io/rift/"
+              src="https://raw.githubusercontent.com/just-yamap/rift/admin-dashboard-rework-2026-04-18/rift-admin-v2.html"
               className="w-full rounded-lg border border-border bg-background"
               style={{ height: '900px' }}
-              title="RIFT ATM Terminal Demo"
+              title="RIFT Admin Dashboard Demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
             />
           </motion.div>
