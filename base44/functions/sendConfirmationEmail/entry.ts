@@ -2,12 +2,15 @@ import { createClientFromRequest } from 'npm:@base44/sdk@0.8.25';
 
 Deno.serve(async (req) => {
   const base44 = createClientFromRequest(req);
-  const user = await base44.auth.me();
-  if (!user) {
-    return Response.json({ error: 'Unauthorized' }, { status: 401 });
-  }
 
-  const { name, email, quantity, location } = await req.json();
+  // This function is triggered by an entity automation on EarlyBirdSignup create.
+  // Use service role to read the entity payload.
+  const { data } = await req.json();
+  const { name, email, quantity, location } = data || {};
+
+  if (!email || !name) {
+    return Response.json({ error: 'Missing required fields' }, { status: 400 });
+  }
 
   const emailBody = `<!DOCTYPE html>
 <html>
@@ -61,16 +64,11 @@ Deno.serve(async (req) => {
 </body>
 </html>`;
 
-  try {
-    await base44.asServiceRole.integrations.Core.SendEmail({
-      to: email,
-      subject: "You're on the RIFT Early Bird list ✓",
-      body: emailBody
-    });
-  } catch (err) {
-    console.error('Email error:', err.message, err);
-    return Response.json({ error: err.message }, { status: 500 });
-  }
+  await base44.asServiceRole.integrations.Core.SendEmail({
+    to: email,
+    subject: "You're on the RIFT Early Bird list ✓",
+    body: emailBody
+  });
 
   return Response.json({ success: true });
 });
