@@ -66,11 +66,6 @@ export default function SignupSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-6">
-            <Zap className="w-3 h-3 text-accent" />
-            <span className="font-heading text-xs text-accent tracking-wider">EARLY BIRD PRICING</span>
-          </div>
-
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-4">
             Be First In Line
           </h2>
