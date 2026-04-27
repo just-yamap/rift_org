@@ -15,7 +15,6 @@ import ContactBubble from '../components/landing/ContactBubble';
 import RiftConnectSection from '../components/landing/RiftConnectSection';
 import AssetsSection from '../components/landing/AssetsSection';
 import PrivacySection from '../components/landing/PrivacySection';
-import NativeBTCSection from '../components/landing/NativeBTCSection';
 import InfrastructureSection from '../components/landing/InfrastructureSection';
 import TransparencySection from '../components/landing/TransparencySection';
 import SupportedAssets from '../components/landing/SupportedAssets';
@@ -35,7 +34,6 @@ export default function Home() {
       <HowItWorks />
       <Features />
       <SupportedAssets />
-      <NativeBTCSection />
       <PrivacySection />
       <InfrastructureSection />
       <TechStack />
