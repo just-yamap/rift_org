@@ -159,40 +159,6 @@ export default function TechStack() {
           ))}
         </div>
 
-        {/* Hackathon / Ecosystem affiliations */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="font-heading text-xs text-muted-foreground tracking-widest uppercase mb-2 text-center">Colosseum Frontier Hackathon</p>
-          <p className="font-body text-xs text-muted-foreground/60 mb-6 text-center">Participating in the Main Track + selected side tracks</p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {hackathons.map((h, i) => (
-              <motion.a
-                key={h.name}
-                href={h.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="flex items-center gap-2 border border-white/10 bg-white/4 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-white/8 hover:border-white/20 transition-colors"
-              >
-                {h.logo ? (
-                  <img src={h.logo} alt={h.name} className="w-4 h-4 rounded-full object-cover flex-shrink-0" onError={e => e.target.style.display='none'} />
-                ) : (
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                )}
-                <span className="font-heading text-xs font-semibold text-foreground">{h.name}</span>
-                <span className="font-body text-xs text-muted-foreground">· {h.label}</span>
-              </motion.a>
-            ))}
-          </div>
-        </motion.div>
-
       </div>
     </section>
   );
