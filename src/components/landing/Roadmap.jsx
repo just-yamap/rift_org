@@ -4,20 +4,20 @@ import { motion } from 'framer-motion';
 const milestones = [
   {
     quarter: "Phase 01",
-    title: "Waitlist Sign Up",
-    description: "Join the RIFT waitlist. Secure your spot and get notified as soon as early access opens.",
+    title: "Letter of Intent — Now Open",
+    description: "Submit your Letter of Intent to secure your operator allocation. LOI holders are first in line when RIFT goes live — locking in priority pricing, dedicated onboarding, and early access to the terminal. No commitment required.",
     active: true
   },
   {
     quarter: "Phase 02",
-    title: "Open Early Bird Access",
-    description: "Waitlist members get first access when pre-orders open. Pricing will be announced exclusively to early bird subscribers.",
+    title: "Production & Deployment",
+    description: "Hardware enters production. LOI operators receive purchase agreements, finalise configurations, and coordinate installation. RIFT terminals ship and go live at operator venues worldwide.",
     active: false
   },
   {
     quarter: "Phase 03",
-    title: "Public Access",
-    description: "Full public launch. RIFT terminals available globally at standard pricing.",
+    title: "Global GTM — Underserved Markets First",
+    description: "RIFT executes an aggressive go-to-market strategy targeting underbanked and underserved regions across Africa, Southeast Asia, Latin America, and Eastern Europe. Presence at key crypto and fintech conferences. Operator network expands market-by-market.",
     active: false
   }
 ];
