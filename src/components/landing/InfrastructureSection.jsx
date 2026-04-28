@@ -21,22 +21,10 @@ const infra = [
     desc: "Best-price SPL swap aggregator. Integrated via the Developer Platform Swap V2 API.",
   },
   {
-    name: "LI.FI",
-    href: "https://li.fi",
-    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/bcae33013_image.png",
-    desc: "Universal liquidity infrastructure. Aggregates 20+ bridges across 60+ chains. Native BTC + ETH delivery.",
-  },
-  {
     name: "MagicBlock",
     href: "https://magicblock.gg",
     logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/7c4d76708_generated_image.png",
     desc: "Ephemeral Rollups give the kiosk flow sub-200ms finality, then commit back to mainnet.",
-  },
-  {
-    name: "RPC Fast",
-    href: "https://rpcfast.com",
-    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/038d8f03e_image.png",
-    desc: "Dedicated low-latency Solana RPC (Frankfurt region). 500 req/s baseline.",
   },
   {
     name: "Privy",
@@ -49,18 +37,6 @@ const infra = [
     href: "https://app.umbra.cash",
     logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/e9eaa355f_image.png",
     desc: "Confidential SPL transfers with viewing-key-based regulatory decryption.",
-  },
-  {
-    name: "Squads",
-    href: "https://squads.so",
-    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/4ead2372c_generated_image.png",
-    desc: "Solana-native 2-of-3 multi-sig for operator + platform custody. No single key can drain a kiosk.",
-  },
-  {
-    name: "Ika",
-    href: "https://ika.xyz",
-    logo: "https://media.base44.com/images/public/69bce5cb012b9c997937b65e/20a44efd1_generated_image.png",
-    desc: "2PC-MPC dWallets for secure native BTC/ETH/other-chain custody.",
   },
   {
     name: "Covalent",
