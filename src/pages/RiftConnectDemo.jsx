@@ -41,9 +41,9 @@ const screens = [
     id: 'atmmap',
     label: 'ATM Map',
     icon: MapPin,
-    image: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/6dae2d587_90E4B8BA-9B6D-4D7F-BB47-A2C5B094EA0B.jpg',
+    image: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/ce4aa637b_IMG_9485.png',
     title: 'Find RIFT ATMs',
-    description: 'A live directory of every RIFT terminal — filterable by All, Online, Offline, Maintenance, or Near Me. Each listing shows real-time cash availability, supported operations (Buy / Sell), maximum transaction limit, and opening hours. Toggle to a full map view to see terminal pins across Europe and beyond.',
+    description: 'Switch between a list view and a full map view of every RIFT terminal worldwide. The map pins show live locations across Europe and beyond. Filter by Online, Offline, Maintenance, or Near Me. Each listing shows real-time cash availability, supported operations (Buy / Sell), maximum transaction limit, and opening hours.',
   },
 ];
 
