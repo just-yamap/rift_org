@@ -58,6 +58,13 @@ export default function Navbar() {
                       <p className="font-body text-xs text-muted-foreground">Analytics & management</p>
                     </div>
                   </a>
+                  <div className="h-px bg-white/5" />
+                  <a href="/rift-connect-demo" className="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors">
+                    <div>
+                      <p className="font-heading text-xs font-semibold text-foreground">RIFT Connect</p>
+                      <p className="font-body text-xs text-muted-foreground">Companion app walkthrough</p>
+                    </div>
+                  </a>
                 </motion.div>
               )}
             </AnimatePresence>

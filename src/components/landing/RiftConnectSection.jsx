@@ -29,13 +29,11 @@ export default function RiftConnectSection() {
             </p>
 
             <a
-              href="https://rift-pass-link.base44.app"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/rift-connect-demo"
               className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-heading text-sm font-semibold hover:opacity-90 transition-opacity"
             >
               <Smartphone className="w-5 h-5" />
-              DOWNLOAD RIFT CONNECT
+              SEE APP DEMO →
             </a>
           </div>
 

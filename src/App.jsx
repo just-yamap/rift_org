@@ -16,6 +16,7 @@ import Assets from './pages/Assets';
 import Transparency from './pages/Transparency';
 import Waitlist from './pages/Waitlist';
 import UserDemo from './pages/UserDemo';
+import RiftConnectDemo from './pages/RiftConnectDemo.jsx';
 import CookieBanner from './components/CookieBanner';
 // Add page imports here
 
@@ -56,6 +57,7 @@ const AuthenticatedApp = () => {
       <Route path="/transparency" element={<Transparency />} />
       <Route path="/waitlist" element={<Waitlist />} />
       <Route path="/user-demo" element={<UserDemo />} />
+      <Route path="/rift-connect-demo" element={<RiftConnectDemo />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
