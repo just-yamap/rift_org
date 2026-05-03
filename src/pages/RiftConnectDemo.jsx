@@ -11,7 +11,7 @@ const screens = [
     icon: Home,
     image: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/74575f2ce_2ACD8D22-C6C3-4F56-8945-B893CAA92315.jpg',
     title: 'Home Dashboard',
-    description: 'Your RIFT identity card is front and centre — shows your KYC verification status, issuer, and creation date. Three quick-action tiles let you jump directly to KYC, scan the ATM QR code, or find a nearby terminal. Key stats (400ms speed, 15+ assets, $0.001 fee) are pinned at the bottom.',
+    description: 'Your RIFT identity card is front and centre, showing your KYC verification status, issuer, and creation date. Three quick-action tiles let you jump directly to KYC, scan the ATM QR code, or find a nearby terminal. Key stats (400ms speed, 15+ assets, $0.001 fee) are pinned at the bottom.',
   },
   {
     id: 'kyc',
@@ -19,7 +19,7 @@ const screens = [
     icon: ShieldCheck,
     image: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/785bb8081_3E30335F-545D-449F-83D1-3576BFE3E505.jpg',
     title: 'KYC Verification',
-    description: 'A guided identity check that meets eIDAS QeS (Qualified electronic Signature) standards. Four collapsible sections walk you through Registration, Signing, Verifiable Credentials, and Safety & Security. You verify once — RIFT never stores raw biometric data outside encrypted storage — and your credential is reusable at every RIFT terminal worldwide.',
+    description: 'A guided identity check that meets eIDAS QeS (Qualified electronic Signature) standards. Four collapsible sections walk you through Registration, Signing, Verifiable Credentials, and Safety & Security. You verify once. RIFT never stores raw biometric data outside encrypted storage, and your credential is reusable at every RIFT terminal worldwide.',
   },
   {
     id: 'qrcode',
@@ -27,7 +27,7 @@ const screens = [
     icon: QrCode,
     image: 'https://media.base44.com/images/public/69bce5cb012b9c997937b65e/bcb3602d2_86CA910E-115F-44AA-B125-469EF3B92A3F.jpg',
     title: 'Your RIFT KYC Code',
-    description: 'Once verified, a unique QR code is generated and tied to your identity credential. Scan it at any RIFT ATM to skip manual KYC entry at the terminal — your tier (Basic / Advanced) and verification status are confirmed instantly. The code also displays your RIFT-KYC reference ID for support queries.',
+    description: 'Once verified, a unique QR code is generated and tied to your identity credential. Scan it at any RIFT ATM to skip manual KYC entry at the terminal. Your tier (Basic / Advanced) and verification status are confirmed instantly. The code also displays your RIFT-KYC reference ID for support queries.',
   },
   {
     id: 'scan',
@@ -74,7 +74,7 @@ export default function RiftConnectDemo() {
               RIFT Connect App
             </h1>
             <p className="font-body text-muted-foreground text-lg max-w-2xl">
-              The companion app for every RIFT terminal. Verify your identity once, scan your QR at any kiosk, locate ATMs in real time — no waiting, no paperwork.
+              The companion app for every RIFT terminal. Verify your identity once, scan your QR at any kiosk, locate ATMs in real time. No waiting, no paperwork.
             </p>
           </motion.div>
 

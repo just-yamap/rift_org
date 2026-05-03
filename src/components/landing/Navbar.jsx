@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Smartphone } from 'lucide-react';
 import RiftLogo from './RiftLogo';
 import ContactForm from './ContactForm';
 
@@ -72,15 +71,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <a
-            href="https://rift-pass-link.base44.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors font-body text-sm"
-          >
-            <Smartphone className="w-3.5 h-3.5" />
-            Connect
-          </a>
+
           <a
             href="#signup"
             className="bg-foreground text-background px-5 py-2 rounded font-heading text-sm font-semibold hover:opacity-80 transition-opacity"
